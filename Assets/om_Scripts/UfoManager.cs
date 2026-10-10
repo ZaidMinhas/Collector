@@ -30,8 +30,11 @@ public class UfoManager : MonoBehaviour
         Vector3 directionToPlanet = (planetManager.transform.position - transform.position).normalized;
         Vector3 moveDirection = Vector3.zero;
 
+        bool tooClose = (planetManager.transform.position - transform.position).magnitude 
+            <= planetManager.gameObject.GetComponent<Renderer>().bounds.size.x / 2f;
+
         if (MoveUp()) moveDirection -= directionToPlanet;
-        if (MoveDown()) moveDirection += directionToPlanet;
+        if (!tooClose && MoveDown()) moveDirection += directionToPlanet;
 
         if (MoveRight()) moveDirection -= Vector3.Cross(directionToPlanet, Vector3.forward).normalized;
         if (MoveLeft()) moveDirection += Vector3.Cross(directionToPlanet, Vector3.forward).normalized;
