@@ -30,14 +30,10 @@ public class Projectile : MonoBehaviour
         {
             Vector3 pullDir = m.transform.position - transform.position;
             float r = pullDir.magnitude;
-            float f = u.G * (m.mass / (r*r));
+            float f = u.G * (m.mass / Mathf.Pow(r, m.rExponent));
             Vector3 pullVec = pullDir * f;
             rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-    }
 }
