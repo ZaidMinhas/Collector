@@ -34,6 +34,12 @@ public class Projectile : MonoBehaviour
         rBody.linearVelocity = velocity;
     }
 
+    public void Launch(float angle, BulletConfig bulletConfig)
+    {
+        this.damage = bulletConfig.damage;
+        SetVelocity(angle, bulletConfig.speed);
+    }
+
     private void Update()
     {
         if (!affectedByGravity) return;
@@ -58,5 +64,4 @@ public class Projectile : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         isHitting = true;
     }
-
 }

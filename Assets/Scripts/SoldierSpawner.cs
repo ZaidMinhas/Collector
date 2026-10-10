@@ -92,7 +92,7 @@ public class SoldierSpawner : MonoBehaviour
             {
                 float interval =
                     Mathf.Max(0f, wave.spawnInterval) +
-                    Random.Range(0f, 2f);
+                    Random.Range(0f, wave.spawnInterval*0.1f);
 
                 yield return new WaitForSeconds(interval);
             }

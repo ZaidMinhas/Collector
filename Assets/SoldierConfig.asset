@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: SoldierConfig
   m_EditorClassIdentifier: Assembly-CSharp::SoldierConfig
   baseSpeed: 1
-  searchRangeAngle: 14
+  searchRangeAngle: 40
+  maxHealth: 2
   burstBullets: 5
   burstFireRate: 0.1
   fireInterval: 1
-  maxHealth: 2
+  bulletConfig:
+    speed: 10
+    damage: 2
