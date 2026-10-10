@@ -32,7 +32,7 @@ public class BulletMovement : MonoBehaviour
 
     public void rotateBullet()
     {
-        
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
     }
 
     public Vector2 bulletDirection()
