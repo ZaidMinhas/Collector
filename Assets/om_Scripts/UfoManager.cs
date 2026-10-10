@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,11 +13,15 @@ public class UfoManager : MonoBehaviour
 
     public GameObject forceField;
 
+    public LineRenderer laserBeam;
+
     public StaticMass placeableMass;
     public StaticMass placeableNegMass;
 
     public float moveSpeed = 5.0f;
     public float shotSpeed = 8.0f;
+
+    public int maxLaserDist = 100;
 
     private void Start()
     {
@@ -58,7 +63,7 @@ public class UfoManager : MonoBehaviour
 
         // LASER
 
-        // tba
+        if (Laser()) HandleLaser();
 
         // MULTISHOT
 
@@ -110,23 +115,14 @@ public class UfoManager : MonoBehaviour
         if (bulletCount == 0) return;
         if (shieldOn) return;
 
-        // Get mouse position in world space
-        Vector3 mouseScreenPos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
-        mouseWorldPos.z = transform.position.z; // Ensure same Z as UFO
-
-        // Calculate direction and angle
-        Vector3 dir = (mouseWorldPos - transform.position).normalized;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        float angle = GetAngleFromMouse(transform.position);
 
         float c = bulletCount;
         for (float i = 0f; i < c; i++)
         {
             float offset = (c == 1) ? 0f : -(spread / 2f) + (spread * (i / (c - 1f)));
             float shotAngle = angle + offset;
-            float radians = shotAngle * Mathf.Deg2Rad;
-            Vector3 spawnOffset = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0f) * 0.5f;
-            Vector3 spawnPos = transform.position + spawnOffset;
+            Vector3 spawnPos = GetVectorAtAngleFrom(transform.position, shotAngle, 0.5f);
 
             Projectile proj = Instantiate(defaultProjectile, spawnPos, Quaternion.identity);
             proj.SetVelocity(shotAngle, shotSpeed);
@@ -172,8 +168,41 @@ public class UfoManager : MonoBehaviour
         shieldMax = durationSeconds;
         shieldOn = true;
     }
+    
+    private void HandleLaser()
+    {/*
+        laserBeam.positionCount = maxLaserDist;
+        Vector3 pos = transform.position;
+        Vector3 vel = 
+        for (int i = 0; i < maxLaserDist; i++)
+        {
+            laserTrag = UniverseManager.Universe().UpdateVelocityForBody()
+        }*/
+    }
 
 
+    // HELPER FUNCTIONS
+
+    private float GetAngleFromMouse(Vector3 targetLocation)
+    {
+        // Get mouse position in world space
+        Vector3 mouseScreenPos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
+        mouseWorldPos.z = transform.position.z; // Ensure same Z as UFO
+
+        // Calculate direction and angle
+        Vector3 dir = (mouseWorldPos - targetLocation).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        return angle;
+    }
+
+    private Vector3 GetVectorAtAngleFrom(Vector3 origin, float angle, float distance)
+    {
+        float radians = angle * Mathf.Deg2Rad;
+        Vector3 spawnOffset = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0f) * distance;
+        Vector3 spawnPos = transform.position + spawnOffset;
+        return spawnPos;
+    }
 
 
     // KEY STROKES

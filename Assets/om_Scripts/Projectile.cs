@@ -37,16 +37,8 @@ public class Projectile : MonoBehaviour
     private void Update()
     {
         if (!affectedByGravity) return;
-        UniverseManager u = UniverseManager.Universe();
-
-        foreach (StaticMass m in u.allMasses)
-        {
-            Vector3 pullDir = m.transform.position - transform.position;
-            float r = pullDir.magnitude;
-            float f = u.G * (m.mass / Mathf.Pow(r, m.rExponent));
-            Vector3 pullVec = pullDir * (f * gravityModifier);
-            rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
-        }
+        rBody.linearVelocity = UniverseManager.Universe().UpdateVelocityForBody(
+            transform.position, rBody.linearVelocity, gravityModifier, Time.deltaTime);
     }
 
     //By Zaid
