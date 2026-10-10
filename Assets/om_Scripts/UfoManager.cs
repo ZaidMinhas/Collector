@@ -13,6 +13,7 @@ public class UfoManager : MonoBehaviour
 
     public GameObject forceField;
 
+    public LineRenderer previewBeam;
     public LineRenderer laserBeam;
 
     public StaticMass placeableMass;
@@ -21,7 +22,7 @@ public class UfoManager : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float shotSpeed = 8.0f;
 
-    public int maxLaserDist = 100;
+    public int maxLaserDist = 256;
 
     private void Start()
     {
@@ -46,6 +47,8 @@ public class UfoManager : MonoBehaviour
         // PROJECTILES
 
         if (Shoot()) HandleShooting(1, 0f);
+        if (PathShow()) HandleLaser(true);
+        if (PathHide()) previewBeam.positionCount = 0;
 
         // MASS PLACEMENT
 
@@ -63,7 +66,7 @@ public class UfoManager : MonoBehaviour
 
         // LASER
 
-        if (Laser()) HandleLaser();
+        if (Laser()) HandleLaser(false);
 
         // MULTISHOT
 
@@ -75,13 +78,27 @@ public class UfoManager : MonoBehaviour
     private float shieldMax = 0f; // # of seconds
     private bool shieldOn = false;
 
+    private float laserTimer = 0f;
+    private float laserMax = 0f; // # of seconds
+    private bool laserOn = false;
+
     private void FixedUpdate()
     {
-        if (!shieldOn) return;
-        if (shieldTimer++ >= (shieldMax*50f))
+        if (shieldOn)
         {
-            forceField.SetActive(false);
-            shieldOn = false;
+            if (shieldTimer++ >= (shieldMax * 50f))
+            {
+                forceField.SetActive(false);
+                shieldOn = false;
+            }
+        }
+        if (laserOn)
+        {
+            if (laserTimer++ >= (laserMax * 50f))
+            {
+                laserBeam.positionCount = 0;
+                laserOn = false;
+            }
         }
     }
 
@@ -132,6 +149,7 @@ public class UfoManager : MonoBehaviour
 
     private void HandleMassPlacement(Vector3 directionToPlanet, bool negativeMass)
     {
+        if (shieldOn) return;
         StaticMass placeable = negativeMass ? placeableNegMass : placeableMass;
         StaticMass sm = Instantiate(placeable.gameObject).GetComponent<StaticMass>();
         sm.gameObject.transform.position = transform.position + directionToPlanet * 0.75f;
@@ -140,6 +158,7 @@ public class UfoManager : MonoBehaviour
 
     private void HandleAbduction()
     {
+        if (shieldOn) return;
         abductionBeam.SetActive(true);
 
         // find and destroy target
@@ -154,7 +173,6 @@ public class UfoManager : MonoBehaviour
                 if (bounds.IntersectRay(new(ufoPos, dir)))
                 {
                     Destroy(abductionTarget.gameObject);
-                    /*temp*/
                     gameObject.GetComponent<BidenBlast>().abductText.enabled = true;
                 }
             }
@@ -168,16 +186,42 @@ public class UfoManager : MonoBehaviour
         shieldMax = durationSeconds;
         shieldOn = true;
     }
-    
-    private void HandleLaser()
-    {/*
-        laserBeam.positionCount = maxLaserDist;
-        Vector3 pos = transform.position;
-        Vector3 vel = 
-        for (int i = 0; i < maxLaserDist; i++)
+
+    private void HandleLaser(bool isPreview)
+    {
+        if (shieldOn) return;
+
+        LineRenderer beam = isPreview ? previewBeam : laserBeam;
+        beam.positionCount = 0;
+        beam.positionCount = maxLaserDist;
+        float angle = GetAngleFromMouse(transform.position);
+        Vector3 pos = GetVectorAtAngleFrom(transform.position, angle, 0.5f);
+        Vector3 vel = GetVelocityVectorFor(angle, shotSpeed);
+        beam.SetPosition(0, (isPreview ? transform.position : pos));
+        UniverseManager u = UniverseManager.Universe();
+        for (int i = 1; i < beam.positionCount; i++)
         {
-            laserTrag = UniverseManager.Universe().UpdateVelocityForBody()
-        }*/
+            // TODO
+            // linear search of all enemies to damage along the laser line
+            // ...
+            bool collide = false;
+            foreach (StaticMass m in u.allMasses)
+            {
+                CircleCollider2D c = m.gameObject.GetComponent<CircleCollider2D>();
+                if (c != null && c.OverlapPoint(pos))
+                { collide = true; break; }
+            }
+            beam.SetPosition(i, pos);
+            vel = u.UpdateVelocityForBody(pos, vel, defaultProjectile.gravityModifier, Time.fixedDeltaTime);
+            pos += vel * Time.fixedDeltaTime;
+            if (collide) beam.positionCount -= (maxLaserDist - i);
+        }
+        if (!isPreview)
+        {
+            laserTimer = 0f;
+            laserMax = 0.5f;
+            laserOn = true;
+        }
     }
 
 
@@ -204,6 +248,13 @@ public class UfoManager : MonoBehaviour
         return spawnPos;
     }
 
+    private Vector3 GetVelocityVectorFor(float angle, float speed)
+    {
+        float radians = angle * Mathf.Deg2Rad;
+        Vector3 velocity = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0f) * speed;
+        return velocity;
+    }
+
 
     // KEY STROKES
 
@@ -216,6 +267,10 @@ public class UfoManager : MonoBehaviour
     private bool MoveDown() => Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
 
     private bool Shoot() => Input.GetKeyDown(KeyCode.Mouse0);
+
+    private bool PathShow() => Input.GetKey(KeyCode.Mouse1);
+
+    private bool PathHide() => Input.GetKeyUp(KeyCode.Mouse1);
 
     private bool Abduct() => Input.GetKeyDown(KeyCode.Space);
 
