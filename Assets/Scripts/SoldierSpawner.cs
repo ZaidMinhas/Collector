@@ -6,16 +6,15 @@ using Random = UnityEngine.Random;
 
 public class SoldierSpawner : MonoBehaviour
 {
-    public bool isGameOver;
     public Soldier soldierPrefab;
     public Transform player;
     public Transform planet;
-
-    public List<Soldier> spawnedSoldiers = new List<Soldier>();
     public List<WaveParameters> waves = new List<WaveParameters>();
-    public int currentWave;
-
-    [Min(1)] public int MaxEnemyCount = 100;
+    
+    [HideInInspector]public bool isGameOver;
+    [HideInInspector] public List<Soldier> spawnedSoldiers = new List<Soldier>();
+    [HideInInspector] public  int currentWave;
+    [HideInInspector] public int MaxEnemyCount = 100;
 
     private IEnumerator Start()
     {

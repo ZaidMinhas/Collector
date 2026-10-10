@@ -3900,42 +3900,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 100167996}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 100167996}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: spawnedSoldiers.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.data[0].enemyCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.data[0].spawnDelay
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.data[1].enemyCount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.data[1].spawnDelay
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.data[0].spawnInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738740492349108888, guid: e4414ef43cf83dc409d91764f440bf88, type: 3}
-      propertyPath: waves.Array.data[1].spawnInterval
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

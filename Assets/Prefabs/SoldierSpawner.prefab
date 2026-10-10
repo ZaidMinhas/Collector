@@ -46,18 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoldierSpawner
   isGameOver: 0
   soldierPrefab: {fileID: 5136024243146152133, guid: b269dcafbdc4ed8408ea55edc893d203, type: 3}
-  target: {fileID: 0}
+  player: {fileID: 0}
   planet: {fileID: 0}
   spawnedSoldiers: []
   waves:
-  - enemyCount: 0
-    spawnInterval: 0
-    spawnDelay: 0
-  - enemyCount: 0
-    spawnInterval: 0
-    spawnDelay: 0
-  - enemyCount: 0
-    spawnInterval: 0
-    spawnDelay: 0
+  - enemyCount: 10
+    spawnInterval: 1
+    spawnDelay: 2
+  - enemyCount: 20
+    spawnInterval: 2
+    spawnDelay: 10
   currentWave: 0
   MaxEnemyCount: 100
