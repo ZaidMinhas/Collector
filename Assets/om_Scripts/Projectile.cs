@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
         rBody.linearVelocity = velocity;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!affectedByGravity) return;
         UniverseManager u = UniverseManager.Universe();
@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
             float r = pullDir.magnitude;
             float f = u.G * (m.mass / (r*r));
             Vector3 pullVec = pullDir * f;
-            rBody.linearVelocity = (Vector3)rBody.linearVelocity + pullVec;
+            rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
         }
     }
 

@@ -7,6 +7,9 @@ public class UfoManager : MonoBehaviour
 
     public Projectile defaultProjectile;
 
+    public StaticMass placeableMass;
+    public StaticMass placeableNegMass;
+
     public float moveSpeed = 5.0f;
     public float shootSpeed = 1.0f;
 
@@ -18,30 +21,9 @@ public class UfoManager : MonoBehaviour
     void Update()
     {
         if (defaultProjectile == null) return;
-
-        // PROJECTILES
-
-        if (Shooting())
-        {
-            // Get mouse position in world space
-            Vector3 mouseScreenPos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
-            mouseWorldPos.z = transform.position.z; // Ensure same Z as UFO
-
-            // Calculate direction and angle
-            Vector3 dir = (mouseWorldPos - transform.position).normalized;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-            // Instantiate and set projectile
-            Projectile proj = Instantiate(defaultProjectile, transform.position, Quaternion.identity);
-            proj.SetVelocity(angle, shootSpeed);
-            proj.affectedByGravity = true;
-        }
-    }
-
-    private void FixedUpdate()
-    {
         if (planetManager == null) return;
+        if (placeableMass == null) return;
+        if (placeableNegMass == null) return;
 
         // MOVEMENT
 
@@ -57,13 +39,47 @@ public class UfoManager : MonoBehaviour
 
         if (moveDirection != Vector3.zero)
         {
-            transform.position += moveSpeed * Time.fixedDeltaTime * moveDirection.normalized;
+            transform.position += moveSpeed * Time.deltaTime * moveDirection.normalized;
         }
 
         // ROTATION: Make UFO's bottom face the planet
         // For 2D (assuming Z axis is forward)
-        float angle = Mathf.Atan2(directionToPlanet.y, directionToPlanet.x) * Mathf.Rad2Deg + 90f;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        float btDir = Mathf.Atan2(directionToPlanet.y, directionToPlanet.x) * Mathf.Rad2Deg + 90f;
+        transform.rotation = Quaternion.Euler(0f, 0f, btDir);
+
+        // PROJECTILES
+
+        if (Shoot())
+        {
+            // Get mouse position in world space
+            Vector3 mouseScreenPos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
+            mouseWorldPos.z = transform.position.z; // Ensure same Z as UFO
+
+            // Calculate direction and angle
+            Vector3 dir = (mouseWorldPos - transform.position).normalized;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+            // Instantiate and set projectile
+            Projectile proj = Instantiate(defaultProjectile, transform.position, Quaternion.identity);
+            proj.SetVelocity(angle, shootSpeed);
+            proj.affectedByGravity = true;
+        }
+
+        // MASS PLACEMENT
+
+        if (PlaceMass())
+        {
+            StaticMass sm = Instantiate(placeableMass.gameObject).GetComponent<StaticMass>();
+            sm.gameObject.transform.position = transform.position;
+            UniverseManager.Universe().allMasses.Add(sm);
+        }
+        if (PlaceNegMass())
+        {
+            StaticMass nsm = Instantiate(placeableNegMass.gameObject).GetComponent<StaticMass>();
+            nsm.gameObject.transform.position = transform.position;
+            UniverseManager.Universe().allMasses.Add(nsm);
+        }
 
     }
 
@@ -75,5 +91,9 @@ public class UfoManager : MonoBehaviour
 
     private bool MoveDown() => Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
 
-    private bool Shooting() => Input.GetKeyDown(KeyCode.Mouse0);
+    private bool Shoot() => Input.GetKeyDown(KeyCode.Mouse0);
+
+    private bool PlaceMass() => Input.GetKeyDown(KeyCode.Z);
+
+    private bool PlaceNegMass() => Input.GetKeyDown(KeyCode.X);
 }
