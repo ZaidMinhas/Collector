@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float startingSpeed = 1.0f;
-    public float startingAngle = 45f;
-
     public bool affectedByGravity = true;
     public float gravityModifier = 1.0f;
 
