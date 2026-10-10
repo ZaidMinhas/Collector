@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float angle = 45f;
+    public float startingSpeed = 1.0f;
+    public float startingAngle = 45f;
 
     public bool affectedByGravity = true;
+    public float gravityModifier = 1.0f;
 
     private Rigidbody2D rBody;
 
@@ -21,7 +22,7 @@ public class Projectile : MonoBehaviour
         rBody.linearVelocity = velocity;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!affectedByGravity) return;
         UniverseManager u = UniverseManager.Universe();
@@ -30,14 +31,10 @@ public class Projectile : MonoBehaviour
         {
             Vector3 pullDir = m.transform.position - transform.position;
             float r = pullDir.magnitude;
-            float f = u.G * (m.mass / (r*r));
-            Vector3 pullVec = pullDir * f;
-            rBody.linearVelocity = (Vector3)rBody.linearVelocity + pullVec;
+            float f = u.G * (m.mass / Mathf.Pow(r, m.rExponent));
+            Vector3 pullVec = pullDir * f * gravityModifier;
+            rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-    }
 }
