@@ -181,13 +181,13 @@ Transform:
   m_GameObject: {fileID: 142436255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< Updated upstream
+# <<<<<<< Updated upstream
   m_LocalPosition: {x: 0.0271, y: -0.1032, z: 0}
   m_LocalScale: {x: 9.609682, y: 5.5369625, z: 1}
-=======
-  m_LocalPosition: {x: 0.0667, y: -0.0834, z: 0}
-  m_LocalScale: {x: 5.7914433, y: 3.2186103, z: 1}
->>>>>>> Stashed changes
+# =======
+#   m_LocalPosition: {x: 0.0667, y: -0.0834, z: 0}
+#   m_LocalScale: {x: 5.7914433, y: 3.2186103, z: 1}
+# >>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 604551975}
@@ -237,13 +237,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-<<<<<<< Updated upstream
+# <<<<<<< Updated upstream
   m_SortingLayerID: -1946088117
   m_SortingLayer: 1
-=======
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
->>>>>>> Stashed changes
+# =======
+#   m_SortingLayerID: 0
+#   m_SortingLayer: 0
+# >>>>>>> Stashed changes
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5161061956977912460, guid: 81147bfe4ea67ae41a4710490b9bf276, type: 3}
@@ -254,11 +254,11 @@ SpriteRenderer:
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-<<<<<<< Updated upstream
+# <<<<<<< Updated upstream
   m_WasSpriteAssigned: 0
 =======
-  m_WasSpriteAssigned: 1
->>>>>>> Stashed changes
+#   m_WasSpriteAssigned: 1
+# >>>>>>> Stashed changes
   m_SpriteSortPoint: 0
 --- !u!1 &177527209
 GameObject:
@@ -288,12 +288,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-<<<<<<< Updated upstream
+# <<<<<<< Updated upstream
   m_Children:
   - {fileID: 1504755700}
-=======
-  m_Children: []
->>>>>>> Stashed changes
+# =======
+#   m_Children: []
+# >>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604551974
@@ -328,7 +328,7 @@ Transform:
   - {fileID: 142436256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
+# <<<<<<< Updated upstream
 --- !u!1 &709583652
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,8 +420,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> Stashed changes
+# =======
+# >>>>>>> Stashed changes
 --- !u!1 &1111282620
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,11 +564,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-<<<<<<< Updated upstream
+# <<<<<<< Updated upstream
   orthographic size: 5
-=======
-  orthographic size: 8.59
->>>>>>> Stashed changes
+# =======
+#   orthographic size: 8.59
+# >>>>>>> Stashed changes
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -599,8 +599,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
+# <<<<<<< Updated upstream
+# =======
 --- !u!1 &1504755699
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,22 +724,22 @@ Transform:
   - {fileID: 709583653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
+# >>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1415265687}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
+# <<<<<<< Updated upstream
+# <<<<<<< Updated upstream
+# =======
   - {fileID: 604551975}
   - {fileID: 1111282621}
   - {fileID: 177527210}
   - {fileID: 2008704995}
->>>>>>> Stashed changes
-=======
-  - {fileID: 604551975}
-  - {fileID: 1111282621}
-  - {fileID: 177527210}
->>>>>>> Stashed changes
+# >>>>>>> Stashed changes
+# =======
+#   - {fileID: 604551975}
+#   - {fileID: 1111282621}
+#   - {fileID: 177527210}
+# >>>>>>> Stashed changes
