@@ -53,12 +53,12 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!isHitting) return;
+        Destroy(gameObject);
         
         HealthComponent target = other.GetComponentInParent<HealthComponent>();
         if (target == null) return;
         
         target.TakeDamage(damage);
-        Destroy(gameObject);
     }
     
     IEnumerator DelayHitting()

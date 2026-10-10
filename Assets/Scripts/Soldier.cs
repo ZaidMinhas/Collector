@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(HealthComponent))]
 public class Soldier : MonoBehaviour
@@ -16,11 +14,9 @@ public class Soldier : MonoBehaviour
     [HideInInspector] public float angle;
     [HideInInspector] public float radius;
 
-    private float targetAngle;
-    private bool hasTargetAngle;
     private float lastDir = 1f;
     private SpriteRenderer spriteRenderer;
-    private float nextShotTime = 0;
+    private float nextShotTime;
     private bool isShooting;
     private Coroutine burstRoutine;
 
@@ -58,8 +54,8 @@ public class Soldier : MonoBehaviour
 
     public void Shoot()
     {
-        if (!isActiveAndEnabled || isShooting || bullet == null || player == null ||
-            soldierConfig == null || soldierConfig.burstBullets < 1f ||
+        if (!isActiveAndEnabled || isShooting || !bullet || !player ||
+            !soldierConfig || soldierConfig.burstBullets < 1f ||
             Time.time < nextShotTime)
             return;
 
@@ -76,7 +72,7 @@ public class Soldier : MonoBehaviour
 
         for (int i = 0; i < bulletCount; i++)
         {
-            if (player == null || bullet == null)
+            if (!player || !bullet)
                 break;
 
             // Aim each shot from the Soldier's current position.
@@ -113,14 +109,13 @@ public class Soldier : MonoBehaviour
 
     public void Move(float dir)
     {
-        // Clamp the angular step so we reach the target without overshooting.
+        // Stop at the nearest search-range boundary without overshooting it.
         float step = (soldierConfig.baseSpeed / radius) * Time.deltaTime;
-        if (hasTargetAngle)
-        {
-            float remaining = Mathf.Abs(Mathf.DeltaAngle(
-                angle * Mathf.Rad2Deg, targetAngle)) * Mathf.Deg2Rad;
-            step = Mathf.Min(step, remaining);
-        }
+        float difference = Mathf.Abs(Mathf.DeltaAngle(
+            angle * Mathf.Rad2Deg, GetAngle(player.position)));
+        float halfRange = soldierConfig.searchRangeAngle / 2f;
+        float remaining = Mathf.Max(0f, difference - halfRange) * Mathf.Deg2Rad;
+        step = Mathf.Min(step, remaining);
         angle -= step * dir;
 
         Vector2 offset = new Vector2(
@@ -135,44 +130,16 @@ public class Soldier : MonoBehaviour
     {
         float playerAngle = GetAngle(player.position);
         float enemyAngle = angle * Mathf.Rad2Deg;
-
         float halfRange = soldierConfig.searchRangeAngle / 2f;
+        float difference = Mathf.DeltaAngle(enemyAngle, playerAngle);
 
-        // Check if existing target is still within player's range
-        if (hasTargetAngle)
-        {
-            float targetOffset = Mathf.DeltaAngle(
-                playerAngle,
-                targetAngle
-            );
-
-            if (Mathf.Abs(targetOffset) > halfRange)
-                hasTargetAngle = false;
-        }
-
-        // Pick a new random target if needed
-        if (!hasTargetAngle)
-        {
-            targetAngle = playerAngle + Random.Range(
-                -halfRange,
-                halfRange
-            );
-
-            hasTargetAngle = true;
-        }
-
-        // Find shortest direction around planet
-        float targetDifference = Mathf.DeltaAngle(
-            enemyAngle,
-            targetAngle
-        );
-
-        // Keep the selected target after arrival until the player leaves its range.
-        if (Mathf.Abs(targetDifference) <= 0.01f)
+        // Stop and shoot as soon as we enter the player's search range.
+        // A tiny tolerance prevents floating-point jitter at the boundary.
+        if (Mathf.Abs(difference) <= halfRange + 0.001f)
             return 0f;
 
-        // Negative because Move() subtracts angle
-        return -Mathf.Sign(targetDifference);
+        // Move along the shortest route; Move() subtracts the angle.
+        return -Mathf.Sign(difference);
     }
 
     private float GetAngle(Vector2 position)

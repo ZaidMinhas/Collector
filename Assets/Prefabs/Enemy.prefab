@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  defaultMaxHealth: 0
+  defaultMaxHealth: 2
   currentHealth: 0
   isDestroyedOnDeath: 0
   isDebugMode: 0

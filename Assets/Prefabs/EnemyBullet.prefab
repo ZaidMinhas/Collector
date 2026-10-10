@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   affectedByGravity: 0
-  gravityModifier: 1
+  gravityModifier: 0.5
   damage: 1
   speed: 5
 --- !u!58 &8087905628687548962
