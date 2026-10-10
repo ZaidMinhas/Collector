@@ -13,11 +13,6 @@ public class UfoManager : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float shootSpeed = 1.0f;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (defaultProjectile == null) return;
@@ -71,13 +66,13 @@ public class UfoManager : MonoBehaviour
         if (PlaceMass())
         {
             StaticMass sm = Instantiate(placeableMass.gameObject).GetComponent<StaticMass>();
-            sm.gameObject.transform.position = transform.position;
+            sm.gameObject.transform.position = transform.position + directionToPlanet;
             UniverseManager.Universe().allMasses.Add(sm);
         }
         if (PlaceNegMass())
         {
             StaticMass nsm = Instantiate(placeableNegMass.gameObject).GetComponent<StaticMass>();
-            nsm.gameObject.transform.position = transform.position;
+            nsm.gameObject.transform.position = transform.position + directionToPlanet;
             UniverseManager.Universe().allMasses.Add(nsm);
         }
 
