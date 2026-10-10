@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Soldier : MonoBehaviour, IDamagable
+[RequireComponent(typeof(HealthComponent))]
+public class Soldier : MonoBehaviour
 {
     public Transform player;
     public Transform planet;
     public SoldierConfig soldierConfig;
-    public EnemyBullet bullet;
+    public Projectile bullet;
+    private HealthComponent healthComponent;
     
 
     [HideInInspector] public float angle;
@@ -19,12 +23,18 @@ public class Soldier : MonoBehaviour, IDamagable
     private float nextShotTime = 0;
     private bool isShooting;
     private Coroutine burstRoutine;
-    private int health;
 
+    void Awake()
+    {
+        healthComponent = GetComponent<HealthComponent>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         radius = planet.GetComponent<SpriteRenderer>().bounds.extents.x;
+        healthComponent.setHealth(soldierConfig.maxHealth);
+        healthComponent.OnDeath += Die;
 
         // Initialize angle in radians
         Vector2 offset = transform.position - planet.position;
@@ -75,9 +85,10 @@ public class Soldier : MonoBehaviour, IDamagable
             if (direction.sqrMagnitude > 0.000001f)
             {
                 float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                EnemyBullet shot = Instantiate(bullet, spawnPosition,
-                    Quaternion.Euler(0f, 0f, rotation));
-                shot.Launch(direction, gameObject);
+                Projectile shot = Instantiate(bullet, spawnPosition, Quaternion.Euler(0f, 0f, rotation));
+                
+                shot.SetVelocity(rotation, 2);
+                shot.affectedByGravity = true;
             }
 
             if (i < bulletCount - 1)
@@ -189,18 +200,10 @@ public class Soldier : MonoBehaviour, IDamagable
         // Flip sprite depending on movement direction
         spriteRenderer.flipX = lastDir < 0f;
     }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
+    
 
     public void Die()
     {
-        
+        Destroy(gameObject);
     }
 }

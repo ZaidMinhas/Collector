@@ -17,4 +17,4 @@ MonoBehaviour:
   burstBullets: 5
   burstFireRate: 0.1
   fireInterval: 1
-  maxHealth: 100
+  maxHealth: 2

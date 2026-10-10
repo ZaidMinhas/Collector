@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -7,12 +8,20 @@ public class Projectile : MonoBehaviour
 
     public bool affectedByGravity = true;
     public float gravityModifier = 1.0f;
+    public float damage = 1;
+    private bool isHitting;
 
     private Rigidbody2D rBody;
 
     private void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
+        rBody.gravityScale = 0f;
+    }
+
+    private void Start()
+    {
+        StartCoroutine(DelayHitting());
     }
 
     public void SetVelocity(float angle, float speed)
@@ -35,6 +44,24 @@ public class Projectile : MonoBehaviour
             Vector3 pullVec = pullDir * f * gravityModifier;
             rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
         }
+    }
+
+    //By Zaid
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isHitting) return;
+        
+        HealthComponent target = other.GetComponentInParent<HealthComponent>();
+        if (target == null) return;
+        
+        target.TakeDamage(damage);
+        Destroy(gameObject);
+    }
+    
+    IEnumerator DelayHitting()
+    {
+        yield return new WaitForSeconds(0.2f);
+        isHitting = true;
     }
 
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5136024243146152133}
   - component: {fileID: 3362903032309590112}
   - component: {fileID: 9206495667507640133}
-  - component: {fileID: 8852502643145144787}
+  - component: {fileID: 8124763463536113730}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -50,7 +50,7 @@ MonoBehaviour:
   player: {fileID: 0}
   planet: {fileID: 0}
   soldierConfig: {fileID: 11400000, guid: 209055b5196d617499db03d2aa0aa7db, type: 2}
-  bullet: {fileID: -2347435202423284734, guid: 1dcc240a748181640a4cf0e41220b0fa, type: 3}
+  bullet: {fileID: -3427170235566603166, guid: 1dcc240a748181640a4cf0e41220b0fa, type: 3}
   angle: 0
   radius: 0
 --- !u!212 &3362903032309590112
@@ -102,12 +102,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 80a998514daa5e8489801b9c5d9d09e3, type: 3}
+  m_Sprite: {fileID: -6287627944682604501, guid: 80a998514daa5e8489801b9c5d9d09e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.875, y: 7.53125}
+  m_Size: {x: 5, y: 6.40625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -149,7 +149,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.08064866}
   m_Size: {x: 4.384043, y: 6.5312123}
   m_Direction: 0
---- !u!114 &8852502643145144787
+--- !u!114 &8124763463536113730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,13 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2836425751517951031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c293a83b4a0115647954113d5cbb9c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SoldierSearchDebugger
-  soldier: {fileID: 5136024243146152133}
-  showSearchAngle: 1
-  radiusOverride: 0
-  arcSegments: 60
-  searchColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  insideColor: {r: 0, g: 1, b: 0, a: 1}
-  outsideColor: {r: 1, g: 0, b: 0, a: 1}
+  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
+  maxHealth: 0
+  currentHealth: 0
+  DestroyOnDeath: 0
