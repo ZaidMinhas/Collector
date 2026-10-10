@@ -11,7 +11,7 @@ namespace Manager
             SceneManager.LoadScene(sceneName);
         }
 
-        public void QuitGame()
+        public static void QuitGame()
         {
             Debug.Log("Quit Game");
             Application.Quit();
