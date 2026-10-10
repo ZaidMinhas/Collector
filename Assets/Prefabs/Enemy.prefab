@@ -50,6 +50,7 @@ MonoBehaviour:
   player: {fileID: 0}
   planet: {fileID: 0}
   soldierConfig: {fileID: 11400000, guid: 209055b5196d617499db03d2aa0aa7db, type: 2}
+  bullet: {fileID: -2347435202423284734, guid: 1dcc240a748181640a4cf0e41220b0fa, type: 3}
   angle: 0
   radius: 0
 --- !u!212 &3362903032309590112

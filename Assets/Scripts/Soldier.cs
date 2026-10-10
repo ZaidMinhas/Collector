@@ -1,18 +1,25 @@
+using System.Collections;
 using UnityEngine;
 
-public class Soldier : MonoBehaviour
+public class Soldier : MonoBehaviour, IDamagable
 {
     public Transform player;
     public Transform planet;
     public SoldierConfig soldierConfig;
+    public EnemyBullet bullet;
+    
 
-    public float angle;
-    public float radius;
+    [HideInInspector] public float angle;
+    [HideInInspector] public float radius;
 
     private float targetAngle;
     private bool hasTargetAngle;
     private float lastDir = 1f;
     private SpriteRenderer spriteRenderer;
+    private float nextShotTime = 0;
+    private bool isShooting;
+    private Coroutine burstRoutine;
+    private int health;
 
     void Start()
     {
@@ -31,8 +38,66 @@ public class Soldier : MonoBehaviour
 
         if (targetDir != 0f)
             Move(targetDir);
+        else
+        {
+            Shoot();
+        }
 
         UpdateRotation(targetDir);
+    }
+
+    public void Shoot()
+    {
+        if (!isActiveAndEnabled || isShooting || bullet == null || player == null ||
+            soldierConfig == null || soldierConfig.burstBullets < 1f ||
+            Time.time < nextShotTime)
+            return;
+
+        // Lock before starting: Update must not start another burst next frame.
+        isShooting = true;
+        burstRoutine = StartCoroutine(ShootBurst());
+    }
+
+    private IEnumerator ShootBurst()
+    {
+        int bulletCount = Mathf.Max(1, Mathf.RoundToInt(soldierConfig.burstBullets));
+        // burstFireRate is bullets per second (20 means 0.05 seconds apart).
+        float shotInterval = soldierConfig.burstFireRate;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            if (player == null || bullet == null)
+                break;
+
+            // Aim each shot from the Soldier's current position.
+            Vector3 spawnPosition = transform.position;
+            Vector2 direction = (Vector2)(player.position - spawnPosition);
+            if (direction.sqrMagnitude > 0.000001f)
+            {
+                float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                EnemyBullet shot = Instantiate(bullet, spawnPosition,
+                    Quaternion.Euler(0f, 0f, rotation));
+                shot.Launch(direction, gameObject);
+            }
+
+            if (i < bulletCount - 1)
+                yield return new WaitForSeconds(shotInterval);
+        }
+
+        // Cooldown starts after the final shot, with no extra shot delay.
+        nextShotTime = Time.time + Mathf.Max(0.01f, soldierConfig.fireInterval);
+        isShooting = false;
+        burstRoutine = null;
+    }
+
+    private void OnDisable()
+    {
+        if (burstRoutine != null)
+            StopCoroutine(burstRoutine);
+        burstRoutine = null;
+        isShooting = false;
+        if (soldierConfig != null)
+            nextShotTime = Time.time + Mathf.Max(0.01f, soldierConfig.fireInterval);
     }
 
     public void Move(float dir)
@@ -123,5 +188,19 @@ public class Soldier : MonoBehaviour
 
         // Flip sprite depending on movement direction
         spriteRenderer.flipX = lastDir < 0f;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        
     }
 }
