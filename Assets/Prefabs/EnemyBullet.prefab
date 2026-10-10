@@ -109,7 +109,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -133,11 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1c6da29ffd9094292400d9aad69c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  startingSpeed: 1
-  startingAngle: 45
   affectedByGravity: 0
   gravityModifier: 1
   damage: 1
+  speed: 5
 --- !u!58 &8087905628687548962
 CircleCollider2D:
   m_ObjectHideFlags: 0

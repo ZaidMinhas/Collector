@@ -87,7 +87,7 @@ public class Soldier : MonoBehaviour
                 float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 Projectile shot = Instantiate(bullet, spawnPosition, Quaternion.Euler(0f, 0f, rotation));
                 
-                shot.SetVelocity(rotation, 2);
+                shot.SetVelocity(rotation);
                 shot.affectedByGravity = true;
             }
 

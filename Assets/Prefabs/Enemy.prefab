@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6927274063769703797}
   - component: {fileID: 5136024243146152133}
+  - component: {fileID: 8124763463536113730}
   - component: {fileID: 3362903032309590112}
   - component: {fileID: 9206495667507640133}
-  - component: {fileID: 8124763463536113730}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -53,6 +53,22 @@ MonoBehaviour:
   bullet: {fileID: -3427170235566603166, guid: 1dcc240a748181640a4cf0e41220b0fa, type: 3}
   angle: 0
   radius: 0
+--- !u!114 &8124763463536113730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836425751517951031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
+  defaultMaxHealth: 0
+  currentHealth: 0
+  isDestroyedOnDeath: 0
+  isDebugMode: 0
 --- !u!212 &3362903032309590112
 SpriteRenderer:
   serializedVersion: 2
@@ -149,18 +165,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.08064866}
   m_Size: {x: 4.384043, y: 6.5312123}
   m_Direction: 0
---- !u!114 &8124763463536113730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2836425751517951031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  maxHealth: 0
-  currentHealth: 0
-  DestroyOnDeath: 0

@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     public bool affectedByGravity = true;
     public float gravityModifier = 1.0f;
     public float damage = 1;
+    public float speed = 1;
     private bool isHitting;
 
     private Rigidbody2D rBody;
@@ -21,7 +22,7 @@ public class Projectile : MonoBehaviour
         StartCoroutine(DelayHitting());
     }
 
-    public void SetVelocity(float angle, float speed)
+    public void SetVelocity(float angle)
     {
         float radians = angle * Mathf.Deg2Rad;
         Vector3 velocity = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0f) * speed;
@@ -38,7 +39,7 @@ public class Projectile : MonoBehaviour
             Vector3 pullDir = m.transform.position - transform.position;
             float r = pullDir.magnitude;
             float f = u.G * (m.mass / Mathf.Pow(r, m.rExponent));
-            Vector3 pullVec = pullDir * f * gravityModifier;
+            Vector3 pullVec = pullDir * (f * gravityModifier);
             rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
         }
     }
