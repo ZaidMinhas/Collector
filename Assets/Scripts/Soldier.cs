@@ -6,6 +6,7 @@ public class Soldier : MonoBehaviour
 {
     public Transform player;
     public Transform planet;
+    
     public SoldierConfig soldierConfig;
     public Projectile bullet;
     private HealthComponent healthComponent;
@@ -19,11 +20,13 @@ public class Soldier : MonoBehaviour
     private float nextShotTime;
     private bool isShooting;
     private Coroutine burstRoutine;
+    private float searchRangeOffset;
 
     void Awake()
     {
         healthComponent = GetComponent<HealthComponent>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
     
     void Start()
@@ -31,6 +34,8 @@ public class Soldier : MonoBehaviour
         radius = planet.GetComponent<SpriteRenderer>().bounds.extents.x;
         healthComponent.setHealth(soldierConfig.maxHealth);
         healthComponent.OnDeath += Die;
+        
+        searchRangeOffset = soldierConfig.searchRangeAngle + Random.Range(-20, 20);
 
         // Initialize angle in radians
         Vector2 offset = transform.position - planet.position;
@@ -52,6 +57,11 @@ public class Soldier : MonoBehaviour
         UpdateRotation(targetDir);
     }
 
+    public void Init(Transform _planet, Transform _player)
+    {
+        planet = _planet;
+        player = _player;
+    }
     public void Shoot()
     {
         if (!isActiveAndEnabled || isShooting || !bullet || !player ||
@@ -77,7 +87,7 @@ public class Soldier : MonoBehaviour
 
             // Aim each shot from the Soldier's current position.
             Vector3 spawnPosition = transform.position;
-            Vector2 direction = (Vector2)(player.position - spawnPosition);
+            Vector2 direction = player.position - spawnPosition;
             if (direction.sqrMagnitude > 0.000001f)
             {
                 float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -111,9 +121,8 @@ public class Soldier : MonoBehaviour
     {
         // Stop at the nearest search-range boundary without overshooting it.
         float step = (soldierConfig.baseSpeed / radius) * Time.deltaTime;
-        float difference = Mathf.Abs(Mathf.DeltaAngle(
-            angle * Mathf.Rad2Deg, GetAngle(player.position)));
-        float halfRange = soldierConfig.searchRangeAngle / 2f;
+        float difference = Mathf.Abs(Mathf.DeltaAngle( angle * Mathf.Rad2Deg, GetAngle(player.position)));
+        float halfRange = searchRangeOffset / 2f;
         float remaining = Mathf.Max(0f, difference - halfRange) * Mathf.Deg2Rad;
         step = Mathf.Min(step, remaining);
         angle -= step * dir;
@@ -130,7 +139,7 @@ public class Soldier : MonoBehaviour
     {
         float playerAngle = GetAngle(player.position);
         float enemyAngle = angle * Mathf.Rad2Deg;
-        float halfRange = soldierConfig.searchRangeAngle / 2f;
+        float halfRange = searchRangeOffset / 2f;
         float difference = Mathf.DeltaAngle(enemyAngle, playerAngle);
 
         // Stop and shoot as soon as we enter the player's search range.
