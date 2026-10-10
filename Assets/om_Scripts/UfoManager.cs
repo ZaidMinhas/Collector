@@ -16,6 +16,7 @@ public class UfoManager : MonoBehaviour
     public StaticMass placeableNegMass;
 
     public float moveSpeed = 5.0f;
+    public float shotSpeed = 8.0f;
 
     private void Start()
     {
@@ -128,7 +129,7 @@ public class UfoManager : MonoBehaviour
             Vector3 spawnPos = transform.position + spawnOffset;
 
             Projectile proj = Instantiate(defaultProjectile, spawnPos, Quaternion.identity);
-            proj.SetVelocity(shotAngle);
+            proj.SetVelocity(shotAngle, shotSpeed);
             proj.affectedByGravity = true;
         }
     }

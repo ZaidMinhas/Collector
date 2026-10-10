@@ -24,6 +24,11 @@ public class Projectile : MonoBehaviour
 
     public void SetVelocity(float angle)
     {
+        SetVelocity(angle, speed);
+    }
+
+    public void SetVelocity(float angle, float speed)
+    {
         float radians = angle * Mathf.Deg2Rad;
         Vector3 velocity = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0f) * speed;
         rBody.linearVelocity = velocity;
