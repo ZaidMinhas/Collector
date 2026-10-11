@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: f0f3910e2c7ab0f42875d8b85e6877fa
+guid: bcabe9f9debf9b446a5c1e7b1a57ae4e
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UFO
+    second: {fileID: 2100000, guid: 38ac0dae501d14136a14ba89699ed831, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

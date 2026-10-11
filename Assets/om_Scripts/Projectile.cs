@@ -1,17 +1,30 @@
+using System.Collections;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float angle = 45f;
-
     public bool affectedByGravity = true;
+    public float gravityModifier = 1.0f;
+    public float damage = 1;
+    public float speed = 1;
+    private bool isHitting;
 
     private Rigidbody2D rBody;
 
     private void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
+        rBody.gravityScale = 0f;
+    }
+
+    private void Start()
+    {
+        StartCoroutine(DelayHitting());
+    }
+
+    public void SetVelocity(float angle)
+    {
+        SetVelocity(angle, speed);
     }
 
     public void SetVelocity(float angle, float speed)
@@ -21,19 +34,34 @@ public class Projectile : MonoBehaviour
         rBody.linearVelocity = velocity;
     }
 
+    public void Launch(float angle, BulletConfig bulletConfig)
+    {
+        this.damage = bulletConfig.damage;
+        SetVelocity(angle, bulletConfig.speed);
+    }
+
     private void Update()
     {
         if (!affectedByGravity) return;
-        UniverseManager u = UniverseManager.Universe();
-
-        foreach (StaticMass m in u.allMasses)
-        {
-            Vector3 pullDir = m.transform.position - transform.position;
-            float r = pullDir.magnitude;
-            float f = u.G * (m.mass / Mathf.Pow(r, m.rExponent));
-            Vector3 pullVec = pullDir * f;
-            rBody.linearVelocity = (Vector3)rBody.linearVelocity + (pullVec*Time.deltaTime);
-        }
+        rBody.linearVelocity = UniverseManager.Universe().UpdateVelocityForBody(
+            transform.position, rBody.linearVelocity, gravityModifier, Time.deltaTime);
     }
 
+    //By Zaid
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isHitting) return;
+        Destroy(gameObject);
+        
+        HealthComponent target = other.GetComponentInParent<HealthComponent>();
+        if (target == null) return;
+        
+        target.TakeDamage(damage);
+    }
+    
+    IEnumerator DelayHitting()
+    {
+        yield return new WaitForSeconds(0.2f);
+        isHitting = true;
+    }
 }
