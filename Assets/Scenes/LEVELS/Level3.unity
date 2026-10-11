@@ -19327,62 +19327,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1295918713584677416, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: shootText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295918713584677416, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: abductText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.atime1
-      value: 1638
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.atime2
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.key2.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.m_ColorSpace
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_Parameters.colorGradient.m_NumAlphaKeys
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: laserAction
-      value: 
+      propertyPath: burstPause
+      value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: shootAction
-      value: 
-      objectReference: {fileID: 11400000, guid: 743deb68b1246c5429207f1c0cec0ea7, type: 2}
-    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: abductAction
-      value: 
-      objectReference: {fileID: 11400000, guid: 2b3a4709001f77e48bce59d5df80ac1e, type: 2}
-    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: shieldAction
-      value: 
-      objectReference: {fileID: 11400000, guid: d33af9a167153254ab85459838f681ca, type: 2}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: planetManager
       value: 
@@ -19391,22 +19339,6 @@ PrefabInstance:
       propertyPath: abductionTarget
       value: 
       objectReference: {fileID: 1165873630}
-    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: blackHoleAction
-      value: 
-      objectReference: {fileID: 11400000, guid: fdd9738cd04a1e548a7f178963c8541e, type: 2}
-    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: multishotAction
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: whiteHoleAction
-      value: 
-      objectReference: {fileID: 11400000, guid: 958010835d15ca44eab2d89fd298e682, type: 2}
-    - target: {fileID: 6693053035532410630, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7115028554574802624, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.23
@@ -19451,8 +19383,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1295918713584677416, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
