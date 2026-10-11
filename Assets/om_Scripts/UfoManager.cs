@@ -76,7 +76,6 @@ public class UfoManager : MonoBehaviour
     {
         if (action == null)
         {
-            Debug.LogError($"Missing PlayerAction for {callback.Method.Name}.", this);
             return;
         }
 
