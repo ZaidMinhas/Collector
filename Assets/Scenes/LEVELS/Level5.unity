@@ -9275,6 +9275,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6855478004669190440, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
+      propertyPath: entityToTrack
+      value:
+      objectReference: {fileID: 33330754}
+    - target: {fileID: 6855478004669190440, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 33330754}
