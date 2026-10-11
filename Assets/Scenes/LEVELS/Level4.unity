@@ -10714,6 +10714,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlanetManager
   planetToOrbit: {fileID: 606662203}
   orbitSpeed: 2
+--- !u!1001 &700000000000004001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 360629830439005799, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825335152432478518, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825335152432478518, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
 --- !u!4 &3779130359580430396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5575804173364051121, guid: de1ac51cf1a21644b88ba20386aca745, type: 3}
@@ -11088,12 +11113,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: music
-      value:
-      objectReference: {fileID: 8300000, guid: 49d44eed17a6d0842b0698dd23bb9126, type: 3}
-    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 49d44eed17a6d0842b0698dd23bb9126, type: 3}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: volume
+      value: 0.682
       objectReference: {fileID: 0}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
@@ -11221,6 +11250,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 700000000000004001}
   - {fileID: 6659840101920734924}
   - {fileID: 1694082254}
   - {fileID: 8894646615142529936}
