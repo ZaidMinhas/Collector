@@ -1,5 +1,11 @@
 # Collector
 
+## Balancing all SFX per scene
+
+Add **Scene Audio Settings** to any active GameObject in the scene, such as an empty object named Audio Settings, and edit **Sfx Volume Multiplier**. The GameUI prefab does not include this component. MainMenu has it on **SceneManagerObj**. Values range from 0 to 4: 0 mutes SFX, 0.5 halves their amplitude, 1 preserves the existing balance, and 2 boosts their amplitude by about 6 dB. Music is unaffected. Save the scene for a level-specific balance and use only one settings component per scene.
+
+The multiplier works live through the SFX mixer, covering normal effects, varied enemy shots, Kidnap, and UI buttons. It stacks with individual effect volumes and the player's global SFX/Master sliders without changing saved preferences. The additive pause menu retains the underlying scene's multiplier. Scenes without settings default to 1. Edits to scene components during Play Mode must be reapplied after stopping and saved.
+
 ## Balancing music per scene
 
 Open a level, expand its GameUI/MenuCanvas/IconsMenuSet object, and select the child named **LevelMusic**. Adjust the **Volume** field on its LevelMusic component from 0 (silent) to 1 (full track volume). Set this on the scene instance to save an override for that level; changing the shared GameUI prefab affects every instance that does not override it. MainMenu's LevelMusic component is on **SceneManagerObj**.

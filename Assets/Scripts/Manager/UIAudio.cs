@@ -73,7 +73,9 @@ namespace Manager
             if (instance.source.outputAudioMixerGroup == null)
                 instance.source.volume *= Mathf.Clamp01(PlayerPrefs.GetFloat("MasterVol", 1f)) *
                     Mathf.Clamp01(PlayerPrefs.GetFloat("SfxVol", 1f));
-            instance.source.PlayOneShot(clip, 0.5f);
+            float sceneGain = instance.source.outputAudioMixerGroup == null
+                ? SceneAudioSettings.CurrentSfxMultiplier : 1f;
+            instance.source.PlayOneShot(clip, 0.5f * sceneGain);
         }
 
         private void OnDestroy()

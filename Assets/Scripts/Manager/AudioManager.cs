@@ -21,6 +21,8 @@ namespace Manager
 
         private readonly System.Collections.Generic.List<AudioSource> shotVoices =
             new System.Collections.Generic.List<AudioSource>();
+        private float globalSfxVolume = 1f;
+        private float lastSfxGain = float.NaN;
 
         void Awake()
         {
@@ -37,6 +39,12 @@ namespace Manager
         void Start()
         {
             LoadVolumeSettings();
+        }
+
+        private void LateUpdate()
+        {
+            // Includes Inspector edits, scene changes, and paused gameplay.
+            ApplySfxMixerGain();
         }
         
         
@@ -87,14 +95,20 @@ namespace Manager
         // Applique et sauvegarde le volume des Effets Sonores (SFX)
         public void SetSfxVolume(float sliderValue)
         {
-            float db = Mathf.Log10(Mathf.Clamp(sliderValue, 0.0001f, 1f)) * 20f;
-            if (audioMixer != null) 
-            {
-                audioMixer.SetFloat("SfxVolume", db);
-            }
+            globalSfxVolume = Mathf.Clamp01(sliderValue);
+            ApplySfxMixerGain();
 
             PlayerPrefs.SetFloat("SfxVol", sliderValue);
             PlayerPrefs.Save();
+        }
+
+        private void ApplySfxMixerGain()
+        {
+            float gain = globalSfxVolume * SceneAudioSettings.CurrentSfxMultiplier;
+            if (audioMixer == null || Mathf.Approximately(gain, lastSfxGain)) return;
+            // Gains above one intentionally boost SFX without changing the saved slider value.
+            float db = Mathf.Log10(Mathf.Max(gain, 0.0001f)) * 20f;
+            if (audioMixer.SetFloat("SfxVolume", db)) lastSfxGain = gain;
         }
         
         // Fonction pour jouer un effet sonore (SFX) facilement depuis n'importe quel script
