@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float damage = 1;
     public float speed = 1;
     private bool isHitting;
+    public bool isDebug;
 
     public Rigidbody2D rBody;
     private Transform owner;
@@ -60,12 +61,14 @@ public class Projectile : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (owner != null && other.transform.IsChildOf(owner)) return;
-        if (!isHitting) return; 
+        if (!isHitting) return;
+
+        if (isDebug)
+        {
+            Debug.Log(gameObject.name + " collided with " + other.name);
+        }
         isHitting = false;
         Destroy(gameObject);
-        
-        
-        
         HealthComponent target = other.GetComponentInParent<HealthComponent>();
         if (target == null) return;
         target.TakeDamage(damage);

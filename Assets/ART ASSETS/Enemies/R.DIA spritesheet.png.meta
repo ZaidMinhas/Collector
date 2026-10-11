@@ -131,12 +131,12 @@ TextureImporter:
       name: R.DIA spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 144
-        width: 60
-        height: 139
+        x: 0
+        y: 145
+        width: 100
+        height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: R.DIA spritesheet_1
       rect:
         serializedVersion: 2
-        x: 103
-        y: 146
-        width: 95
-        height: 136
+        x: 100
+        y: 145
+        width: 100
+        height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: R.DIA spritesheet_2
       rect:
         serializedVersion: 2
-        x: 216
-        y: 148
-        width: 71
-        height: 136
+        x: 200
+        y: 145
+        width: 100
+        height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: R.DIA spritesheet_3
       rect:
         serializedVersion: 2
-        x: 299
-        y: 164
-        width: 95
-        height: 91
+        x: 300
+        y: 145
+        width: 100
+        height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: R.DIA spritesheet_4
       rect:
         serializedVersion: 2
-        x: 25
-        y: 3
-        width: 62
-        height: 136
+        x: 0
+        y: 0
+        width: 100
+        height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: R.DIA spritesheet_5
       rect:
         serializedVersion: 2
-        x: 103
+        x: 100
         y: 0
-        width: 97
-        height: 136
+        width: 100
+        height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 672a55059a6b91243a52a2bd787a635b
     internalID: 0
     vertices: []
     indices: 
@@ -271,7 +271,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":100.0,"y":145.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       R.DIA spritesheet_0: -8841248189855832978
       R.DIA spritesheet_1: -4558109207626304778
