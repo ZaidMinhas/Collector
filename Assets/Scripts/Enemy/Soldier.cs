@@ -48,6 +48,12 @@ public class Soldier : MonoBehaviour
             enabled = false;
             return;
         }
+        // Preserve the outward offset assigned by SoldierSpawner.
+        radius = Mathf.Max(
+            radius,
+            Vector2.Distance(transform.position, PlanetCenter)
+        );
+
         healthComponent.setHealth(soldierConfig.maxHealth);
         //healthComponent.OnDeath += Die;
         

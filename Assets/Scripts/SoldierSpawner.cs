@@ -9,12 +9,14 @@ public class SoldierSpawner : MonoBehaviour
     public Soldier soldierPrefab;
     public Transform player;
     public Transform planet;
+    public float spawnRadiusOffset;
     public List<WaveParameters> waves = new List<WaveParameters>();
     
     [HideInInspector]public bool isGameOver;
     [HideInInspector] public List<Soldier> spawnedSoldiers = new List<Soldier>();
     [HideInInspector] public  int currentWave;
     [HideInInspector] public int MaxEnemyCount = 100;
+    
 
     public bool loopFinalWave = true;
 
@@ -88,7 +90,7 @@ public class SoldierSpawner : MonoBehaviour
             float spawnAngle = Random.Range(0f, Mathf.PI * 2f);
             Vector3 spawnPosition = center + new Vector3(
                 Mathf.Cos(spawnAngle), Mathf.Sin(spawnAngle), 0f
-            ) * radius;
+            ) * (radius + spawnRadiusOffset);
             Quaternion spawnRotation = Quaternion.Euler(
                 0f, 0f, spawnAngle * Mathf.Rad2Deg - 90f
             );
