@@ -749,6 +749,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: music
+      value:
+      objectReference: {fileID: 8300000, guid: 268a0a555018460b8f6e9385cbb5407f, type: 3}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
