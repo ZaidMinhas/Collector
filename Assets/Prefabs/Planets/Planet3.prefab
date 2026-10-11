@@ -14619,6 +14619,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9283befd6840247208587a0f6918bd0a, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6029509393614138455}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9283befd6840247208587a0f6918bd0a, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6216165907679014833}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9283befd6840247208587a0f6918bd0a, type: 3}
       insertIndex: -1
@@ -15863,3 +15866,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 447b03f33f10646649f902bebb6b0188, type: 3}
   m_PrefabInstance: {fileID: 9127958126721747263}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &810830835927769061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6029509393614138455}
+  - component: {fileID: 5646076713880236311}
+  m_Layer: 0
+  m_Name: Particles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6029509393614138455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810830835927769061}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6137254290064881785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5646076713880236311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810830835927769061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6abb09973874357a0ff00c53bc14c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetParticles
+  planet: {fileID: 6137254290064881785}
+  shape: 0
+  pixelsPerUnit: 10
+  rainbow: 0
+  intensity: 1.5
+  sortingOrder: 102
+  atmosphere: 1
+  atmosphereRate: 8
+  atmosphereHeight: 0.2
+  atmosphereDrift: 6
+  atmosphereSize: {x: 1, y: 2}
+  atmosphereLifetime: {x: 3, y: 6}
+  atmosphereOpacity: 0.4
+  belt: 0
+  beltCount: 150
+  beltRadius: {x: 1.7, y: 2.1}
+  beltTilt: 60
+  beltAngle: 0
+  beltThickness: 0.04
+  beltSpeed: 8
+  beltSize: {x: 1, y: 2}
+  spiral: 1
+  spiralRate: 5
+  spiralStartRadius: 2.4
+  spiralSpin: 35
+  spiralPull: 0.3
+  spiralSize: {x: 1, y: 2}
+  sparks: 0
+  sparkInterval: {x: 2.5, y: 5}
+  sparkCount: {x: 5, y: 10}
+  sparkSpeed: 1.5
+  sparkGravity: 2.5
+  sparkSize: {x: 1, y: 2}
+  sparkLifetime: {x: 0.6, y: 1.1}

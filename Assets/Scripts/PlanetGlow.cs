@@ -15,6 +15,10 @@ public class PlanetGlow : MonoBehaviour
     [Min(1f)] public float pixelsPerUnit = 20f;
 
     [Header("Color")]
+    public bool rainbow = false;
+    public float rainbowSpeed = 0.05f;
+    public float rainbowTwist = 0.5f;
+    [Range(0f, 1f)] public float rainbowSaturation = 0.8f;
     public bool matchPlanetColor = true;
     public Color innerColor = new Color(1f, 0.35f, 0.65f);
     public Color outerColor = new Color(0.6f, 0.1f, 0.4f);
@@ -64,6 +68,10 @@ public class PlanetGlow : MonoBehaviour
     static readonly int RayCountId = Shader.PropertyToID("_RayCount");
     static readonly int RaySpeedId = Shader.PropertyToID("_RaySpeed");
     static readonly int RayStrengthId = Shader.PropertyToID("_RayStrength");
+    static readonly int RainbowId = Shader.PropertyToID("_Rainbow");
+    static readonly int RainbowSpeedId = Shader.PropertyToID("_RainbowSpeed");
+    static readonly int RainbowTwistId = Shader.PropertyToID("_RainbowTwist");
+    static readonly int RainbowSaturationId = Shader.PropertyToID("_RainbowSaturation");
 
     void Reset()
     {
@@ -117,7 +125,7 @@ public class PlanetGlow : MonoBehaviour
         if (planet == null) planet = transform.parent;
         if (planet == null || runtimeMaterial == null) return;
 
-        float glowRadius = PlanetRadius() * size;
+        float glowRadius = PlanetPalette.Radius(planet) * size;
         float wave = Application.isPlaying ? Mathf.Sin(Time.time * pulseSpeed * Mathf.PI * 2f) : 0f;
 
         Camera cam = Camera.main;
@@ -157,16 +165,12 @@ public class PlanetGlow : MonoBehaviour
         m.SetFloat(RayCountId, rayCount);
         m.SetFloat(RaySpeedId, raySpeed);
         m.SetFloat(RayStrengthId, rayStrength);
+        m.SetFloat(RainbowId, rainbow ? 1f : 0f);
+        m.SetFloat(RainbowSpeedId, rainbowSpeed);
+        m.SetFloat(RainbowTwistId, rainbowTwist);
+        m.SetFloat(RainbowSaturationId, rainbowSaturation);
 
         meshRenderer.sortingOrder = sortingOrder;
-    }
-
-    float PlanetRadius()
-    {
-        Renderer planetRenderer = planet.GetComponent<Renderer>();
-        if (planetRenderer == null || planetRenderer == meshRenderer) return 1f;
-        Vector3 extents = planetRenderer.bounds.extents;
-        return Mathf.Max(extents.x, extents.y, extents.z);
     }
 
     static void DestroySafe(Object obj)

@@ -43,6 +43,7 @@ public class CrystalOrbit : MonoBehaviour
     public float tumbleSpeed = 0f;
 
     [Header("Ring Color (optional)")]
+    public bool rainbow = false;
     public bool matchPlanetColor = true;
     public bool useColor = false;
     public Gradient colorGradient = DefaultGradient();
@@ -72,8 +73,13 @@ public class CrystalOrbit : MonoBehaviour
 
     Vector3 Center => planet != null ? PlanetPalette.Center(planet) : transform.position;
 
-    public bool UsesColor => matchPlanetColor || useColor;
-    public Gradient RingGradient => matchPlanetColor && UpdatePlanetGradient() ? planetGradient : colorGradient;
+    static Gradient rainbowGradient;
+    static Gradient RainbowGradient => rainbowGradient ??= BuildRainbow();
+
+    public bool UsesColor => rainbow || matchPlanetColor || useColor;
+    public Gradient RingGradient => rainbow ? RainbowGradient
+                                  : matchPlanetColor && UpdatePlanetGradient() ? planetGradient
+                                  : colorGradient;
 
     void Reset()
     {
@@ -338,6 +344,20 @@ public class CrystalOrbit : MonoBehaviour
             Gizmos.DrawLine(previous, next);
             previous = next;
         }
+    }
+
+    static Gradient BuildRainbow()
+    {
+        var keys = new GradientColorKey[8];
+        for (int i = 0; i < keys.Length; i++)
+        {
+            float t = i / (keys.Length - 1f);
+            keys[i] = new GradientColorKey(Color.HSVToRGB(t % 1f, 0.85f, 1f), t);
+        }
+
+        var gradient = new Gradient();
+        gradient.SetKeys(keys, new[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) });
+        return gradient;
     }
 
     static Gradient DefaultGradient()

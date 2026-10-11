@@ -18,6 +18,14 @@ public static class PlanetPalette
         return planetRenderer != null ? planetRenderer.bounds.center : planet.position;
     }
 
+    public static float Radius(Transform planet)
+    {
+        Renderer planetRenderer = planet.GetComponent<Renderer>();
+        if (planetRenderer == null) return 1f;
+        Vector3 extents = planetRenderer.bounds.extents;
+        return Mathf.Max(extents.x, extents.y, extents.z);
+    }
+
     public static bool TryGet(Transform planet, out Colors colors)
     {
         colors = default;
@@ -39,6 +47,10 @@ public static class PlanetPalette
 
         List<Color> samples = SampleTexture(texture, tint);
         samples.Sort((a, b) => Luminance(a).CompareTo(Luminance(b)));
+
+        float floor = Luminance(samples[samples.Count - 1]) * 0.35f;
+        int firstBright = samples.FindIndex(c => Luminance(c) >= floor);
+        if (firstBright > 0) samples.RemoveRange(0, firstBright);
 
         Color Pick(float percentile) => samples[Mathf.RoundToInt((samples.Count - 1) * percentile)];
         colors = new Colors { dark = Pick(0.3f), mid = Pick(0.6f), bright = Pick(0.95f) };

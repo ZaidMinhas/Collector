@@ -19,6 +19,10 @@ Shader "Collector/PlanetGlow"
         _RayCount ("Ray Count", Float) = 6
         _RaySpeed ("Ray Speed", Float) = 0.03
         _RayStrength ("Ray Strength", Range(0, 1)) = 0.3
+        _Rainbow ("Rainbow", Range(0, 1)) = 0
+        _RainbowSpeed ("Rainbow Speed", Float) = 0.05
+        _RainbowTwist ("Rainbow Twist", Float) = 0.5
+        _RainbowSaturation ("Rainbow Saturation", Range(0, 1)) = 0.8
     }
 
     SubShader
@@ -52,6 +56,16 @@ Shader "Collector/PlanetGlow"
             float _RayCount;
             float _RaySpeed;
             float _RayStrength;
+            float _Rainbow;
+            float _RainbowSpeed;
+            float _RainbowTwist;
+            float _RainbowSaturation;
+
+            float3 HueToRgb(float hue, float saturation)
+            {
+                float3 rgb = saturate(abs(frac(hue + float3(0.0, 2.0 / 3.0, 1.0 / 3.0)) * 6.0 - 3.0) - 1.0);
+                return lerp(float3(1.0, 1.0, 1.0), rgb, saturation);
+            }
 
             struct appdata
             {
@@ -98,7 +112,9 @@ Shader "Collector/PlanetGlow"
 
                 a = ceil(a * _Bands) / _Bands;
 
-                float3 color = lerp(_InnerColor.rgb, _OuterColor.rgb, t) * _Intensity;
+                float3 color = lerp(_InnerColor.rgb, _OuterColor.rgb, t);
+                float hue = angle / TAU + t * _RainbowTwist + time * _RainbowSpeed;
+                color = lerp(color, HueToRgb(hue, _RainbowSaturation), _Rainbow) * _Intensity;
                 return float4(color, a * _Opacity);
             }
             ENDCG
