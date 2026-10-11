@@ -750,13 +750,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: music
-      value:
-      objectReference: {fileID: 8300000, guid: 268a0a555018460b8f6e9385cbb5407f, type: 3}
-    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 268a0a555018460b8f6e9385cbb5407f, type: 3}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
@@ -777,6 +777,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: entityToTrack
+      value: 
+      objectReference: {fileID: 6659840101920734925}
     - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: healthComponent
       value: 
@@ -14303,6 +14307,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+      propertyPath: shieldAction
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: planetManager
       value: 
       objectReference: {fileID: 4443247952604459662}
@@ -14310,6 +14318,14 @@ PrefabInstance:
       propertyPath: abductionTarget
       value: 
       objectReference: {fileID: 1551406076}
+    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+      propertyPath: blackHoleAction
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+      propertyPath: whiteHoleAction
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7115028554574802624, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.07

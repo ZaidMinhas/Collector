@@ -11008,6 +11008,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3439439053944739649, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3454198493314499232, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11160,6 +11164,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -840
       objectReference: {fileID: 0}
+    - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: entityToTrack
+      value: 
+      objectReference: {fileID: 6659840101920734925}
     - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: healthComponent
       value: 

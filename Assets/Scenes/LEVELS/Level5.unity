@@ -9483,6 +9483,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3439439053944739649, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3454198493314499232, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9584,13 +9588,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: music
-      value:
-      objectReference: {fileID: 8300000, guid: 45e9c913de2475a4785748020730b970, type: 3}
-    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 45e9c913de2475a4785748020730b970, type: 3}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
       value: IconsMenuSet
@@ -9631,6 +9635,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: entityToTrack
+      value: 
+      objectReference: {fileID: 1619011508}
     - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: healthComponent
       value: 
