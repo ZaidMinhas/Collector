@@ -42,6 +42,11 @@ public class HealthComponent : MonoBehaviour
         }
     }
 
+    public void GiveHealth(float health)
+    {
+        TakeDamage(-health);
+    }
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;

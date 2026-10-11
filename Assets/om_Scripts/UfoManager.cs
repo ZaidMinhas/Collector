@@ -26,6 +26,7 @@ public class UfoManager : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float shotSpeed = 8.0f;
     public float laserDmg = 64f;
+    public float shieldHealthGain = 25;
 
     public int maxLaserDist = 256;
 
@@ -33,6 +34,7 @@ public class UfoManager : MonoBehaviour
 
     private bool showPreviewBeam = false;
     private bool abductSequence = false;
+    private HealthComponent _healthComponent;
 
     [Header("Actions")]
     public PlayerAction shootAction;
@@ -50,6 +52,8 @@ public class UfoManager : MonoBehaviour
 
         if (forceField != null)
             forceField.SetActive(false);
+
+        _healthComponent = GetComponent<HealthComponent>();
     }
 
     private void OnEnable()
@@ -61,11 +65,11 @@ public class UfoManager : MonoBehaviour
         Subscribe(laserAction, FireLaser);
         Subscribe(multishotAction, ShootMultiple);
         Subscribe(shieldAction, ActivateShield);
+    }
 
-        gameObject.GetComponent<HealthComponent>().OnDeath += () =>
-        {
-            FindFirstObjectByType<CircleTransition>().Reload();
-        };
+    void Start()
+    {
+        _healthComponent.OnDeath += () => FindFirstObjectByType<CircleTransition>().Reload(); 
     }
 
     private void OnDisable()
@@ -321,6 +325,7 @@ public class UfoManager : MonoBehaviour
         shieldTimer = 0f;
         shieldMax = durationSeconds;
         shieldOn = true;
+        _healthComponent.GiveHealth(shieldHealthGain);
     }
 
     private void HandleLaser(bool isPreview, float arcRequired)
