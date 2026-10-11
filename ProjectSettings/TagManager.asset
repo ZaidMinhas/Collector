@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - background
-  - middle ground
-  - front ground
+  - Target
+  - 
+  - 
   - 
   - 
   - 
@@ -40,15 +40,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 2348879179
-    locked: 0
-  - name: middle
-    uniqueID: 2186424383
-    locked: 0
-  - name: front
-    uniqueID: 4126688217
     locked: 0
   m_RenderingLayers:
   - Default
