@@ -65,13 +65,13 @@ public class Turret : MonoBehaviour
 
     private void AimAtPlayer()
     {
-        if (player == null || aimPivot == null)
+        if (player == null /*|| aimPivot == null*/)
             return;
-        Vector2 direction = (Vector2)(player.position - aimPivot.position);
+        Vector2 direction = (Vector2)(player.position - transform.position);
         if (direction.sqrMagnitude <= 0.000001f)
             return;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        aimPivot.rotation = Quaternion.Euler(0f, 0f, angle + aimRotationOffset);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle + aimRotationOffset);
     }
 
     public bool CanSeeTarget()
