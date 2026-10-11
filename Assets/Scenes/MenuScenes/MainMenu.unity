@@ -1002,6 +1002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952691242}
   - component: {fileID: 952691241}
+  - component: {fileID: 952691243}
   m_Layer: 0
   m_Name: SceneManagerObj
   m_TagString: Untagged
@@ -1021,6 +1022,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc88972063f20b42b35903cb6a22f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Manager.SceneLoader
+--- !u!114 &952691243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952691240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c963c1ba1d6476544ba87d50d6ea72dd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::LevelMusic
+  music: {fileID: 8300000, guid: 3c49ac97637f48c45a571ceb104016e5, type: 3}
+  loop: 1
 --- !u!4 &952691242
 Transform:
   m_ObjectHideFlags: 0

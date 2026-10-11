@@ -67,6 +67,7 @@ namespace Manager
 
             busy = true;
             paused = true;
+            UIAudio.PlayCool();
             previousTimeScale = Time.timeScale;
             gameplayScene = SceneManager.GetActiveScene();
             Time.timeScale = 0f;
@@ -113,6 +114,7 @@ namespace Manager
                     if (!isBackButton) continue;
                     button.onClick = new Button.ButtonClickedEvent();
                     button.onClick.AddListener(Resume);
+                    UIAudio.Attach(button).SetHandledByAction();
                     var label = button.GetComponentInChildren<TMP_Text>(true);
                     if (label != null) label.text = "RESUME";
                 }
@@ -122,6 +124,7 @@ namespace Manager
         public void Resume()
         {
             if (!paused || busy) return;
+            if (!closeRequested) UIAudio.PlayUncool();
             StartCoroutine(Close());
         }
 

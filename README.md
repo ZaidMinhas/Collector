@@ -2,6 +2,8 @@
 
 ## Pause menu
 
+All Unity UI Buttons automatically play `Assets/Resources/Sfx/cool button press.ogg`, including keyboard/controller submission. Escape opening the pause menu uses the same sound; Escape or Resume closing it uses `uncool button press.ogg` instead, once per action. UI sounds persist through scene changes and follow the SFX and Master volumes. Sliders are not Buttons and do not trigger a button click sound.
+
 Press **Escape** to open the existing OptionSetting screen over the current scene. Gameplay and player actions pause while the Master, Music, and SFX sliders remain usable. Press **Escape** again or click **Resume** to return without reloading the level. The menu is created automatically, including when starting a level directly in the editor; no prefab setup is needed. OptionSetting must remain enabled in the build scene list.
 
 Opening options normally from MainMenu keeps its existing Back behavior. During a tutorial intro, closing the pause menu restores the intro's paused state; the blink and fade resume where they stopped. Music continues while paused so its volume can be adjusted.
