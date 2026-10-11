@@ -13,8 +13,6 @@ public class UniverseManager : MonoBehaviour
 
     private static UniverseManager _universe;
 
-    private static int currentLevel = 1;
-
     private void Awake()
     {
         _universe = this;

@@ -69,7 +69,7 @@ public class Projectile : MonoBehaviour
         }
         isHitting = false;
         Destroy(gameObject);
-        HealthComponent target = other.GetComponentInParent<HealthComponent>();
+        HealthComponent target = other.gameObject.GetComponent<HealthComponent>();
         if (target == null) return;
         target.TakeDamage(damage);
     }
