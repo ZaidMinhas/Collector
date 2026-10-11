@@ -129,7 +129,7 @@ public class Turret : MonoBehaviour
                 else
                 {
                     // Ordinary projectiles use the shared non-homing settings.
-                    shot.SetOwner(transform);
+                    //shot.SetOwner(transform);
                     shot.affectedByGravity = config.affectedByGravity;
                     shot.gravityModifier = config.gravityModifier;
                     shot.Launch(angle, new BulletConfig

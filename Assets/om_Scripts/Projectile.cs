@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     public float speed = 1;
     private bool isHitting;
 
-    private Rigidbody2D rBody;
+    public Rigidbody2D rBody;
 
     private void Awake()
     {
@@ -17,9 +17,14 @@ public class Projectile : MonoBehaviour
         rBody.gravityScale = 0f;
     }
 
-    private void Start()
+    protected void Start()
     {
         StartCoroutine(DelayHitting());
+    }
+
+    protected void FixedUpdate()
+    {
+        
     }
 
     public void SetVelocity(float angle)
@@ -32,6 +37,7 @@ public class Projectile : MonoBehaviour
         float radians = angle * Mathf.Deg2Rad;
         Vector3 velocity = new Vector3(Mathf.Cos(radians), Mathf.Sin(radians), 0f) * speed;
         rBody.linearVelocity = velocity;
+        transform.up = velocity;
     }
 
     public void Launch(float angle, BulletConfig bulletConfig)
@@ -45,6 +51,7 @@ public class Projectile : MonoBehaviour
         if (!affectedByGravity) return;
         rBody.linearVelocity = UniverseManager.Universe().UpdateVelocityForBody(
             transform.position, rBody.linearVelocity, gravityModifier, Time.deltaTime);
+        transform.up = rBody.linearVelocity;
     }
 
     //By Zaid
