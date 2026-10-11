@@ -18336,6 +18336,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e517e10953aa53f479459202ad3a88f4, type: 3}
+--- !u!114 &1165873630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8755616921780044106, guid: e517e10953aa53f479459202ad3a88f4, type: 3}
+  m_PrefabInstance: {fileID: 1165873629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e16edbe8b7f174f80395d473ab5346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetLeaderManager
 --- !u!4 &1172088421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7115028554574802624, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
@@ -19015,7 +19026,7 @@ PrefabInstance:
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: abductionTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1165873630}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: blackHoleAction
       value: 
@@ -19139,7 +19150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081565451780079449, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_fontSize
-      value: 32.1
+      value: 34.4
       objectReference: {fileID: 0}
     - target: {fileID: 4121487168893646323, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Pivot.x
