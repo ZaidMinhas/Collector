@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 850bacfe54974454c974f8fadbff3be2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -874638611161869057
+    second: White-hole-spritesheet_0
+  - first:
+      213: -1230254696403783811
+    second: White-hole-spritesheet_1
+  - first:
+      213: 5125061973222438434
+    second: White-hole-spritesheet_2
+  - first:
+      213: -1727739750250108291
+    second: White-hole-spritesheet_3
+  - first:
+      213: -6027091405177408293
+    second: White-hole-spritesheet_4
+  - first:
+      213: 3666634005233555478
+    second: White-hole-spritesheet_5
+  - first:
+      213: 7808864822753507848
+    second: White-hole-spritesheet_6
+  - first:
+      213: 4174835400591085361
+    second: White-hole-spritesheet_7
+  - first:
+      213: -7292832190831444134
+    second: White-hole-spritesheet_8
+  - first:
+      213: -6059606002329984940
+    second: White-hole-spritesheet_9
+  - first:
+      213: 1871652209951857535
+    second: White-hole-spritesheet_10
+  - first:
+      213: 5634738323658962240
+    second: White-hole-spritesheet_11
+  - first:
+      213: -2926654483329498934
+    second: White-hole-spritesheet_12
+  - first:
+      213: 8117640638241299428
+    second: White-hole-spritesheet_13
+  - first:
+      213: 4590748416635319134
+    second: White-hole-spritesheet_14
+  - first:
+      213: 3586095974746936108
+    second: White-hole-spritesheet_15
+  - first:
+      213: -394486628785528212
+    second: White-hole-spritesheet_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: White-hole-spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff41bd231d8acd3f0800000000000000
+      internalID: -874638611161869057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 136
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fa89d2fd14deee0800000000000000
+      internalID: -1230254696403783811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 104
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22639cdf5b0ef1740800000000000000
+      internalID: 5125061973222438434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 68
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a2502e9d5d508e0800000000000000
+      internalID: -1727739750250108291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 120
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd43795cc487b5ca0800000000000000
+      internalID: -6027091405177408293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 122
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 618505b733082e230800000000000000
+      internalID: 3666634005233555478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 117
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a3443ee29ae5c60800000000000000
+      internalID: 7808864822753507848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 108
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f05f77daeffe930800000000000000
+      internalID: 4174835400591085361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 97
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f35f2f2c7aaca90800000000000000
+      internalID: -7292832190831444134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 74
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450eb403274f7eba0800000000000000
+      internalID: -6059606002329984940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 86
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b514db4c179f910800000000000000
+      internalID: 1871652209951857535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 71
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045f8f7b6ac923e40800000000000000
+      internalID: 5634738323658962240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 66
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac047d4e04f6267d0800000000000000
+      internalID: -2926654483329498934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 63
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebd5a0c627a7a070800000000000000
+      internalID: 8117640638241299428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 67
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e533cb2bc5d95bf30800000000000000
+      internalID: 4590748416635319134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23df310a4f54c130800000000000000
+      internalID: 3586095974746936108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White-hole-spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 44
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c62e89e4080868af0800000000000000
+      internalID: -394486628785528212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      White-hole-spritesheet_0: -874638611161869057
+      White-hole-spritesheet_1: -1230254696403783811
+      White-hole-spritesheet_10: 1871652209951857535
+      White-hole-spritesheet_11: 5634738323658962240
+      White-hole-spritesheet_12: -2926654483329498934
+      White-hole-spritesheet_13: 8117640638241299428
+      White-hole-spritesheet_14: 4590748416635319134
+      White-hole-spritesheet_15: 3586095974746936108
+      White-hole-spritesheet_16: -394486628785528212
+      White-hole-spritesheet_2: 5125061973222438434
+      White-hole-spritesheet_3: -1727739750250108291
+      White-hole-spritesheet_4: -6027091405177408293
+      White-hole-spritesheet_5: 3666634005233555478
+      White-hole-spritesheet_6: 7808864822753507848
+      White-hole-spritesheet_7: 4174835400591085361
+      White-hole-spritesheet_8: -7292832190831444134
+      White-hole-spritesheet_9: -6059606002329984940
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
