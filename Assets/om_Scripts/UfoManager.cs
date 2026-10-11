@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -28,6 +29,8 @@ public class UfoManager : MonoBehaviour
     public int maxLaserDist = 256;
 
     private Vector3 directionToPlanet = Vector3.zero;
+
+    private bool showPreviewBeam = false;
 
     [Header("Actions")]
     public PlayerAction shootAction;
@@ -110,10 +113,14 @@ public class UfoManager : MonoBehaviour
 
         // used below a bunch
         directionToPlanet = (planetManager.transform.position - transform.position).normalized;
+        UniverseManager uM = UniverseManager.Universe();
 
         // MOVEMENT
 
         HandleMovement(directionToPlanet);
+
+        // CANCEL FURTHER ACTIONS IF SHIELD ON
+        if (shieldOn) return;
 
         // PROJECTILES
 
@@ -121,17 +128,22 @@ public class UfoManager : MonoBehaviour
         {
             shootAction.UseAction();
         }
-        if (PathShow()) HandleLaser(true, 1.5f);
-        if (PathHide()) previewBeam.positionCount = 0;
+
+        if (PathShowHide())
+        {
+            if (showPreviewBeam) { previewBeam.positionCount = 0; showPreviewBeam = false; }
+            else { showPreviewBeam = true; }
+        }
+        if (showPreviewBeam) HandleLaser(true, 1.5f);
 
         // MASS PLACEMENT
 
-        if (PlaceMass())
+        if (PlaceMass() && !uM.AtCapacity())
         {
             blackHoleAction.UseAction();
         }
 
-        if (PlaceNegMass())
+        if (PlaceNegMass() && !uM.AtCapacity())
         {
             whiteHoleAction.UseAction();
         }
@@ -239,6 +251,12 @@ public class UfoManager : MonoBehaviour
         if (shieldOn) return;
         StaticMass placeable = negativeMass ? placeableNegMass : placeableMass;
         StaticMass sm = Instantiate(placeable.gameObject).GetComponent<StaticMass>();
+        MortalEntity mort = sm.gameObject.GetComponent<MortalEntity>();
+        if (mort != null)
+        {
+            mort.lifetime = negativeMass ? whiteHoleAction.lifeTime : blackHoleAction.lifeTime;
+            mort.StartTimer();
+        }
         sm.gameObject.transform.position = transform.position + directionToPlanet * 0.75f;
         UniverseManager.Universe().allMasses.Add(sm);
     }
@@ -299,12 +317,26 @@ public class UfoManager : MonoBehaviour
         {
             // TODO
             // linear search of all enemies to damage along the laser line
-            // ...
+            if (!isPreview)
+            {
+                List<DestroyableEnemy> toDmg = new();
+                foreach (DestroyableEnemy e in u.allEnemies)
+                {
+                    if (e == null) continue;
+                    Collider2D c = e.gameObject.GetComponent<Collider2D>();
+                    if (c != null && c.OverlapPoint(pos) && !e.isBoss)
+                    { toDmg.Add(e); }
+                }
+                foreach (DestroyableEnemy e in toDmg) 
+                    e.gameObject.GetComponent<HealthComponent>().TakeDamage(64f);
+            }
+
 
             // if inside a mass, stop the line draw 
             bool collide = false;
             foreach (StaticMass m in u.allMasses)
             {
+                if (m == null) continue;
                 CircleCollider2D c = m.gameObject.GetComponent<CircleCollider2D>();
                 if (c != null && c.OverlapPoint(pos))
                 { collide = true; break; }
@@ -372,9 +404,7 @@ public class UfoManager : MonoBehaviour
 
     private bool Shoot() => Input.GetKeyDown(KeyCode.Mouse0);
 
-    private bool PathShow() => Input.GetKey(KeyCode.Mouse1);
-
-    private bool PathHide() => Input.GetKeyUp(KeyCode.Mouse1);
+    private bool PathShowHide() => Input.GetKeyDown(KeyCode.Mouse1);
 
     private bool Abduct() => Input.GetKeyDown(KeyCode.Space);
 

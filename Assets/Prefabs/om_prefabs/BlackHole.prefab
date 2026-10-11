@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1983769735044260198}
   - component: {fileID: 3419993410288163112}
   - component: {fileID: 5848883379352543754}
+  - component: {fileID: 4258237669594238812}
   m_Layer: 0
   m_Name: BlackHole
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.123, y: 208.228, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -166,3 +167,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4258237669594238812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694172418226505701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4662bf6ccf872e4dafc822ac8bbe0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MortalEntity
+  lifetime: 2
+  lifeframes: 100
+  timerState: 0

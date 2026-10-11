@@ -49,7 +49,7 @@ public class Soldier : MonoBehaviour
             return;
         }
         healthComponent.setHealth(soldierConfig.maxHealth);
-        healthComponent.OnDeath += Die;
+        //healthComponent.OnDeath += Die;
         
         searchRangeOffset = soldierConfig.searchRangeAngle + Random.Range(-20, 20);
 
@@ -196,9 +196,9 @@ public class Soldier : MonoBehaviour
         spriteRenderer.flipX = lastDir < 0f;
     }
     
-
+    /*
     public void Die()
     {
         Destroy(gameObject);
-    }
+    }*/
 }

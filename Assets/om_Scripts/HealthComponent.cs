@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
-    
+
     public float defaultMaxHealth;
     public float currentHealth;
     public bool isDestroyedOnDeath = false;
@@ -26,8 +26,12 @@ public class HealthComponent : MonoBehaviour
     {
         if (isDestroyedOnDeath)
         {
-            OnDeath += () => Destroy(gameObject);
-            
+            OnDeath += () =>
+            {
+                if (gameObject.GetComponent<DestroyableEnemy>() != null) gameObject.GetComponent<DestroyableEnemy>().Kill();
+                else Destroy(gameObject);
+            };
+
         }
 
         if (isDebugMode)
