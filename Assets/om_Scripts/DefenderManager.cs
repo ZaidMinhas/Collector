@@ -20,15 +20,13 @@ public class DefenderManager : MonoBehaviour
         System.Random rng = new();
         moveDir = (rng.NextDouble() < 0.5f) ? 1.0f : -1.0f;
         movementSpeed += 2f * (float)rng.NextDouble();
-        defendRange += (float)rng.NextDouble()*1.5f;
+        defendRange += (float)rng.NextDouble() * 1.5f;
         FaceMoveDir();
     }
 
 
     private void Update()
     {
-        if (leader == null) return;
-
         Vector3 directionToPlanet = (planet.transform.position - transform.position).normalized;
 
         // MOVEMENT
@@ -42,7 +40,8 @@ public class DefenderManager : MonoBehaviour
         moveOffset *= Time.deltaTime * speed;
 
         Vector3 moveTo = transform.position + (moveDir * moveOffset);
-        float distToLeader = (leader.transform.position - transform.position).magnitude;
+        float distToLeader = (leader != null)
+            ? (leader.transform.position - transform.position).magnitude : 1024f;
 
         if (!defendPass && (distToLeader < defendRange))
         {
@@ -70,7 +69,7 @@ public class DefenderManager : MonoBehaviour
 
     private void FaceMoveDir()
     {
-        transform.localScale = new(Mathf.Abs(transform.localScale.x) * -moveDir, 
+        transform.localScale = new(Mathf.Abs(transform.localScale.x) * -moveDir,
             transform.localScale.y, transform.localScale.z);
 
     }

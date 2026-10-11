@@ -88,8 +88,8 @@ public class UfoManager : MonoBehaviour
 
     private void ShootSingle() => HandleShooting(1, 0f);
     private void ShootMultiple() => HandleShooting(8, 45f);
-    private void PlaceBlackHole() => HandleMassPlacement(directionToPlanet, true);
-    private void PlaceWhiteHole() => HandleMassPlacement(directionToPlanet, false);
+    private void PlaceBlackHole() => HandleMassPlacement(directionToPlanet, false);
+    private void PlaceWhiteHole() => HandleMassPlacement(directionToPlanet, true);
     private void FireLaser() => HandleLaser(false, 1.5f);
     private void ActivateShield() => HandleShield(shieldAction.lifeTime);
 
@@ -251,8 +251,16 @@ public class UfoManager : MonoBehaviour
         // find and destroy target
         if (abductionTarget != null)
         {
-            if ((abductionTarget.transform.position - transform.position).magnitude < 1f)
+            if ((abductionTarget.transform.position - transform.position).magnitude < 2f)
             {
+                bool nearbyEnemies = false;
+                foreach (DestroyableEnemy e in UniverseManager.Universe().allEnemies)
+                {
+                    if (e == null) continue;
+                    if ((e.transform.position - abductionTarget.transform.position).magnitude < 4f)
+                    { nearbyEnemies = true; break; }
+                }
+                if (nearbyEnemies) return;
                 Bounds bounds = abductionTarget.GetComponent<Renderer>().bounds;
                 Vector3 ufoPos = transform.position;
                 Vector3 planetPos = planetManager.transform.position;
@@ -260,7 +268,6 @@ public class UfoManager : MonoBehaviour
                 if (bounds.IntersectRay(new(ufoPos, dir)))
                 {
                     Destroy(abductionTarget.gameObject);
-                    gameObject.GetComponent<BidenBlast>().abductText.enabled = true;
                 }
             }
         }

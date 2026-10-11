@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3419993410288163112}
   - component: {fileID: 5848883379352543754}
   m_Layer: 0
-  m_Name: default_red
+  m_Name: BlackHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b1db2a3ad70dc4b9966addbd4631bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StaticMass
-  mass: -4
+  mass: 4
   rExponent: 3
 --- !u!95 &5848883379352543754
 Animator:
