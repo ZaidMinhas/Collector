@@ -59,6 +59,11 @@ public class UfoManager : MonoBehaviour
         Subscribe(laserAction, FireLaser);
         Subscribe(multishotAction, ShootMultiple);
         Subscribe(shieldAction, ActivateShield);
+
+        gameObject.GetComponent<HealthComponent>().OnDeath += () =>
+        {
+            FindFirstObjectByType<CircleTransition>().Reload();
+        };
     }
 
     private void OnDisable()
@@ -285,6 +290,7 @@ public class UfoManager : MonoBehaviour
                 if (bounds.IntersectRay(new(ufoPos, dir)))
                 {
                     Destroy(abductionTarget.gameObject);
+                    FindFirstObjectByType<CircleTransition>().Progress();
                 }
             }
         }
@@ -326,7 +332,7 @@ public class UfoManager : MonoBehaviour
                     if (c != null && c.OverlapPoint(pos) && !e.isBoss)
                     { toDmg.Add(e); }
                 }
-                foreach (DestroyableEnemy e in toDmg) 
+                foreach (DestroyableEnemy e in toDmg)
                     e.gameObject.GetComponent<HealthComponent>().TakeDamage(64f);
             }
 
