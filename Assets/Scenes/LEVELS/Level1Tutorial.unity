@@ -645,6 +645,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3439439053944739649, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3454198493314499232, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -761,6 +765,23 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: healthComponent
+      value: 
+      objectReference: {fileID: 6659840101920734925}
+    - target: {fileID: 6051168631428581819, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_text
+      value: 'Welcome, you are on a quest to collect the greatest minds in the galaxy
+        to craft your arsenal of weapons.
+
+
+        To move, press A/D to orbit the
+        planet, and W/S to change altitude.
+
+
+        Press LMB to shoot hostiles,
+        and hold SPACE to abduct your target'
+      objectReference: {fileID: 0}
     - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -768,6 +789,18 @@ PrefabInstance:
     - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -590
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14320,6 +14353,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+--- !u!114 &6659840101920734925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 444699534328019186, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+  m_PrefabInstance: {fileID: 6659840101920734924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
 --- !u!114 &6738740491530611930
 MonoBehaviour:
   m_ObjectHideFlags: 0
