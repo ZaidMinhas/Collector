@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetManager
   planetToOrbit: {fileID: 8761595040741567589}
-  orbitSpeed: 0.5
+  orbitSpeed: 1
 --- !u!114 &1871691574259610429
 MonoBehaviour:
   m_ObjectHideFlags: 0
