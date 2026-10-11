@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
     public bool affectedByGravity = true;
@@ -10,16 +9,15 @@ public class Projectile : MonoBehaviour
     public float speed = 1;
     private bool isHitting;
 
-    protected Rigidbody2D rBody;
-    private Transform owner;
+    private Rigidbody2D rBody;
 
-    protected virtual void Awake()
+    private void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
         rBody.gravityScale = 0f;
     }
 
-    protected virtual void Start()
+    private void Start()
     {
         StartCoroutine(DelayHitting());
     }
@@ -39,29 +37,20 @@ public class Projectile : MonoBehaviour
     public void Launch(float angle, BulletConfig bulletConfig)
     {
         this.damage = bulletConfig.damage;
-        this.speed = bulletConfig.speed;
         SetVelocity(angle, bulletConfig.speed);
     }
 
-    public void SetOwner(Transform shooter)
-    {
-        owner = shooter;
-    }
-
-    protected virtual void FixedUpdate()
+    private void Update()
     {
         if (!affectedByGravity) return;
-        if (UniverseManager.Universe() == null) return;
         rBody.linearVelocity = UniverseManager.Universe().UpdateVelocityForBody(
-            transform.position, rBody.linearVelocity, gravityModifier, Time.fixedDeltaTime);
+            transform.position, rBody.linearVelocity, gravityModifier, Time.deltaTime);
     }
 
     //By Zaid
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!isHitting) return;
-        if (owner != null && other.transform.IsChildOf(owner)) return;
-        isHitting = false;
         Destroy(gameObject);
         
         HealthComponent target = other.GetComponentInParent<HealthComponent>();

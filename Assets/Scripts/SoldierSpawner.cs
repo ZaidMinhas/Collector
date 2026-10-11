@@ -83,7 +83,7 @@ public class SoldierSpawner : MonoBehaviour
             );
 
             Soldier soldier = Instantiate(
-                soldierPrefab, spawnPosition, spawnRotation, planet
+                soldierPrefab, spawnPosition, spawnRotation, transform
             );
             soldier.Init(planet, player);
             spawnedSoldiers.Add(soldier);
