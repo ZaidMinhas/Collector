@@ -94,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,10 +105,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,7 +132,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -174,11 +174,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 63
+        y: 64
         width: 64
-        height: 62
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: Black-hole-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 23
-        y: 123
-        width: 10
-        height: 5
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: Black-hole-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 123
-        width: 11
-        height: 5
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: Black-hole-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 66
-        y: 104
-        width: 15
-        height: 21
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,12 +261,12 @@ TextureImporter:
       name: Black-hole-spritesheet_4
       rect:
         serializedVersion: 2
-        x: 83
-        y: 120
-        width: 14
-        height: 8
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,341 +279,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 122
-        width: 16
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0058c6c7ea28c5050800000000000000
-      internalID: 5790646906815022336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 117
-        width: 16
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b97ef7ded1d93e30800000000000000
-      internalID: 4483845659060763061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 63
-        width: 129
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fd82e75301866f60800000000000000
-      internalID: 8027245237193838073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 108
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b761d7c230a41cbb0800000000000000
-      internalID: -4917567940620118405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 68
-        width: 55
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afb2339d3fa316f10800000000000000
-      internalID: 2261153306912173050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 108
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fedbf48fee6643a0800000000000000
-      internalID: -6681531022150213901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 97
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5438a718b323a390800000000000000
-      internalID: -7808358055352454054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 82
-        width: 8
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90fe3a8c9b486cb70800000000000000
-      internalID: 8918962045523848969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 74
-        width: 6
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bb214f02d05931e0800000000000000
-      internalID: -2217652478373975120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 86
-        width: 6
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7019c53e6ebadb970800000000000000
-      internalID: 8772356657332916487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 71
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 885d930d2a3e69ed0800000000000000
-      internalID: -2407486662365293176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_16
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 66
-        width: 13
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2c7c27cb6ffe9600800000000000000
-      internalID: 477099448916016175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 63
-        width: 23
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee2167cf80708cd60800000000000000
-      internalID: 7910580480653005550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 67
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 383e1c148fee6dab0800000000000000
-      internalID: -4983533187616349309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Black-hole-spritesheet_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6f601668db636e60800000000000000
-      internalID: 7954319944035889007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -621,28 +291,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Black-hole-spritesheet_0: 4043613593131394261
       Black-hole-spritesheet_1: -1545604517346429315
-      Black-hole-spritesheet_10: -6681531022150213901
-      Black-hole-spritesheet_11: -7808358055352454054
-      Black-hole-spritesheet_12: 8918962045523848969
-      Black-hole-spritesheet_13: -2217652478373975120
-      Black-hole-spritesheet_14: 8772356657332916487
-      Black-hole-spritesheet_15: -2407486662365293176
-      Black-hole-spritesheet_16: 477099448916016175
-      Black-hole-spritesheet_17: 7910580480653005550
-      Black-hole-spritesheet_18: -4983533187616349309
-      Black-hole-spritesheet_19: 7954319944035889007
       Black-hole-spritesheet_2: 651108840996438042
       Black-hole-spritesheet_3: 3650317172226086133
       Black-hole-spritesheet_4: -6030628909943066080
-      Black-hole-spritesheet_5: 5790646906815022336
-      Black-hole-spritesheet_6: 4483845659060763061
-      Black-hole-spritesheet_7: 8027245237193838073
-      Black-hole-spritesheet_8: -4917567940620118405
-      Black-hole-spritesheet_9: 2261153306912173050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

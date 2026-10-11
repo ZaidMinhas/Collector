@@ -1,6 +1,9 @@
 using System;
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class UfoManager : MonoBehaviour
 {
@@ -24,21 +27,89 @@ public class UfoManager : MonoBehaviour
 
     public int maxLaserDist = 256;
 
-    private void Start()
+    private Vector3 directionToPlanet = Vector3.zero;
+
+    [Header("Actions")]
+    public PlayerAction shootAction;
+    public PlayerAction abductAction;
+    public PlayerAction blackHoleAction;
+    public PlayerAction whiteHoleAction;
+    public PlayerAction laserAction;
+    public PlayerAction multishotAction;
+    public PlayerAction shieldAction;
+
+    private void Awake()
     {
-        abductionBeam.SetActive(false);
-        forceField.SetActive(false);
+        if (abductionBeam != null)
+            abductionBeam.SetActive(false);
+
+        if (forceField != null)
+            forceField.SetActive(false);
     }
+
+    private void OnEnable()
+    {
+        Subscribe(shootAction, ShootSingle);
+        Subscribe(abductAction, HandleAbduction);
+        Subscribe(blackHoleAction, PlaceBlackHole);
+        Subscribe(whiteHoleAction, PlaceWhiteHole);
+        Subscribe(laserAction, FireLaser);
+        Subscribe(multishotAction, ShootMultiple);
+        Subscribe(shieldAction, ActivateShield);
+    }
+
+    private void OnDisable()
+    {
+        Unsubscribe(shootAction, ShootSingle);
+        Unsubscribe(abductAction, HandleAbduction);
+        Unsubscribe(blackHoleAction, PlaceBlackHole);
+        Unsubscribe(whiteHoleAction, PlaceWhiteHole);
+        Unsubscribe(laserAction, FireLaser);
+        Unsubscribe(multishotAction, ShootMultiple);
+        Unsubscribe(shieldAction, ActivateShield);
+    }
+
+    private void Subscribe(PlayerAction action, Action callback)
+    {
+        if (action == null)
+        {
+            Debug.LogError($"Missing PlayerAction for {callback.Method.Name}.", this);
+            return;
+        }
+
+        action.OnUsePass += callback;
+    }
+
+    private void Unsubscribe(PlayerAction action, Action callback)
+    {
+        if (action != null)
+            action.OnUsePass -= callback;
+    }
+
+    private void ShootSingle() => HandleShooting(1, 0f);
+    private void ShootMultiple() => HandleShooting(8, 45f);
+    private void PlaceBlackHole() => HandleMassPlacement(directionToPlanet, false);
+    private void PlaceWhiteHole() => HandleMassPlacement(directionToPlanet, true);
+    private void FireLaser() => HandleLaser(false, 1.5f);
+    private void ActivateShield() => HandleShield(shieldAction.lifeTime);
 
     void Update()
     {
+        if (shootAction != null) shootAction.TickCooldown();
+        if (abductAction != null) abductAction.TickCooldown();
+        if (blackHoleAction != null) blackHoleAction.TickCooldown();
+        if (whiteHoleAction != null) whiteHoleAction.TickCooldown();
+        if (laserAction != null) laserAction.TickCooldown();
+        if (multishotAction != null) multishotAction.TickCooldown();
+        if (shieldAction != null) shieldAction.TickCooldown();
+
         if (defaultProjectile == null) return;
         if (planetManager == null) return;
         if (placeableMass == null) return;
         if (placeableNegMass == null) return;
 
         // used below a bunch
-        Vector3 directionToPlanet = (planetManager.transform.position - transform.position).normalized;
+        directionToPlanet = (planetManager.transform.position - transform.position).normalized;
 
         // MOVEMENT
 
@@ -46,31 +117,47 @@ public class UfoManager : MonoBehaviour
 
         // PROJECTILES
 
-        if (Shoot()) HandleShooting(1, 0f);
+        if (Shoot())
+        {
+            shootAction.UseAction();
+        }
         if (PathShow()) HandleLaser(true, 1.5f);
         if (PathHide()) previewBeam.positionCount = 0;
 
         // MASS PLACEMENT
 
-        if (PlaceMass()) HandleMassPlacement(directionToPlanet, false);
-        if (PlaceNegMass()) HandleMassPlacement(directionToPlanet, true);
+        if (PlaceMass())
+        {
+            blackHoleAction.UseAction();
+        }
+
+        if (PlaceNegMass())
+        {
+            whiteHoleAction.UseAction();
+        }
 
         // ABDUCTION
 
-        if (Abduct()) HandleAbduction();
+        if (Abduct())
+        {
+            abductAction.UseAction();
+        }
         if (EndAbduct()) abductionBeam.SetActive(false);
 
         // SHIELD
 
-        if (Shield()) HandleShield(2f);
+        if (Shield())
+        {
+            shieldAction.UseAction();
+        }
 
         // LASER
 
-        if (Laser()) HandleLaser(false, 1.5f);
+        if (Laser()) laserAction.UseAction();
 
         // MULTISHOT
 
-        if (Multishot()) HandleShooting(8, 45f);
+        if (Multishot()) multishotAction.UseAction();
 
     }
 

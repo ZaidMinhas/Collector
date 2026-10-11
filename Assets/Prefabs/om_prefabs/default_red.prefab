@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3267616503061954884}
   - component: {fileID: 1983769735044260198}
   - component: {fileID: 3419993410288163112}
+  - component: {fileID: 5848883379352543754}
   m_Layer: 0
   m_Name: default_red
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.123, y: 208.228, z: 0}
-  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7987649538029329488, guid: f2c16869d49a3a445b361bd8933b2890, type: 3}
+  m_Sprite: {fileID: 4043613593131394261, guid: 2858d5a07db38f849bd527579398853a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +129,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.56
+  m_Radius: 0.31311896
 --- !u!114 &3419993410288163112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +144,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StaticMass
   mass: -4
   rExponent: 3
+--- !u!95 &5848883379352543754
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694172418226505701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e0b311987531fb42bae3a5b47a197b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
