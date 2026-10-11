@@ -10,6 +10,7 @@ public class HealthComponent : MonoBehaviour
     public bool isDebugMode;
 
     public Action OnTakeDamage;
+    public Action<float> OnHealthChange;
     public Action OnDeath;
 
     public void Awake()
@@ -19,7 +20,7 @@ public class HealthComponent : MonoBehaviour
 
     public void setHealth(float health)
     {
-        this.currentHealth = health;
+        this.currentHealth = defaultMaxHealth =  health;
     }
 
     public void Start()
@@ -45,6 +46,7 @@ public class HealthComponent : MonoBehaviour
     {
         currentHealth -= damage;
         OnTakeDamage?.Invoke();
+        OnHealthChange?.Invoke(currentHealth/defaultMaxHealth);
 
         if (currentHealth <= 0)
         {
