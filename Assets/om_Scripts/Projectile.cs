@@ -60,10 +60,11 @@ public class Projectile : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (owner != null && other.transform.IsChildOf(owner)) return;
+        if (!isHitting) return; 
+        isHitting = false;
         Destroy(gameObject);
         
-        if (!isHitting) return;
-        isHitting = false;
+        
         
         HealthComponent target = other.GetComponentInParent<HealthComponent>();
         if (target == null) return;
