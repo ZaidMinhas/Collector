@@ -9276,7 +9276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855478004669190440, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
       propertyPath: entityToTrack
-      value:
+      value: 
       objectReference: {fileID: 33330754}
     - target: {fileID: 6855478004669190440, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
       propertyPath: healthComponent
@@ -9309,6 +9309,31 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4121487168893646323, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
   m_PrefabInstance: {fileID: 8894646615142529936}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &700000000000004001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 360629830439005799, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825335152432478518, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825335152432478518, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
 --- !u!1001 &6659840101920734924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9360,6 +9385,10 @@ PrefabInstance:
     - target: {fileID: 2807354672236227366, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: m_Parameters.colorGradient.m_NumAlphaKeys
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+      propertyPath: laserDmg
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: moveSpeed
@@ -9732,31 +9761,6 @@ PrefabInstance:
       addedObject: {fileID: 1818133730}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
---- !u!1001 &700000000000004001
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 360629830439005799, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825335152432478518, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825335152432478518, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18ce4282bff623b49b4b8dbfcd9c14ba, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

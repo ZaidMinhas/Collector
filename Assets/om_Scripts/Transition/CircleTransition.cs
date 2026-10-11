@@ -129,6 +129,7 @@ public class CircleTransition : MonoBehaviour
 
     public void Reload()
     {
+        if (currentLevel > 5) currentLevel = 5;
         GoToNextLevel("Level" + currentLevel);
     }
 
@@ -136,7 +137,7 @@ public class CircleTransition : MonoBehaviour
     {
         transitionDuration *= 2f;
         currentLevel++;
-        GoToNextLevel("Level" + currentLevel);
+        Reload();
         transitionDuration /= 2f;
     }
 }
