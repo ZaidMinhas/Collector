@@ -90,6 +90,7 @@ public class UfoManager : MonoBehaviour
 
     private void OnDisable()
     {
+        StopAbduction();
         ResetPrimaryBurst();
         Unsubscribe(shootAction, ShootSingle);
         Unsubscribe(abductAction, HandleAbduction);
@@ -155,6 +156,8 @@ public class UfoManager : MonoBehaviour
 
     void Update()
     {
+        // Check before early returns so releasing Space also stops audio during transitions.
+        if (!Input.GetKey(KeyCode.Space)) StopAbduction();
         if (shootAction != null) shootAction.TickCooldown();
         if (abductAction != null) abductAction.TickCooldown();
         if (blackHoleAction != null) blackHoleAction.TickCooldown();
@@ -217,7 +220,7 @@ public class UfoManager : MonoBehaviour
         {
             abductAction?.UseAction();
         }
-        if (EndAbduct()) abductionBeam.SetActive(false);
+        if (EndAbduct()) StopAbduction();
 
         // SHIELD
 
@@ -332,8 +335,9 @@ public class UfoManager : MonoBehaviour
 
     private void HandleAbduction()
     {
-        if (shieldOn) return;
+        if (shieldOn || abductionBeam == null) return;
         abductionBeam.SetActive(true);
+        Manager.KidnapAudio.Play(transform);
 
         // find and destroy target
         if (abductionTarget != null)
@@ -372,6 +376,13 @@ public class UfoManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void StopAbduction()
+    {
+        Manager.KidnapAudio.Stop();
+        if (abductionBeam != null && abductionBeam.activeSelf)
+            abductionBeam.SetActive(false);
     }
 
     private void HandleShield(float durationSeconds)

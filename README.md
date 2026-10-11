@@ -14,6 +14,10 @@ This is a convenience component built on Unity audio. Use a dedicated AudioSourc
 
 ## Defender shooting sounds
 
+The Space-bar abduction portal loops `Assets/Resources/Sfx/Kidnap.ogg` while Space is held after successful activation. Releasing Space or disabling the player stops the loop and beam. Failed actions, shield-blocked abduction, and missing beams do not start the sound. A dedicated source follows the SFX and Master sliders and allows the loop to stop independently of other effects.
+
+Enemy defeats play `Assets/Resources/Sfx/Defeat.ogg` when positive damage takes a living enemy's health to zero or below. The sound uses the persistent AudioManager, so destroying the enemy does not cut it off, and follows the SFX and Master sliders. Further damage to an already dead enemy does not replay it. Replace this single Resources asset to update the sound.
+
 Enemy damage plays `Assets/Resources/Sfx/Hit an Ennemy.ogg` through the shared SFX source. Only living objects with `DestroyableEnemy` trigger it for positive damage, including lethal hits; player damage and healing do not. Each enemy limits feedback to once every 0.08 seconds to avoid stacked laser sounds. This asset was moved with its existing `.meta` file from Audio/SFX, so there is only one copy; replace the Resources file to update it.
 
 The main player's UFO plays `Assets/Resources/Sfx/Pew(HigherPitched).ogg` for each launched projectile. Its higher pitch is baked into the audio asset; playback uses the shared SFX source at 0.4 volume and follows the SFX and Master sliders. Shield-blocked attacks and failed actions do not trigger the sound.

@@ -53,6 +53,7 @@ public class HealthComponent : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        bool wasAlive = currentHealth > 0f;
         if (damage > 0f && currentHealth > 0f &&
             GetComponent<DestroyableEnemy>() != null && Time.unscaledTime >= nextHitSoundTime)
         {
@@ -62,6 +63,12 @@ public class HealthComponent : MonoBehaviour
         }
 
         currentHealth -= damage;
+        if (wasAlive && damage > 0f && currentHealth <= 0f &&
+            GetComponent<DestroyableEnemy>() != null)
+        {
+            // Play through the persistent manager before death callbacks destroy the enemy.
+            Manager.EnemyDefeatAudio.Play();
+        }
         OnTakeDamage?.Invoke();
         OnHealthChange?.Invoke(currentHealth/defaultMaxHealth);
 
