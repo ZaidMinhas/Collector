@@ -227,8 +227,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: bcabe9f9debf9b446a5c1e7b1a57ae4e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3916889926264082077}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bcabe9f9debf9b446a5c1e7b1a57ae4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 311539233301476373}
   m_SourcePrefab: {fileID: 100100000, guid: bcabe9f9debf9b446a5c1e7b1a57ae4e, type: 3}
+--- !u!1 &3736476176182677265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bcabe9f9debf9b446a5c1e7b1a57ae4e, type: 3}
+  m_PrefabInstance: {fileID: 4547448808167518784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &311539233301476373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736476176182677265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b40d9386d2c4428bbccaa96454d6e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverSway
+  swayDistance: 0.15
+  swaySpeed: 0.5
+  tiltAngle: 6
+  bobHeight: 0.06
+  bobSpeed: 0.9
+  unsteadiness: 0.4
 --- !u!4 &4076164368317044139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bcabe9f9debf9b446a5c1e7b1a57ae4e, type: 3}
