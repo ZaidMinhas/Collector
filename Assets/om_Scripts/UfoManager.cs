@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
@@ -314,7 +315,16 @@ public class UfoManager : MonoBehaviour
                     gameObject.GetComponent<Collider2D>().enabled = false;
                     if (abductionTarget.GetComponent<Collider2D>() != null) 
                         abductionTarget.GetComponent<Collider2D>().enabled = false;
-                    FindFirstObjectByType<CircleTransition>().Progress();
+
+                    var trans = FindFirstObjectByType<CircleTransition>();
+                    if (trans)
+                    {
+                        trans.Progress();
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1 );
+                    }
                 }
             }
         }
