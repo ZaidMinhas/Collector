@@ -16,6 +16,8 @@ public class SoldierSpawner : MonoBehaviour
     [HideInInspector] public  int currentWave;
     [HideInInspector] public int MaxEnemyCount = 100;
 
+    public bool loopFinalWave = true;
+
     private IEnumerator Start()
     {
         if (soldierPrefab == null || player == null || planet == null ||
@@ -44,6 +46,8 @@ public class SoldierSpawner : MonoBehaviour
             // Stay on the last wave once all earlier waves have run.
             if (currentWave < waves.Count - 1)
                 currentWave++;
+            else if (!loopFinalWave)
+                yield break;
         }
     }
 
