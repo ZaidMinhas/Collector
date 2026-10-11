@@ -1,20 +1,25 @@
 using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Slider))]
+
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] HealthComponent healthComponent;
-    private Slider slider;
+    public List<Sprite> barStages;
+    public HealthComponent entityToTrack;
+    public Animator animator;
+    public Image barImg;
 
-    public void Awake()
+    private void Start()
     {
-        slider = GetComponent<Slider>();
-    }
-
-    public void Start()
-    {
-        healthComponent.OnHealthChange += (value) => slider.value = value;
+        entityToTrack.OnHealthChange += (hp) =>
+        {
+            Debug.Log("Hit taken");
+            int bars = (int)Math.Ceiling(hp * 10f);
+            if (bars > 0) barImg.sprite = barStages[10 - bars];
+            animator.SetTrigger("TakeHit");
+        };
     }
 }

@@ -645,10 +645,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3439439053944739649, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3454198493314499232, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -664,10 +660,6 @@ PrefabInstance:
     - target: {fileID: 3454198493314499232, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765223219231448766, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: stayDuration
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4121487168893646323, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Pivot.x
@@ -769,48 +761,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4793894457119491779, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: healthComponent
+    - target: {fileID: 8482805075068246991, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: entityToTrack
       value: 
-      objectReference: {fileID: 6659840101920734925}
-    - target: {fileID: 6051168631428581819, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_text
-      value: 'WELCOME you are on a quest to collect the greatest minds in the galaxy
-        to craft your arsenal of weapons and stop the EVIL ROBOT
-
-
-        To move,
-        press <u><b>A/D</u></b> to orbit the planet, and <u><b>W/S</u></b> to change
-        altitude.
-
-
-        Press <u><b>LMB</u></b> to shoot hostiles, and hold <u><b>SPACE
-        </u></b>to capture your target'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -590
-      objectReference: {fileID: 0}
-    - target: {fileID: 8371931444775259991, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1201.4
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1172088426}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1525,6 +1479,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d212390c04564243b6426d7d41e3a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!114 &1172088426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 444699534328019186, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+  m_PrefabInstance: {fileID: 6659840101920734924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
 --- !u!1 &1367237261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +1913,63 @@ MonoBehaviour:
   overlay: {fileID: 672297913}
   transitionDuration: 2
   center: {x: 0.5, y: 0.6}
+--- !u!1001 &1662771265
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.96535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.10574
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172887076073674116, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669629074743843859, guid: abb64b4b820d64db08750a902d65910a, type: 3}
+      propertyPath: m_Name
+      value: Starfield
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abb64b4b820d64db08750a902d65910a, type: 3}
 --- !u!1 &1721998614
 GameObject:
   m_ObjectHideFlags: 0
@@ -14294,6 +14316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 112616315513238945, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: planetManager
       value: 
@@ -14351,17 +14377,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
---- !u!114 &6659840101920734925 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 444699534328019186, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
-  m_PrefabInstance: {fileID: 6659840101920734924}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
 --- !u!114 &6738740491530611930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25819,6 +25834,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 223866560}
+  - {fileID: 1662771265}
   - {fileID: 6812997325983144071}
   - {fileID: 6659840101920734924}
   - {fileID: 722422986}

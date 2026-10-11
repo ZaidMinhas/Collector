@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 495a257cffd82a84ba6e979d15d88279
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9115248306006246732
+    second: spritesheet leader enemy 4_0
+  - first:
+      213: 4185386017908587110
+    second: spritesheet leader enemy 4_1
+  - first:
+      213: -5305295778852296187
+    second: spritesheet leader enemy 4_2
+  - first:
+      213: -3251498586564890107
+    second: spritesheet leader enemy 4_3
+  - first:
+      213: 2604477296411688373
+    second: spritesheet leader enemy 4_4
+  - first:
+      213: -5089544862275997446
+    second: spritesheet leader enemy 4_5
+  - first:
+      213: -5626781699780904801
+    second: spritesheet leader enemy 4_6
+  - first:
+      213: 9170700770278063804
+    second: spritesheet leader enemy 4_7
+  - first:
+      213: -378939696819647742
+    second: spritesheet leader enemy 4_8
+  - first:
+      213: -2433918813196797458
+    second: spritesheet leader enemy 4_9
+  - first:
+      213: -5769836632591613424
+    second: spritesheet leader enemy 4_10
+  - first:
+      213: -1446886228563168732
+    second: spritesheet leader enemy 4_11
+  - first:
+      213: -2679362308616849533
+    second: spritesheet leader enemy 4_12
+  - first:
+      213: 3297380160452157347
+    second: spritesheet leader enemy 4_13
+  - first:
+      213: 3064915386663897743
+    second: spritesheet leader enemy 4_14
+  - first:
+      213: 6360900835292344900
+    second: spritesheet leader enemy 4_15
+  - first:
+      213: 1214213953897620575
+    second: spritesheet leader enemy 4_16
+  - first:
+      213: 7820035210067873730
+    second: spritesheet leader enemy 4_17
+  - first:
+      213: -2515227233415208300
+    second: spritesheet leader enemy 4_18
+  - first:
+      213: -7453285046126165669
+    second: spritesheet leader enemy 4_19
+  - first:
+      213: -7270004336254071755
+    second: spritesheet leader enemy 4_20
+  - first:
+      213: -8801002073524838162
+    second: spritesheet leader enemy 4_21
+  - first:
+      213: -7838094622655944345
+    second: spritesheet leader enemy 4_22
+  - first:
+      213: -3318414046750492333
+    second: spritesheet leader enemy 4_23
+  - first:
+      213: 5254211247815619514
+    second: spritesheet leader enemy 4_24
+  - first:
+      213: 2204275560326411804
+    second: spritesheet leader enemy 4_25
+  - first:
+      213: 2331065345296673205
+    second: spritesheet leader enemy 4_26
+  - first:
+      213: -5526123170969194500
+    second: spritesheet leader enemy 4_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 383
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45cbf62a0edf7e70800000000000000
+      internalID: 9115248306006246732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 383
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66af35d786a751a30800000000000000
+      internalID: 4185386017908587110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 383
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a2129099dcf56b0800000000000000
+      internalID: -5305295778852296187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 383
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5027d10434b50e2d0800000000000000
+      internalID: -3251498586564890107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 319
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd303e4d46f42420800000000000000
+      internalID: 2604477296411688373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 319
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0ff9fc9ed4e59b0800000000000000
+      internalID: -5089544862275997446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 319
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98f3e32bd7a9e1b0800000000000000
+      internalID: -5626781699780904801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 319
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe33d913cfd44f70800000000000000
+      internalID: 9170700770278063804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 255
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b45cb7a5cbdbaf0800000000000000
+      internalID: -378939696819647742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 255
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9b34f1cbbf83ed0800000000000000
+      internalID: -2433918813196797458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 255
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012475e072c6defa0800000000000000
+      internalID: -5769836632591613424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_11
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 255
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422761c14a0abebe0800000000000000
+      internalID: -1446886228563168732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 191
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387725a1d2ef0dad0800000000000000
+      internalID: -2679362308616849533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 191
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afdb2129c5a2cd20800000000000000
+      internalID: 3297380160452157347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_14
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 191
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a0bb83e44c88a20800000000000000
+      internalID: 3064915386663897743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_15
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 191
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442f513bb95764850800000000000000
+      internalID: 6360900835292344900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 127
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54e36b6821c9d010800000000000000
+      internalID: 1214213953897620575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_17
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 127
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf842b5798568c60800000000000000
+      internalID: 7820035210067873730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_18
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 127
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492e5ee482e181dd0800000000000000
+      internalID: -2515227233415208300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 127
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b514bef5dbc909890800000000000000
+      internalID: -7453285046126165669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 63
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53cc6060391cb1b90800000000000000
+      internalID: -7270004336254071755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 63
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0631c6e3f8cd580800000000000000
+      internalID: -8801002073524838162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_22
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 63
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76961bcf77e793390800000000000000
+      internalID: -7838094622655944345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_23
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 63
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35935c59100a2f1d0800000000000000
+      internalID: -3318414046750492333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab379e8ba45bae840800000000000000
+      internalID: 5254211247815619514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_25
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16b45081f8279e10800000000000000
+      internalID: 2204275560326411804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_26
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9a1aeb49b995020800000000000000
+      internalID: 2331065345296673205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet leader enemy 4_27
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff635131444f43b0800000000000000
+      internalID: -5526123170969194500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet leader enemy 4_0: 9115248306006246732
+      spritesheet leader enemy 4_1: 4185386017908587110
+      spritesheet leader enemy 4_10: -5769836632591613424
+      spritesheet leader enemy 4_11: -1446886228563168732
+      spritesheet leader enemy 4_12: -2679362308616849533
+      spritesheet leader enemy 4_13: 3297380160452157347
+      spritesheet leader enemy 4_14: 3064915386663897743
+      spritesheet leader enemy 4_15: 6360900835292344900
+      spritesheet leader enemy 4_16: 1214213953897620575
+      spritesheet leader enemy 4_17: 7820035210067873730
+      spritesheet leader enemy 4_18: -2515227233415208300
+      spritesheet leader enemy 4_19: -7453285046126165669
+      spritesheet leader enemy 4_2: -5305295778852296187
+      spritesheet leader enemy 4_20: -7270004336254071755
+      spritesheet leader enemy 4_21: -8801002073524838162
+      spritesheet leader enemy 4_22: -7838094622655944345
+      spritesheet leader enemy 4_23: -3318414046750492333
+      spritesheet leader enemy 4_24: 5254211247815619514
+      spritesheet leader enemy 4_25: 2204275560326411804
+      spritesheet leader enemy 4_26: 2331065345296673205
+      spritesheet leader enemy 4_27: -5526123170969194500
+      spritesheet leader enemy 4_3: -3251498586564890107
+      spritesheet leader enemy 4_4: 2604477296411688373
+      spritesheet leader enemy 4_5: -5089544862275997446
+      spritesheet leader enemy 4_6: -5626781699780904801
+      spritesheet leader enemy 4_7: 9170700770278063804
+      spritesheet leader enemy 4_8: -378939696819647742
+      spritesheet leader enemy 4_9: -2433918813196797458
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
