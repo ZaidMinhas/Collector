@@ -15,7 +15,7 @@ namespace Manager
             if (defaultClip == null) return;
 
             AudioManager.Instance.PlaySFX(defaultClip,
-                Random.Range(0.35f, 0.45f), Random.Range(0.9f, 1.1f));
+                Random.Range(0.25f, 0.35f), Random.Range(0.9f, 1.1f));
         }
     }
 }
