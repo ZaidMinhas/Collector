@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Scene Juan.unity.meta
 guid: 21475e77f1232834c8aeba8d669d232a
+========
+guid: cf31536132c06495ba252aac567d0e44
+>>>>>>>> main:Assets/Scenes/TuanaScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
