@@ -357,7 +357,7 @@ public class UfoManager : MonoBehaviour
         }
         sm.gameObject.transform.position = transform.position + directionToPlanet * 0.75f;
         UniverseManager.Universe().allMasses.Add(sm);
-        Manager.BlackWhiteHoleAudio.Play();
+        Manager.BlackWhiteHoleAudio.Play(sm.transform);
     }
 
     private void HandleAbduction()
