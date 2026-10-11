@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: cda398a12af30374bb604fb481750eab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -427490239925083946
+    second: Blob-alien-target_0
+  - first:
+      213: 7388331941191322364
+    second: Blob-alien-target_1
+  - first:
+      213: -2984408012058355467
+    second: Blob-alien-target_2
+  - first:
+      213: -2849649903984323638
+    second: Blob-alien-target_3
+  - first:
+      213: -6843783931626717195
+    second: Blob-alien-target_4
+  - first:
+      213: -8343852275893712083
+    second: Blob-alien-target_5
+  - first:
+      213: 1504964340292155773
+    second: Blob-alien-target_6
+  - first:
+      213: -4275488171151335704
+    second: Blob-alien-target_7
+  - first:
+      213: -2586467160010672742
+    second: Blob-alien-target_8
+  - first:
+      213: -6281603161390414345
+    second: Blob-alien-target_9
+  - first:
+      213: 4410261133437363757
+    second: Blob-alien-target_10
+  - first:
+      213: 8102510260403099849
+    second: Blob-alien-target_11
+  - first:
+      213: 1641942794402493854
+    second: Blob-alien-target_12
+  - first:
+      213: -5663641523428700706
+    second: Blob-alien-target_13
+  - first:
+      213: 999044555914946175
+    second: Blob-alien-target_14
+  - first:
+      213: 8744733512457453942
+    second: Blob-alien-target_15
+  - first:
+      213: -2366309935570344238
+    second: Blob-alien-target_16
+  - first:
+      213: -6407811666095056014
+    second: Blob-alien-target_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blob-alien-target_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 67
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0a15844ef311af0800000000000000
+      internalID: -427490239925083946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 89
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa816561c0a88660800000000000000
+      internalID: 7388331941191322364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 66
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f89e60a9b04596d0800000000000000
+      internalID: -2984408012058355467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3d9caa2820478d0800000000000000
+      internalID: -2849649903984323638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 66
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fffcdb26cef501a0800000000000000
+      internalID: -6843783931626717195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b450d009ea43c80800000000000000
+      internalID: -8343852275893712083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 66
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d797eb60815b2e410800000000000000
+      internalID: 1504964340292155773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eed32d292a6aa4c0800000000000000
+      internalID: -4275488171151335704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 67
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a95b95852d50b1cd0800000000000000
+      internalID: -2586467160010672742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_9
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f58a51c43343d8a0800000000000000
+      internalID: -6281603161390414345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26ee316225643d30800000000000000
+      internalID: 4410261133437363757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8d8442726e17070800000000000000
+      internalID: 8102510260403099849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e957fd9a54a59c610800000000000000
+      internalID: 1641942794402493854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 25
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd41ecaa04b661b0800000000000000
+      internalID: -5663641523428700706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76291efab15ddd00800000000000000
+      internalID: 999044555914946175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_15
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 23
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6710b794cc88b5970800000000000000
+      internalID: 8744733512457453942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d62add96ad292fd0800000000000000
+      internalID: -2366309935570344238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-target_17
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bdcce5d31e217a0800000000000000
+      internalID: -6407811666095056014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blob-alien-target_0: -427490239925083946
+      Blob-alien-target_1: 7388331941191322364
+      Blob-alien-target_10: 4410261133437363757
+      Blob-alien-target_11: 8102510260403099849
+      Blob-alien-target_12: 1641942794402493854
+      Blob-alien-target_13: -5663641523428700706
+      Blob-alien-target_14: 999044555914946175
+      Blob-alien-target_15: 8744733512457453942
+      Blob-alien-target_16: -2366309935570344238
+      Blob-alien-target_17: -6407811666095056014
+      Blob-alien-target_2: -2984408012058355467
+      Blob-alien-target_3: -2849649903984323638
+      Blob-alien-target_4: -6843783931626717195
+      Blob-alien-target_5: -8343852275893712083
+      Blob-alien-target_6: 1504964340292155773
+      Blob-alien-target_7: -4275488171151335704
+      Blob-alien-target_8: -2586467160010672742
+      Blob-alien-target_9: -6281603161390414345
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     private bool isHitting;
 
     public Rigidbody2D rBody;
+    private Transform owner;
 
     private void Awake()
     {
@@ -17,14 +18,9 @@ public class Projectile : MonoBehaviour
         rBody.gravityScale = 0f;
     }
 
-    protected void Start()
+    protected virtual void Start()
     {
         StartCoroutine(DelayHitting());
-    }
-
-    protected void FixedUpdate()
-    {
-        
     }
 
     public void SetVelocity(float angle)
@@ -43,10 +39,16 @@ public class Projectile : MonoBehaviour
     public void Launch(float angle, BulletConfig bulletConfig)
     {
         this.damage = bulletConfig.damage;
+        this.speed = bulletConfig.speed;
         SetVelocity(angle, bulletConfig.speed);
     }
 
-    private void Update()
+    public void SetOwner(Transform shooter)
+    {
+        owner = shooter;
+    }
+
+    protected virtual void FixedUpdate()
     {
         if (!affectedByGravity) return;
         rBody.linearVelocity = UniverseManager.Universe().UpdateVelocityForBody(
@@ -55,9 +57,11 @@ public class Projectile : MonoBehaviour
     }
 
     //By Zaid
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (!isHitting) return;
+        if (owner != null && other.transform.IsChildOf(owner)) return;
+        isHitting = false;
         Destroy(gameObject);
         
         HealthComponent target = other.GetComponentInParent<HealthComponent>();

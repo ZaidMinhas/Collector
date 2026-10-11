@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: e9645f32d53bf2a429623555d3e1a639
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8587699271018683703
+    second: Blob-alien-soldier_0
+  - first:
+      213: -6597600998553613724
+    second: Blob-alien-soldier_1
+  - first:
+      213: 9094112367838156344
+    second: Blob-alien-soldier_2
+  - first:
+      213: -3387980913126578680
+    second: Blob-alien-soldier_3
+  - first:
+      213: 7177007090267400967
+    second: Blob-alien-soldier_4
+  - first:
+      213: 7823842629092993528
+    second: Blob-alien-soldier_5
+  - first:
+      213: 8181481820187223948
+    second: Blob-alien-soldier_6
+  - first:
+      213: 3399478203495979128
+    second: Blob-alien-soldier_7
+  - first:
+      213: 1035647406897379471
+    second: Blob-alien-soldier_8
+  - first:
+      213: 460778511146295468
+    second: Blob-alien-soldier_9
+  - first:
+      213: 2700341341485553702
+    second: Blob-alien-soldier_10
+  - first:
+      213: -8534289741061352324
+    second: Blob-alien-soldier_11
+  - first:
+      213: -1612135066376503087
+    second: Blob-alien-soldier_12
+  - first:
+      213: -5811752522830984601
+    second: Blob-alien-soldier_13
+  - first:
+      213: 6660469682717547671
+    second: Blob-alien-soldier_14
+  - first:
+      213: 4962062368799044594
+    second: Blob-alien-soldier_15
+  - first:
+      213: -5192372613868781293
+    second: Blob-alien-soldier_16
+  - first:
+      213: 1053074589359693171
+    second: Blob-alien-soldier_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blob-alien-soldier_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 67
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2ec09330d52d880800000000000000
+      internalID: -8587699271018683703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 89
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a037fe8dc9074a0800000000000000
+      internalID: -6597600998553613724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 66
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836da701407c43e70800000000000000
+      internalID: 9094112367838156344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806694f4f497bf0d0800000000000000
+      internalID: -3387980913126578680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 66
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b29d55ce9d99360800000000000000
+      internalID: 7177007090267400967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f965ad2b6fd39c60800000000000000
+      internalID: 7823842629092993528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 66
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87639c3e567a8170800000000000000
+      internalID: 8181481820187223948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8789f053a6f5d2f20800000000000000
+      internalID: 3399478203495979128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 67
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f883ca854db5f5e00800000000000000
+      internalID: 1035647406897379471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_9
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca022055d93056600800000000000000
+      internalID: 460778511146295468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6285c8f942a897520800000000000000
+      internalID: 2700341341485553702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7417c572bc109980800000000000000
+      internalID: -8534289741061352324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 3
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d08da6d2bb80a9e0800000000000000
+      internalID: -1612135066376503087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 25
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76acd2a5fd1885fa0800000000000000
+      internalID: -5811752522830984601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c53a343edbe6c50800000000000000
+      internalID: 6660469682717547671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_15
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 23
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3b99d2f69ccd440800000000000000
+      internalID: 4962062368799044594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31182e83e9cf0f7b0800000000000000
+      internalID: -5192372613868781293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blob-alien-soldier_17
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d56c472c54d9e00800000000000000
+      internalID: 1053074589359693171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blob-alien-soldier_0: -8587699271018683703
+      Blob-alien-soldier_1: -6597600998553613724
+      Blob-alien-soldier_10: 2700341341485553702
+      Blob-alien-soldier_11: -8534289741061352324
+      Blob-alien-soldier_12: -1612135066376503087
+      Blob-alien-soldier_13: -5811752522830984601
+      Blob-alien-soldier_14: 6660469682717547671
+      Blob-alien-soldier_15: 4962062368799044594
+      Blob-alien-soldier_16: -5192372613868781293
+      Blob-alien-soldier_17: 1053074589359693171
+      Blob-alien-soldier_2: 9094112367838156344
+      Blob-alien-soldier_3: -3387980913126578680
+      Blob-alien-soldier_4: 7177007090267400967
+      Blob-alien-soldier_5: 7823842629092993528
+      Blob-alien-soldier_6: 8181481820187223948
+      Blob-alien-soldier_7: 3399478203495979128
+      Blob-alien-soldier_8: 1035647406897379471
+      Blob-alien-soldier_9: 460778511146295468
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

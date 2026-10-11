@@ -17,6 +17,8 @@ public class Soldier : MonoBehaviour
 
     private float lastDir = 1f;
     private SpriteRenderer spriteRenderer;
+    private CircleCollider2D planetCollider;
+    private Vector3 PlanetCenter => planetCollider.transform.TransformPoint(planetCollider.offset);
     private float nextShotTime;
     private bool isShooting;
     private Coroutine burstRoutine;
@@ -31,14 +33,28 @@ public class Soldier : MonoBehaviour
     
     void Start()
     {
-        radius = planet.GetComponent<SpriteRenderer>().bounds.extents.x;
+        planetCollider = planet != null ? planet.GetComponent<CircleCollider2D>() : null;
+        if (planetCollider == null)
+        {
+            Debug.LogError("Soldier needs a CircleCollider2D on its planet.", this);
+            enabled = false;
+            return;
+        }
+        Vector3 planetScale = planetCollider.transform.lossyScale;
+        radius = planetCollider.radius * Mathf.Max(Mathf.Abs(planetScale.x), Mathf.Abs(planetScale.y));
+        if (radius <= 0f)
+        {
+            Debug.LogError("Soldier needs a positive planet collider radius.", this);
+            enabled = false;
+            return;
+        }
         healthComponent.setHealth(soldierConfig.maxHealth);
         healthComponent.OnDeath += Die;
         
         searchRangeOffset = soldierConfig.searchRangeAngle + Random.Range(-20, 20);
 
         // Initialize angle in radians
-        Vector2 offset = transform.position - planet.position;
+        Vector2 offset = transform.position - PlanetCenter;
         angle = Mathf.Atan2(offset.y, offset.x);
         UpdateRotation(0f);
     }
@@ -92,7 +108,7 @@ public class Soldier : MonoBehaviour
             {
                 float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 Projectile shot = Instantiate(bullet, spawnPosition, Quaternion.Euler(0f, 0f, rotation));
-                //shot.SetOwner(transform);
+                shot.SetOwner(transform);
                 if (shot is HomingProjectile homingShot)
                     homingShot.SetTarget(player);
                 
@@ -135,7 +151,7 @@ public class Soldier : MonoBehaviour
             Mathf.Sin(angle)
         ) * radius;
 
-        transform.position = (Vector2)planet.position + offset;
+        transform.position = PlanetCenter + new Vector3(offset.x, offset.y, 0f);
     }
 
     public float GetTargetDir()
@@ -156,7 +172,7 @@ public class Soldier : MonoBehaviour
 
     private float GetAngle(Vector2 position)
     {
-        Vector2 offset = position - (Vector2)planet.position;
+        Vector2 offset = position - (Vector2)PlanetCenter;
 
         return Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
     }

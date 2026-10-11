@@ -65,17 +65,24 @@ public class SoldierSpawner : MonoBehaviour
             if (isGameOver)
                 yield break;
 
-            SpriteRenderer planetSprite = planet.GetComponent<SpriteRenderer>();
-            if (planetSprite == null || planetSprite.bounds.extents.x <= 0f)
+            CircleCollider2D planetCollider = planet.GetComponent<CircleCollider2D>();
+            if (planetCollider == null || planetCollider.radius <= 0f)
             {
-                Debug.LogError("Spawner needs a planet SpriteRenderer with a positive radius.", this);
+                Debug.LogError("Spawner needs a planet CircleCollider2D with a positive radius.", this);
                 yield break;
             }
 
             // Match the circular surface radius used by Soldier movement.
-            float radius = planetSprite.bounds.extents.x;
+            Vector3 planetScale = planetCollider.transform.lossyScale;
+            float radius = planetCollider.radius * Mathf.Max(Mathf.Abs(planetScale.x), Mathf.Abs(planetScale.y));
+            if (radius <= 0f)
+            {
+                Debug.LogError("Planet collider has a zero world radius.", this);
+                yield break;
+            }
+            Vector3 center = planetCollider.transform.TransformPoint(planetCollider.offset);
             float spawnAngle = Random.Range(0f, Mathf.PI * 2f);
-            Vector3 spawnPosition = planet.position + new Vector3(
+            Vector3 spawnPosition = center + new Vector3(
                 Mathf.Cos(spawnAngle), Mathf.Sin(spawnAngle), 0f
             ) * radius;
             Quaternion spawnRotation = Quaternion.Euler(

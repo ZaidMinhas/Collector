@@ -17,7 +17,7 @@ public class HomingProjectile : Projectile
         affectedByGravity = config.affectedByGravity;
         gravityModifier = config.gravityModifier;
         spriteRotationOffset = config.spriteRotationOffset;
-        //SetOwner(shooter);
+        SetOwner(shooter);
         base.Launch(angle, new BulletConfig
         {
             speed = Mathf.Max(0f, config.speed),
@@ -31,13 +31,13 @@ public class HomingProjectile : Projectile
         target = newTarget;
     }
 
-    protected void Start()
+    protected override void Start()
     {
         base.Start();
         Destroy(gameObject, Mathf.Max(0.01f, lifetime));
     }
-
-    protected void FixedUpdate()
+    
+    protected override void FixedUpdate()
     {
         Vector2 velocity = rBody.linearVelocity;
         if (target != null)
