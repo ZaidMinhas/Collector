@@ -17957,6 +17957,10 @@ PrefabInstance:
       propertyPath: stayDuration
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4081565451780079449, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_fontSize
+      value: 34.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4121487168893646323, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -18037,6 +18041,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: d8b23a3a14ab800449ec37e660c4e906, type: 3}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
       value: GameUI

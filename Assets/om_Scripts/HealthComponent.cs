@@ -22,6 +22,8 @@ public class HealthComponent : MonoBehaviour
     {
         this.currentHealth = defaultMaxHealth =  health;
     }
+    
+    
 
     public void Start()
     {
