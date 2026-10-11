@@ -97,9 +97,14 @@ namespace Manager
         // Fonction pour jouer un effet sonore (SFX) facilement depuis n'importe quel script
         public void PlaySFX(AudioClip clip)
         {
+            PlaySFX(clip, 1f);
+        }
+
+        public void PlaySFX(AudioClip clip, float volumeScale)
+        {
             if (SfxSource != null && clip != null)
             {
-                SfxSource.PlayOneShot(clip);
+                SfxSource.PlayOneShot(clip, Mathf.Clamp01(volumeScale));
             }
         }
 
