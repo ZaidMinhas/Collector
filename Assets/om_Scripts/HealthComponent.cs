@@ -69,6 +69,7 @@ public class HealthComponent : MonoBehaviour
             // Play through the persistent manager before death callbacks destroy the enemy.
             Manager.EnemyDefeatAudio.Play();
         }
+
         OnTakeDamage?.Invoke();
         OnHealthChange?.Invoke(currentHealth/defaultMaxHealth);
 
