@@ -1205,6 +1205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   music: {fileID: 8300000, guid: d8b23a3a14ab800449ec37e660c4e906, type: 3}
   loop: 1
+  volume: 1
 --- !u!82 &8030305005123739768
 AudioSource:
   m_ObjectHideFlags: 0

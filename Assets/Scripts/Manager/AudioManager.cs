@@ -139,8 +139,14 @@ namespace Manager
 
         public void PlayMusic(AudioClip clip, bool loop = true)
         {
+            PlayMusic(clip, loop, 1f);
+        }
+
+        public void PlayMusic(AudioClip clip, bool loop, float trackVolume)
+        {
             if (MusicSource != null && clip != null)
             {
+                MusicSource.volume = Mathf.Clamp01(trackVolume);
                 // Si c'est déjà exactement la même musique et qu'elle joue, on peut l'ignorer ou la redémarrer
                 // Mais si c'est une nouvelle musique, on l'assigne et on la lance !
                 if (MusicSource.clip != clip)

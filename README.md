@@ -1,5 +1,11 @@
 # Collector
 
+## Balancing music per scene
+
+Open a level, expand its GameUI/MenuCanvas/IconsMenuSet object, and select the child named **LevelMusic**. Adjust the **Volume** field on its LevelMusic component from 0 (silent) to 1 (full track volume). Set this on the scene instance to save an override for that level; changing the shared GameUI prefab affects every instance that does not override it. MainMenu's LevelMusic component is on **SceneManagerObj**.
+
+Volume adjustments apply live during Play Mode without restarting the track. Copy the chosen value and apply it again after leaving Play Mode to save it. Every track defaults to 1 to preserve existing loudness. The options Music and Master sliders apply on top of this per-track balance.
+
 ## Pause menu
 
 All Unity UI Buttons automatically play `Assets/Resources/Sfx/cool button press.ogg`, including keyboard/controller submission. Escape opening the pause menu uses the same sound; Escape or Resume closing it uses `uncool button press.ogg` instead, once per action. UI sounds persist through scene changes and follow the SFX and Master volumes. Sliders are not Buttons and do not trigger a button click sound.
