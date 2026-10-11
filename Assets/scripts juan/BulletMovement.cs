@@ -8,8 +8,8 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField] float bulletSpeed;
+    [SerializeField] float rotationSpeed;
     GameObject player;
-
     float timer;
 
 
@@ -20,19 +20,35 @@ public class BulletMovement : MonoBehaviour
 
     }
     void Update()
-    {
+    {   
+        rotateBullet();
         GuidedbulletMovement();
         destroyBullet();
 
     }
 
     public void GuidedbulletMovement(){
-        transform.Translate(bulletSpeed * Time.deltaTime * bulletDirection());
+        transform.Translate(bulletSpeed * Time.deltaTime * bulletDirection());  
     }
 
     public void rotateBullet()
     {
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
+    Vector2 direction = bulletDirection();
+
+    float rotationAngle = Mathf.Atan2(
+        direction.y,
+        direction.x
+    ) * Mathf.Rad2Deg;
+
+    Quaternion targetRotation = Quaternion.Euler(
+        0f, 0f, rotationAngle
+    );
+
+    transform.rotation = Quaternion.RotateTowards(
+        transform.rotation,
+        targetRotation,
+        rotationSpeed * Time.deltaTime
+    );
     }
 
     public Vector2 bulletDirection()
@@ -40,10 +56,9 @@ public class BulletMovement : MonoBehaviour
         Vector2 bulletTrajectory = player.transform.position - transform.position;
         return bulletTrajectory;
     }
-
-    void OnCollisionEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);    
+        Destroy(gameObject);
     }
 
     public void destroyBullet()

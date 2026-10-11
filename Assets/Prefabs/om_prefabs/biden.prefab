@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4161987437251082728}
   - component: {fileID: 8879603449513401075}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 8385799464777991211}
   - component: {fileID: 3075735473580382920}
   - component: {fileID: 8323799400670064819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bubble_shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 112616315513238945}
   - component: {fileID: 5916859536807574401}
   - component: {fileID: 6693053035532410630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9132352213937167606}
   - component: {fileID: 3194959349025257904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,9 +513,9 @@ GameObject:
   - component: {fileID: 782825913639436342}
   - component: {fileID: 1295918713584677416}
   - component: {fileID: 444699534328019186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biden
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,7 +536,6 @@ Transform:
   - {fileID: 9132352213937167606}
   - {fileID: 8385799464777991211}
   - {fileID: 4161987437251082728}
-  - {fileID: 7218581064682178373}
   - {fileID: 8102822901132989986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -715,69 +714,3 @@ MonoBehaviour:
   currentHealth: 0
   isDestroyedOnDeath: 0
   isDebugMode: 0
---- !u!1001 &6682493977743741678
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7115028554574802624}
-    m_Modifications:
-    - target: {fileID: 3736476176182677265, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_Name
-      value: UFO
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -26.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9107994030155043623, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
---- !u!4 &7218581064682178373 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4076164368317044139, guid: 308d1bcabc410224a8bba4d57bd62a24, type: 3}
-  m_PrefabInstance: {fileID: 6682493977743741678}
-  m_PrefabAsset: {fileID: 0}
