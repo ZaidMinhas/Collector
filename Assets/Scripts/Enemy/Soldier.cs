@@ -120,6 +120,7 @@ public class Soldier : MonoBehaviour
                 
                 shot.Launch(rotation, soldierConfig.bulletConfig);
                 shot.affectedByGravity = true;
+                Manager.DefenderShotAudio.Play();
             }
 
             if (i < bulletCount - 1)

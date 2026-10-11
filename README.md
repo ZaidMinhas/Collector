@@ -11,3 +11,13 @@
 SoundPlayer uses the manager's shared SFX source, so effects obey the SFX and Master sliders without configuring an AudioSource on every object. Repeated calls can overlap. Its Volume scales each playback independently without changing other effects' volume. Missing clips or manager/source references produce a warning.
 
 This is a convenience component built on Unity audio. Use a dedicated AudioSource for positional 3D sounds or looping effects. Use `LevelMusic` for scene music. SoundPlayer does not automatically wire button clicks or slider changes; connect `Play()` to the event you want.
+
+## Defender shooting sounds
+
+Enemy damage plays `Assets/Resources/Sfx/Hit an Ennemy.ogg` through the shared SFX source. Only living objects with `DestroyableEnemy` trigger it for positive damage, including lethal hits; player damage and healing do not. Each enemy limits feedback to once every 0.08 seconds to avoid stacked laser sounds. This asset was moved with its existing `.meta` file from Audio/SFX, so there is only one copy; replace the Resources file to update it.
+
+The main player's UFO plays `Assets/Resources/Sfx/Pew(HigherPitched).ogg` for each launched projectile. Its higher pitch is baked into the audio asset; playback uses the shared SFX source at 0.4 volume and follows the SFX and Master sliders. Shield-blocked attacks and failed actions do not trigger the sound.
+
+Soldiers and Turrets play `Assets/Resources/Sfx/Pew.ogg` each time they launch a projectile, including shots within a burst. This also applies to existing scene instances without adding components. `DefenderShotAudio` varies pitch from 0.9 to 1.1 and volume from 0.35 to 0.45 per shot. Adjust those ranges in that script to tune the effect. Attack timing, damage, and aiming are unchanged.
+
+The AudioManager reuses up to 24 independent SFX voices for varied shots, all routed through its SFX source's mixer group. When all voices are busy, extra sounds are skipped while projectiles still fire. Keep an AudioManager in the starting scene so shooting sounds follow the SFX and Master sliders.
