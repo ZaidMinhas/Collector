@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: f42efd3602cc1274cb9749642cb1a0b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5321124130432205060
+    second: Shooting-star-spritesheet_0
+  - first:
+      213: -1344658676229535438
+    second: Shooting-star-spritesheet_1
+  - first:
+      213: -2801492520144363649
+    second: Shooting-star-spritesheet_2
+  - first:
+      213: 1054572021967908608
+    second: Shooting-star-spritesheet_3
+  - first:
+      213: 5425385382432253714
+    second: Shooting-star-spritesheet_4
+  - first:
+      213: 6665397894015503640
+    second: Shooting-star-spritesheet_5
+  - first:
+      213: -1307500911103154888
+    second: Shooting-star-spritesheet_6
+  - first:
+      213: 3897561611163183603
+    second: Shooting-star-spritesheet_7
+  - first:
+      213: -1012637617746463305
+    second: Shooting-star-spritesheet_8
+  - first:
+      213: 1231918037623841133
+    second: Shooting-star-spritesheet_9
+  - first:
+      213: 6998525514907354116
+    second: Shooting-star-spritesheet_10
+  - first:
+      213: 7960036949971735033
+    second: Shooting-star-spritesheet_11
+  - first:
+      213: 6836593999712957139
+    second: Shooting-star-spritesheet_12
+  - first:
+      213: -6758950550893297766
+    second: Shooting-star-spritesheet_13
+  - first:
+      213: -4958313567272922959
+    second: Shooting-star-spritesheet_14
+  - first:
+      213: 1848121273699348848
+    second: Shooting-star-spritesheet_15
+  - first:
+      213: 1883335953737052524
+    second: Shooting-star-spritesheet_16
+  - first:
+      213: -1005528673277121682
+    second: Shooting-star-spritesheet_17
+  - first:
+      213: -3586508064700627500
+    second: Shooting-star-spritesheet_18
+  - first:
+      213: -5954871764575425538
+    second: Shooting-star-spritesheet_19
+  - first:
+      213: 1452922864088482977
+    second: Shooting-star-spritesheet_20
+  - first:
+      213: 7232764358150461654
+    second: Shooting-star-spritesheet_21
+  - first:
+      213: -5278805486483544685
+    second: Shooting-star-spritesheet_22
+  - first:
+      213: 3382136026355044742
+    second: Shooting-star-spritesheet_23
+  - first:
+      213: -1884602510971774598
+    second: Shooting-star-spritesheet_24
+  - first:
+      213: -1271491377307403383
+    second: Shooting-star-spritesheet_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 506
+        width: 28
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401cb20443e68d940800000000000000
+      internalID: 5321124130432205060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 644
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239013bee00d65de0800000000000000
+      internalID: -1344658676229535438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 642
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f91e755691f19d0800000000000000
+      internalID: -2801492520144363649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 646
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f6677aaa792ae00800000000000000
+      internalID: 1054572021967908608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 642
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217a879a247da4b40800000000000000
+      internalID: 5425385382432253714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 648
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d4e6fd110408c50800000000000000
+      internalID: 6665397894015503640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 642
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835623a49d2dadde0800000000000000
+      internalID: -1307500911103154888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 501
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9a49b92abe61630800000000000000
+      internalID: 3897561611163183603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 504
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5360ca37362f1f0800000000000000
+      internalID: -1012637617746463305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 513
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6127f0ade6a81110800000000000000
+      internalID: 1231918037623841133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 507
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4048f8340e1cf1160800000000000000
+      internalID: 6998525514907354116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 510
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f19c029e6bb77e60800000000000000
+      internalID: 7960036949971735033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 390
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2357a550670ee50800000000000000
+      internalID: 6836593999712957139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 399
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ff29fc8426332a0800000000000000
+      internalID: -6758950550893297766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 389
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b092b1b418803bb0800000000000000
+      internalID: -4958313567272922959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 369
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07131b4b188d5a910800000000000000
+      internalID: 1848121273699348848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 372
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61f7335214f22a10800000000000000
+      internalID: 1883335953737052524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 381
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6be8d9cff4ab02f0800000000000000
+      internalID: -1005528673277121682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 271
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d50273dae92a3ec0800000000000000
+      internalID: -3586508064700627500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 279
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb6a7d2eab0c5da0800000000000000
+      internalID: -5954871764575425538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 261
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a48900a5a1d92410800000000000000
+      internalID: 1452922864088482977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 268
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d81aa7ecd0ff5460800000000000000
+      internalID: 7232764358150461654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 263
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395e3cbd06aedb6b0800000000000000
+      internalID: -5278805486483544685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 250
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68191f0fbc2cfee20800000000000000
+      internalID: 3382136026355044742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 135
+        width: 19
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79d7b6500c88d5e0800000000000000
+      internalID: -1884602510971774598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooting-star-spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 134
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bbe983451ca5ee0800000000000000
+      internalID: -1271491377307403383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Shooting-star-spritesheet_0: 5321124130432205060
+      Shooting-star-spritesheet_1: -1344658676229535438
+      Shooting-star-spritesheet_10: 6998525514907354116
+      Shooting-star-spritesheet_11: 7960036949971735033
+      Shooting-star-spritesheet_12: 6836593999712957139
+      Shooting-star-spritesheet_13: -6758950550893297766
+      Shooting-star-spritesheet_14: -4958313567272922959
+      Shooting-star-spritesheet_15: 1848121273699348848
+      Shooting-star-spritesheet_16: 1883335953737052524
+      Shooting-star-spritesheet_17: -1005528673277121682
+      Shooting-star-spritesheet_18: -3586508064700627500
+      Shooting-star-spritesheet_19: -5954871764575425538
+      Shooting-star-spritesheet_2: -2801492520144363649
+      Shooting-star-spritesheet_20: 1452922864088482977
+      Shooting-star-spritesheet_21: 7232764358150461654
+      Shooting-star-spritesheet_22: -5278805486483544685
+      Shooting-star-spritesheet_23: 3382136026355044742
+      Shooting-star-spritesheet_24: -1884602510971774598
+      Shooting-star-spritesheet_25: -1271491377307403383
+      Shooting-star-spritesheet_3: 1054572021967908608
+      Shooting-star-spritesheet_4: 5425385382432253714
+      Shooting-star-spritesheet_5: 6665397894015503640
+      Shooting-star-spritesheet_6: -1307500911103154888
+      Shooting-star-spritesheet_7: 3897561611163183603
+      Shooting-star-spritesheet_8: -1012637617746463305
+      Shooting-star-spritesheet_9: 1231918037623841133
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
