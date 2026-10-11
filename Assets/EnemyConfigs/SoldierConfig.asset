@@ -15,9 +15,9 @@ MonoBehaviour:
   baseSpeed: 1
   searchRangeAngle: 40
   maxHealth: 2
-  burstBullets: 5
-  burstFireRate: 0.1
-  fireInterval: 1
+  burstBullets: 3
+  burstFireRate: 0.75
+  fireInterval: 5
   bulletConfig:
     speed: 10
     damage: 2
