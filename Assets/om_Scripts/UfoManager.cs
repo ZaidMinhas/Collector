@@ -69,7 +69,7 @@ public class UfoManager : MonoBehaviour
 
     void Start()
     {
-        _healthComponent.OnDeath += () => FindFirstObjectByType<CircleTransition>().Reload(); 
+        _healthComponent.OnDeath += () => FindFirstObjectByType<CircleTransition>().Reload();
     }
 
     private void OnDisable()
@@ -312,7 +312,8 @@ public class UfoManager : MonoBehaviour
                     abductSequence = true;
                     abductionTarget.UnlockAlt();
                     gameObject.GetComponent<Collider2D>().enabled = false;
-                    abductionTarget.GetComponent<Collider2D>().enabled = false;
+                    if (abductionTarget.GetComponent<Collider2D>() != null) 
+                        abductionTarget.GetComponent<Collider2D>().enabled = false;
                     FindFirstObjectByType<CircleTransition>().Progress();
                 }
             }

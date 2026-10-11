@@ -22,7 +22,7 @@ public class LeaderManager : MonoBehaviour
 
         // MOVEMENT
 
-        HandleAutoMovement(directionToPlanet, movementSpeed);
+        if (lockAlt) HandleAutoMovement(directionToPlanet, movementSpeed);
     }
 
     private void HandleAutoMovement(Vector3 directionToPlanet, float speed)
@@ -38,11 +38,8 @@ public class LeaderManager : MonoBehaviour
         transform.position = (leftDist > rightDist) ? leftOption : rightOption;
 
         // bind to default alt
-        if (lockAlt)
-        {
-            Vector3 dir = (transform.position - planet.transform.position).normalized;
-            transform.position = planet.transform.position + (dir * targetAlt);
-        }
+        Vector3 dir = (transform.position - planet.transform.position).normalized;
+        transform.position = planet.transform.position + (dir * targetAlt);
 
         // ROTATION: Make bottom face the planet
         // For 2D (assuming Z axis is forward)

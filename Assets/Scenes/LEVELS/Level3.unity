@@ -193,6 +193,10 @@ PrefabInstance:
       value: BlobDefender (13)
       objectReference: {fileID: 0}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
       objectReference: {fileID: 606662203}
@@ -17709,6 +17713,10 @@ PrefabInstance:
       value: BlobDefender (7)
       objectReference: {fileID: 0}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
       objectReference: {fileID: 606662203}
@@ -17853,6 +17861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlobDefender (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
@@ -18218,6 +18230,10 @@ PrefabInstance:
       value: BlobDefender
       objectReference: {fileID: 0}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
       objectReference: {fileID: 606662203}
@@ -18375,6 +18391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlobDefender (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
@@ -18563,6 +18583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlobDefender (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
@@ -18836,6 +18860,10 @@ PrefabInstance:
       value: BlobDefender (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
       objectReference: {fileID: 606662203}
@@ -18901,6 +18929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlobDefender (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1165873630}
     - target: {fileID: 5226665477683869437, guid: 43ce52dc653affd419d9073fb6ad5f50, type: 3}
       propertyPath: planet
       value: 
