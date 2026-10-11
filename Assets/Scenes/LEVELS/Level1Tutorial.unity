@@ -1773,17 +1773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e16edbe8b7f174f80395d473ab5346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetLeaderManager
---- !u!114 &1551406077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8417595402667781717, guid: 783d441e92621614fbc1a751653acce5, type: 3}
-  m_PrefabInstance: {fileID: 952408156}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eccf7965ce918d4a9cb867894f74cad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Abductable
 --- !u!1001 &1592099678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14312,7 +14301,7 @@ PrefabInstance:
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: abductionTarget
       value: 
-      objectReference: {fileID: 1551406077}
+      objectReference: {fileID: 1551406076}
     - target: {fileID: 7115028554574802624, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.07
