@@ -22,7 +22,7 @@ public class PlanetGlow : MonoBehaviour
     public bool matchPlanetColor = true;
     public Color innerColor = new Color(1f, 0.35f, 0.65f);
     public Color outerColor = new Color(0.6f, 0.1f, 0.4f);
-    [Range(0f, 1f)] public float opacity = 0.5f;
+    [Range(0f, 1f)] public float opacity = 0.25f;
     [Min(0f)] public float intensity = 1.2f;
     public int sortingOrder = -10;
 

@@ -29,7 +29,7 @@ public class HoverSway : MonoBehaviour
 
     void OnDisable()
     {
-        transform.localPosition -= appliedOffset;
+        transform.position -= appliedOffset;
         transform.localRotation *= Quaternion.Inverse(appliedTilt);
         appliedOffset = Vector3.zero;
         appliedTilt = Quaternion.identity;
@@ -52,7 +52,7 @@ public class HoverSway : MonoBehaviour
         float roll = -Mathf.Lerp(sideVelocity, noiseX, unsteadiness) * tiltAngle;
         Quaternion tilt = Quaternion.Euler(0f, 0f, roll);
 
-        transform.localPosition += offset - appliedOffset;
+        transform.position += offset - appliedOffset;
         transform.localRotation = transform.localRotation * Quaternion.Inverse(appliedTilt) * tilt;
 
         appliedOffset = offset;
