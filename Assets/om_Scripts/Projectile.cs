@@ -59,20 +59,20 @@ public class Projectile : MonoBehaviour
     //By Zaid
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isHitting) return;
         if (owner != null && other.transform.IsChildOf(owner)) return;
-        isHitting = false;
         Destroy(gameObject);
+        
+        if (!isHitting) return;
+        isHitting = false;
         
         HealthComponent target = other.GetComponentInParent<HealthComponent>();
         if (target == null) return;
-        
         target.TakeDamage(damage);
     }
     
     IEnumerator DelayHitting()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         isHitting = true;
     }
 }

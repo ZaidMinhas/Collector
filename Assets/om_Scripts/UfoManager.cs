@@ -88,8 +88,8 @@ public class UfoManager : MonoBehaviour
 
     private void ShootSingle() => HandleShooting(1, 0f);
     private void ShootMultiple() => HandleShooting(8, 45f);
-    private void PlaceBlackHole() => HandleMassPlacement(directionToPlanet, false);
-    private void PlaceWhiteHole() => HandleMassPlacement(directionToPlanet, true);
+    private void PlaceBlackHole() => HandleMassPlacement(directionToPlanet, true);
+    private void PlaceWhiteHole() => HandleMassPlacement(directionToPlanet, false);
     private void FireLaser() => HandleLaser(false, 1.5f);
     private void ActivateShield() => HandleShield(shieldAction.lifeTime);
 
