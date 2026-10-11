@@ -167,12 +167,12 @@ TextureImporter:
       name: Blob-alien-protector_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 67
-        width: 45
-        height: 38
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Blob-alien-protector_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 89
-        width: 8
-        height: 8
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,12 +211,12 @@ TextureImporter:
       name: Blob-alien-protector_2
       rect:
         serializedVersion: 2
-        x: 73
-        y: 66
-        width: 45
-        height: 37
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Blob-alien-protector_3
       rect:
         serializedVersion: 2
-        x: 117
-        y: 87
-        width: 8
-        height: 8
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: Blob-alien-protector_4
       rect:
         serializedVersion: 2
-        x: 136
-        y: 66
-        width: 44
-        height: 38
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: Blob-alien-protector_5
       rect:
         serializedVersion: 2
-        x: 179
-        y: 88
-        width: 8
-        height: 8
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,275 +295,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_6
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 66
-        width: 45
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa44f35e948ae07a0800000000000000
-      internalID: -6409000184369429329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_7
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 87
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba43850308492f650800000000000000
-      internalID: 6265233309913593003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_8
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 67
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 714845959b6b6f480800000000000000
-      internalID: -8865697909248326633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_9
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 66
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df111cc23215e84c0800000000000000
-      internalID: -4283396984066207235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 66
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 319f673bf5bae7950800000000000000
-      internalID: 6448780143962290451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_11
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 66
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5f7f7c635c5dc0740800000000000000
-      internalID: 5119701919417759733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_12
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 3
-        width: 48
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98f763778740484e0800000000000000
-      internalID: -1980453020693528695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_13
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 25
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58ccf8d20b4c971b0800000000000000
-      internalID: -5658275195856630651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_14
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 2
-        width: 45
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 278a16fdf52f8d480800000000000000
-      internalID: -8874076572150028174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_15
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 23
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1db3f28208696b030800000000000000
-      internalID: 3510158436756044753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_16
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 3
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89ea8c9228dd6dce0800000000000000
-      internalID: -1380672684625973608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blob-alien-protector_17
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 2
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e638ceef80db72880800000000000000
-      internalID: -8635725914125335698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4dcf97ae5e987744b9c9bec860ae0a6b
     internalID: 0
     vertices: []
     indices: 
@@ -571,26 +307,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Blob-alien-protector_0: -5666553923283585402
       Blob-alien-protector_1: 8291877907693084359
-      Blob-alien-protector_10: 6448780143962290451
-      Blob-alien-protector_11: 5119701919417759733
-      Blob-alien-protector_12: -1980453020693528695
-      Blob-alien-protector_13: -5658275195856630651
-      Blob-alien-protector_14: -8874076572150028174
-      Blob-alien-protector_15: 3510158436756044753
-      Blob-alien-protector_16: -1380672684625973608
-      Blob-alien-protector_17: -8635725914125335698
       Blob-alien-protector_2: -4325477565001165223
       Blob-alien-protector_3: 5869804670038175793
       Blob-alien-protector_4: 55335986096102490
       Blob-alien-protector_5: -6973066124162086762
-      Blob-alien-protector_6: -6409000184369429329
-      Blob-alien-protector_7: 6265233309913593003
-      Blob-alien-protector_8: -8865697909248326633
-      Blob-alien-protector_9: -4283396984066207235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

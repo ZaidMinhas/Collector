@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5680a3c606a0f43af66ed1365c48d4, type: 3}
+  m_Name: BlobSoldierConfig
+  m_EditorClassIdentifier: Assembly-CSharp::SoldierConfig
+  baseSpeed: 1
+  searchRangeAngle: 1
+  maxHealth: 100
+  burstBullets: 3
+  burstFireRate: 5
+  fireInterval: 20
+  bulletConfig:
+    speed: 0
+    damage: 0
