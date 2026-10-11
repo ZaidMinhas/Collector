@@ -126,7 +126,7 @@ public class UfoManager : MonoBehaviour
 
         if (Shoot())
         {
-            shootAction.UseAction();
+            shootAction?.UseAction();
         }
 
         if (PathShowHide())
@@ -140,19 +140,19 @@ public class UfoManager : MonoBehaviour
 
         if (PlaceMass() && !uM.AtCapacity())
         {
-            blackHoleAction.UseAction();
+            blackHoleAction?.UseAction();
         }
 
         if (PlaceNegMass() && !uM.AtCapacity())
         {
-            whiteHoleAction.UseAction();
+            whiteHoleAction?.UseAction();
         }
 
         // ABDUCTION
 
         if (Abduct())
         {
-            abductAction.UseAction();
+            abductAction?.UseAction();
         }
         if (EndAbduct()) abductionBeam.SetActive(false);
 
@@ -160,16 +160,16 @@ public class UfoManager : MonoBehaviour
 
         if (Shield())
         {
-            shieldAction.UseAction();
+            shieldAction?.UseAction();
         }
 
         // LASER
 
-        if (Laser()) laserAction.UseAction();
+        if (Laser()) laserAction?.UseAction();
 
         // MULTISHOT
 
-        if (Multishot()) multishotAction.UseAction();
+        if (Multishot()) multishotAction?.UseAction();
 
     }
 
