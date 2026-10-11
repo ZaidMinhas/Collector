@@ -139,6 +139,7 @@ public class Turret : MonoBehaviour
                     });
                     Destroy(shot.gameObject, Mathf.Max(0.01f, config.lifetime));
                 }
+                Manager.DefenderShotAudio.Play();
             }
             if (i < count - 1)
                 yield return new WaitForSeconds(interval);

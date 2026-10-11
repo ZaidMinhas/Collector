@@ -19,6 +19,9 @@ namespace Manager
         [Tooltip("Source audio par défaut pour les effets sonores")]
         public AudioSource SfxSource;
 
+        private readonly System.Collections.Generic.List<AudioSource> shotVoices =
+            new System.Collections.Generic.List<AudioSource>();
+
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -97,10 +100,41 @@ namespace Manager
         // Fonction pour jouer un effet sonore (SFX) facilement depuis n'importe quel script
         public void PlaySFX(AudioClip clip)
         {
+            PlaySFX(clip, 1f);
+        }
+
+        public void PlaySFX(AudioClip clip, float volumeScale)
+        {
             if (SfxSource != null && clip != null)
             {
-                SfxSource.PlayOneShot(clip);
+                SfxSource.PlayOneShot(clip, Mathf.Clamp01(volumeScale));
             }
+        }
+
+        public void PlaySFX(AudioClip clip, float volumeScale, float pitch)
+        {
+            if (SfxSource == null || clip == null) return;
+
+            AudioSource voice = shotVoices.Find(source => source != null && !source.isPlaying);
+            if (voice == null)
+            {
+                // Bound simultaneous effects so large enemy waves cannot allocate endlessly.
+                if (shotVoices.Count >= 24) return;
+                var voiceObject = new GameObject("SFX Voice");
+                voiceObject.transform.SetParent(transform, false);
+                voice = voiceObject.AddComponent<AudioSource>();
+                voice.playOnAwake = false;
+                voice.spatialBlend = 0f;
+                shotVoices.Add(voice);
+            }
+
+            // Each shot has its own pitch; overlapping shots keep their original pitch.
+            voice.outputAudioMixerGroup = SfxSource.outputAudioMixerGroup;
+            voice.mute = SfxSource.mute;
+            voice.volume = SfxSource.volume * Mathf.Clamp01(volumeScale);
+            voice.pitch = Mathf.Clamp(pitch, 0.1f, 3f);
+            voice.clip = clip;
+            voice.Play();
         }
 
         public void PlayMusic(AudioClip clip, bool loop = true)

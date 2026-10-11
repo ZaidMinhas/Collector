@@ -311,6 +311,7 @@ public class UfoManager : MonoBehaviour
             Projectile proj = Instantiate(defaultProjectile, spawnPos, Quaternion.identity);
             proj.SetVelocity(shotAngle, shotSpeed);
             proj.affectedByGravity = true;
+            Manager.PlayerShotAudio.Play();
         }
     }
 

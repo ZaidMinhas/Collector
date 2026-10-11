@@ -9,6 +9,8 @@ public class HealthComponent : MonoBehaviour
     public bool isDestroyedOnDeath = false;
     public bool isDebugMode;
 
+    private float nextHitSoundTime;
+
     public Action OnTakeDamage;
     public Action<float> OnHealthChange;
     public Action OnDeath;
@@ -51,6 +53,14 @@ public class HealthComponent : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (damage > 0f && currentHealth > 0f &&
+            GetComponent<DestroyableEnemy>() != null && Time.unscaledTime >= nextHitSoundTime)
+        {
+            Manager.EnemyHitAudio.Play();
+            // Lasers can apply damage repeatedly in one frame; avoid stacked hit sounds.
+            nextHitSoundTime = Time.unscaledTime + 0.08f;
+        }
+
         currentHealth -= damage;
         OnTakeDamage?.Invoke();
         OnHealthChange?.Invoke(currentHealth/defaultMaxHealth);
