@@ -75,7 +75,7 @@ namespace Manager
                     Mathf.Clamp01(PlayerPrefs.GetFloat("SfxVol", 1f));
             float sceneGain = instance.source.outputAudioMixerGroup == null
                 ? SceneAudioSettings.CurrentSfxMultiplier : 1f;
-            instance.source.PlayOneShot(clip, 0.5f * sceneGain);
+            instance.source.PlayOneShot(clip, 0.5f * sceneGain * AudioManager.NonEnemySfxGain);
         }
 
         private void OnDestroy()

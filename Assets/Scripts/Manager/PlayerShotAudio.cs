@@ -14,7 +14,7 @@ namespace Manager
             if (clip == null) return;
 
             // The higher pitch is already baked into this clip.
-            AudioManager.Instance.PlaySFX(clip, 0.4f);
+            AudioManager.Instance.PlayNonEnemySFX(clip, 0.4f);
         }
     }
 }

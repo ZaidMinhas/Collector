@@ -8,6 +8,11 @@ namespace Manager
     public class AudioManager : MonoBehaviour
     {
         public static AudioManager Instance;
+        // +0.15 dB converted to linear amplitude: 10^(0.15 / 20).
+        public const float NonEnemySfxGain = 1.0174194f;
+        // General effects total +6.30 dB after two additional +3 dB boosts (10^(6 / 20)).
+        // UI and lose/win keep their original +0.15 dB boost.
+        public const float GeneralSfxGain = NonEnemySfxGain * NonEnemySfxGain * 1.9952623f;
         
         [Header("Audio Mixer Reference")]
         [Tooltip("Glissez votre Audio Mixer principal ici")]
@@ -123,6 +128,13 @@ namespace Manager
             {
                 SfxSource.PlayOneShot(clip, Mathf.Clamp01(volumeScale));
             }
+        }
+
+        public void PlayNonEnemySFX(AudioClip clip, float volumeScale = 1f, bool includeGeneralBoost = true)
+        {
+            if (SfxSource != null && clip != null)
+                SfxSource.PlayOneShot(clip, Mathf.Clamp01(volumeScale) *
+                    (includeGeneralBoost ? GeneralSfxGain : NonEnemySfxGain));
         }
 
         public void PlaySFX(AudioClip clip, float volumeScale, float pitch)

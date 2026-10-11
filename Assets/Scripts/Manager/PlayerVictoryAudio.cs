@@ -14,7 +14,7 @@ namespace Manager
             if (clip == null) return;
 
             // The persistent manager keeps this playing through the next scene load.
-            AudioManager.Instance.PlaySFX(clip);
+            AudioManager.Instance.PlayNonEnemySFX(clip, includeGeneralBoost: false);
         }
     }
 }

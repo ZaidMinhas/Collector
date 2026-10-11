@@ -27,7 +27,7 @@ namespace Manager
                 return;
             }
 
-            manager.PlaySFX(clip, volume);
+            manager.PlayNonEnemySFX(clip, volume);
         }
     }
 }

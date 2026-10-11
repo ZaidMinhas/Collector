@@ -33,7 +33,7 @@ namespace Manager
             }
 
             source.outputAudioMixerGroup = manager.SfxSource.outputAudioMixerGroup;
-            source.volume = manager.SfxSource.volume * 0.5f;
+            source.volume = manager.SfxSource.volume * 0.5f * AudioManager.GeneralSfxGain;
             source.mute = manager.SfxSource.mute;
             source.clip = clip;
             if (!source.isPlaying) source.Play();

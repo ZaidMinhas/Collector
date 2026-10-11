@@ -23,7 +23,7 @@ namespace Manager
             if (keyboard.rKey.wasPressedThisFrame)
             {
                 AudioClip clip = Resources.Load<AudioClip>("Sfx/sound");
-                AudioManager.Instance.PlaySFX(clip);
+                AudioManager.Instance.PlayNonEnemySFX(clip);
             }
         }
     }
