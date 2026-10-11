@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3362903032309590112}
   - component: {fileID: -5062254252252437407}
   - component: {fileID: 1296691647054325375}
+  - component: {fileID: -2160887975845867824}
   m_Layer: 0
   m_Name: CatSoldier
   m_TagString: Untagged
@@ -188,3 +189,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5625, y: 0.84375}
   m_Direction: 0
+--- !u!114 &-2160887975845867824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836425751517951031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dae13ea6ff57154c96803ae54571d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyableEnemy

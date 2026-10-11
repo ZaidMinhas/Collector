@@ -58,3 +58,4 @@ MonoBehaviour:
   spawnedSoldiers: []
   currentWave: 0
   MaxEnemyCount: 100
+  loopFinalWave: 1

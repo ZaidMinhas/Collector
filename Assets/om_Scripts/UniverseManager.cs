@@ -7,6 +7,8 @@ public class UniverseManager : MonoBehaviour
 
     public List<StaticMass> allMasses;
 
+    public List<DestroyableEnemy> allEnemies;
+
     private static UniverseManager _universe;
 
     private void Awake()
