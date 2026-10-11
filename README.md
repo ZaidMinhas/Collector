@@ -14,6 +14,10 @@ This is a convenience component built on Unity audio. Use a dedicated AudioSourc
 
 ## Defender shooting sounds
 
+Successfully abducting the target plays `Assets/Resources/Sfx/Yay You Won!.ogg` once before advancing to the next level. It stops the Kidnap loop and continues through scene loading via the persistent AudioManager, following the SFX and Master sliders. Failed abductions and the debug level-skip key do not trigger this victory sound. Replace this single Resources asset to update it.
+
+Player death plays `Assets/Resources/Sfx/Oh No You Lost.ogg` once as the circle reload transition starts. The persistent AudioManager lets it finish across the scene reload, following the SFX and Master sliders. The portal loop stops on death, and repeated death notifications do not replay the sound or restart the transition. Replace this single Resources asset to update it.
+
 The Space-bar abduction portal loops `Assets/Resources/Sfx/Kidnap.ogg` while Space is held after successful activation. Releasing Space or disabling the player stops the loop and beam. Failed actions, shield-blocked abduction, and missing beams do not start the sound. A dedicated source follows the SFX and Master sliders and allows the loop to stop independently of other effects.
 
 Enemy defeats play `Assets/Resources/Sfx/Defeat.ogg` when positive damage takes a living enemy's health to zero or below. The sound uses the persistent AudioManager, so destroying the enemy does not cut it off, and follows the SFX and Master sliders. Further damage to an already dead enemy does not replay it. Replace this single Resources asset to update the sound.

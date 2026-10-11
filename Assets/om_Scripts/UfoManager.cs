@@ -36,6 +36,7 @@ public class UfoManager : MonoBehaviour
     private bool showPreviewBeam = true;
     private bool abductSequence = false;
     private HealthComponent _healthComponent;
+    private bool deathHandled;
 
     [Header("Primary Fire Bursts")]
     [Min(1)] public int shotsPerBurst = 3;
@@ -85,7 +86,25 @@ public class UfoManager : MonoBehaviour
 
     void Start()
     {
-        _healthComponent.OnDeath += () => FindFirstObjectByType<CircleTransition>().Reload();
+        _healthComponent.OnDeath += HandleDeath;
+    }
+
+    private void HandleDeath()
+    {
+        if (deathHandled) return;
+        deathHandled = true;
+        StopAbduction();
+        ResetPrimaryBurst();
+        Manager.PlayerDeathAudio.Play();
+
+        var transition = FindFirstObjectByType<CircleTransition>();
+        if (transition != null) transition.Reload();
+    }
+
+    private void OnDestroy()
+    {
+        if (_healthComponent != null)
+            _healthComponent.OnDeath -= HandleDeath;
     }
 
     private void OnDisable()
@@ -156,6 +175,7 @@ public class UfoManager : MonoBehaviour
 
     void Update()
     {
+        if (deathHandled) return;
         // Check before early returns so releasing Space also stops audio during transitions.
         if (!Input.GetKey(KeyCode.Space)) StopAbduction();
         if (shootAction != null) shootAction.TickCooldown();
@@ -335,7 +355,7 @@ public class UfoManager : MonoBehaviour
 
     private void HandleAbduction()
     {
-        if (shieldOn || abductionBeam == null) return;
+        if (shieldOn || deathHandled || abductSequence || abductionBeam == null) return;
         abductionBeam.SetActive(true);
         Manager.KidnapAudio.Play(transform);
 
@@ -359,6 +379,8 @@ public class UfoManager : MonoBehaviour
                 if (bounds.IntersectRay(new(ufoPos, dir)))
                 {
                     abductSequence = true;
+                    Manager.KidnapAudio.Stop();
+                    Manager.PlayerVictoryAudio.Play();
                     abductionTarget.UnlockAlt();
                     gameObject.GetComponent<Collider2D>().enabled = false;
                     if (abductionTarget.GetComponent<Collider2D>() != null) 

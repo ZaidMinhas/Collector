@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: d92ecfca2803e2d40885eb25ae0c50f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6409698399585045846
+    second: spritesheet soldier enemy 3 _0
+  - first:
+      213: -4722562571395772170
+    second: spritesheet soldier enemy 3 _1
+  - first:
+      213: -9208285209900740400
+    second: spritesheet soldier enemy 3 _2
+  - first:
+      213: -6701719861626481929
+    second: spritesheet soldier enemy 3 _3
+  - first:
+      213: 7820530806717454690
+    second: spritesheet soldier enemy 3 _4
+  - first:
+      213: -6596490145088542916
+    second: spritesheet soldier enemy 3 _5
+  - first:
+      213: -1765845072594781467
+    second: spritesheet soldier enemy 3 _6
+  - first:
+      213: -340490291185983963
+    second: spritesheet soldier enemy 3 _7
+  - first:
+      213: 268764022785983560
+    second: spritesheet soldier enemy 3 _8
+  - first:
+      213: 4236254802320199000
+    second: spritesheet soldier enemy 3 _9
+  - first:
+      213: -7556704472413244602
+    second: spritesheet soldier enemy 3 _10
+  - first:
+      213: -7669794904747681636
+    second: spritesheet soldier enemy 3 _11
+  - first:
+      213: 2990745761227774409
+    second: spritesheet soldier enemy 3 _12
+  - first:
+      213: 9175235784665084804
+    second: spritesheet soldier enemy 3 _13
+  - first:
+      213: 1148720297936943513
+    second: spritesheet soldier enemy 3 _14
+  - first:
+      213: -7903819712113874043
+    second: spritesheet soldier enemy 3 _15
+  - first:
+      213: 3849337197143610870
+    second: spritesheet soldier enemy 3 _16
+  - first:
+      213: -6514832133565802502
+    second: spritesheet soldier enemy 3 _17
+  - first:
+      213: -2221078189939262775
+    second: spritesheet soldier enemy 3 _18
+  - first:
+      213: 7397646734453936395
+    second: spritesheet soldier enemy 3 _19
+  - first:
+      213: 2378604688918741075
+    second: spritesheet soldier enemy 3 _20
+  - first:
+      213: -3072710451766178152
+    second: spritesheet soldier enemy 3 _21
+  - first:
+      213: -4074359323430049985
+    second: spritesheet soldier enemy 3 _22
+  - first:
+      213: 5128461263808148923
+    second: spritesheet soldier enemy 3 _23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 327
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d08a00cb2d3f850800000000000000
+      internalID: 6409698399585045846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 327
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0566ecc56167eb0800000000000000
+      internalID: -4722562571395772170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 327
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d01261a369953080800000000000000
+      internalID: -9208285209900740400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _3
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 327
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2d2970b45bef2a0800000000000000
+      internalID: -6701719861626481929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 263
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2699461755b188c60800000000000000
+      internalID: 7820530806717454690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 263
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37e1a9a92f8474a0800000000000000
+      internalID: -6596490145088542916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _6
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 263
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea3d9723457e77e0800000000000000
+      internalID: -1765845072594781467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 263
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ed36852e5564bf0800000000000000
+      internalID: -340490291185983963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 199
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844409a6477dab300800000000000000
+      internalID: 268764022785983560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 199
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d865e4c433aca30800000000000000
+      internalID: 4236254802320199000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 199
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643f339c151312790800000000000000
+      internalID: -7556704472413244602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 199
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98d962ab2a6f8590800000000000000
+      internalID: -7669794904747681636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 135
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c99c779c63418920800000000000000
+      internalID: 2990745761227774409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 135
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4833a6b655cf45f70800000000000000
+      internalID: 9175235784665084804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 135
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999ffc8560311ff00800000000000000
+      internalID: 1148720297936943513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _15
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 135
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58be8ba19ddff4290800000000000000
+      internalID: -7903819712113874043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 71
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5517049c79b6530800000000000000
+      internalID: 3849337197143610870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _17
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 71
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7928b01baa695a0800000000000000
+      internalID: -6514832133565802502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 71
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca7d4e67252d21e0800000000000000
+      internalID: -2221078189939262775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _19
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 71
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0194f4b288b9a660800000000000000
+      internalID: 7397646734453936395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 7
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3508418bc50820120800000000000000
+      internalID: 2378604688918741075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _21
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 7
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ec8d0cf1a8b55d0800000000000000
+      internalID: -3072710451766178152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _22
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 7
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37a6af38c7f477c0800000000000000
+      internalID: -4074359323430049985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet soldier enemy 3 _23
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 7
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5b2a10954fb2740800000000000000
+      internalID: 5128461263808148923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet soldier enemy 3 _0: 6409698399585045846
+      spritesheet soldier enemy 3 _1: -4722562571395772170
+      spritesheet soldier enemy 3 _10: -7556704472413244602
+      spritesheet soldier enemy 3 _11: -7669794904747681636
+      spritesheet soldier enemy 3 _12: 2990745761227774409
+      spritesheet soldier enemy 3 _13: 9175235784665084804
+      spritesheet soldier enemy 3 _14: 1148720297936943513
+      spritesheet soldier enemy 3 _15: -7903819712113874043
+      spritesheet soldier enemy 3 _16: 3849337197143610870
+      spritesheet soldier enemy 3 _17: -6514832133565802502
+      spritesheet soldier enemy 3 _18: -2221078189939262775
+      spritesheet soldier enemy 3 _19: 7397646734453936395
+      spritesheet soldier enemy 3 _2: -9208285209900740400
+      spritesheet soldier enemy 3 _20: 2378604688918741075
+      spritesheet soldier enemy 3 _21: -3072710451766178152
+      spritesheet soldier enemy 3 _22: -4074359323430049985
+      spritesheet soldier enemy 3 _23: 5128461263808148923
+      spritesheet soldier enemy 3 _3: -6701719861626481929
+      spritesheet soldier enemy 3 _4: 7820530806717454690
+      spritesheet soldier enemy 3 _5: -6596490145088542916
+      spritesheet soldier enemy 3 _6: -1765845072594781467
+      spritesheet soldier enemy 3 _7: -340490291185983963
+      spritesheet soldier enemy 3 _8: 268764022785983560
+      spritesheet soldier enemy 3 _9: 4236254802320199000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
