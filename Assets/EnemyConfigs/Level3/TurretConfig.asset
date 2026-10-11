@@ -15,12 +15,12 @@ MonoBehaviour:
   maxHealth: 10
   range: 5
   requireLineOfSight: 0
-  burstBullets: 1
+  burstBullets: 3
   burstInterval: 1
   fireInterval: 5
   homingConfig:
     speed: 5
-    damage: 1
+    damage: 10
     turnSpeed: 90
     lifetime: 5
     affectedByGravity: 1
