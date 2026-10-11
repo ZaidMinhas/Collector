@@ -52,6 +52,7 @@ public class Turret : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale <= 0f) return;
         if (healthComponent.currentHealth <= 0f)
             return;
 

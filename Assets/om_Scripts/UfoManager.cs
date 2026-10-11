@@ -176,6 +176,12 @@ public class UfoManager : MonoBehaviour
     void Update()
     {
         if (deathHandled) return;
+        if (Time.timeScale <= 0f)
+        {
+            ResetPrimaryBurst();
+            if (Manager.PauseMenu.IsPaused || !Input.GetKey(KeyCode.Space)) StopAbduction();
+            return;
+        }
         // Check before early returns so releasing Space also stops audio during transitions.
         if (!Input.GetKey(KeyCode.Space)) StopAbduction();
         if (shootAction != null) shootAction.TickCooldown();

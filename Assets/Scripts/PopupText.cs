@@ -46,9 +46,9 @@ public class PopupText : MonoBehaviour
         for (int i = 0; i < Mathf.Max(1, blinkCount); i++)
         {
             instructions.alpha = 0f;
-            yield return new WaitForSecondsRealtime(Mathf.Max(0.01f, blinkInterval));
+            yield return WaitForIntroSeconds(Mathf.Max(0.01f, blinkInterval));
             instructions.alpha = 1f;
-            yield return new WaitForSecondsRealtime(Mathf.Max(0.01f, blinkInterval));
+            yield return WaitForIntroSeconds(Mathf.Max(0.01f, blinkInterval));
         }
         instructions.alpha = 0f;
 
@@ -62,6 +62,11 @@ public class PopupText : MonoBehaviour
             float elapsed = 0f;
             while (elapsed < fadeDuration)
             {
+                if (Manager.PauseMenu.IsPaused)
+                {
+                    yield return null;
+                    continue;
+                }
                 elapsed += Time.unscaledDeltaTime;
                 float t = Mathf.Clamp01(elapsed / fadeDuration);
                 t = t * t * (3f - 2f * t);
@@ -73,6 +78,7 @@ public class PopupText : MonoBehaviour
             blackOverlay.gameObject.SetActive(false);
         }
 
+        while (Manager.PauseMenu.IsPaused) yield return null;
         instructions.blocksRaycasts = false;
         RestoreTimeScale();
         resumeRoutine = null;
@@ -82,7 +88,7 @@ public class PopupText : MonoBehaviour
     private void RestoreTimeScale()
     {
         if (!ownsPause) return;
-        Time.timeScale = previousTimeScale;
+        Manager.PauseMenu.SetGameplayTimeScale(previousTimeScale);
         ownsPause = false;
     }
 
@@ -92,5 +98,15 @@ public class PopupText : MonoBehaviour
             StopCoroutine(resumeRoutine);
         resumeRoutine = null;
         RestoreTimeScale();
+    }
+
+    private IEnumerator WaitForIntroSeconds(float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            if (!Manager.PauseMenu.IsPaused) elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
     }
 }

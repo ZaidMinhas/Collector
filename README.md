@@ -1,5 +1,11 @@
 # Collector
 
+## Pause menu
+
+Press **Escape** to open the existing OptionSetting screen over the current scene. Gameplay and player actions pause while the Master, Music, and SFX sliders remain usable. Press **Escape** again or click **Resume** to return without reloading the level. The menu is created automatically, including when starting a level directly in the editor; no prefab setup is needed. OptionSetting must remain enabled in the build scene list.
+
+Opening options normally from MainMenu keeps its existing Back behavior. During a tutorial intro, closing the pause menu restores the intro's paused state; the blink and fade resume where they stopped. Music continues while paused so its volume can be adjusted.
+
 ## Adding sound effects
 
 1. Ensure the starting scene contains `Assets/Prefabs/AudioManager.prefab` and an active AudioListener (usually on the camera). The manager persists across scene changes.

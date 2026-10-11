@@ -67,6 +67,7 @@ public class Soldier : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale <= 0f) return;
         float targetDir = GetTargetDir();
 
         if (targetDir != 0f)
