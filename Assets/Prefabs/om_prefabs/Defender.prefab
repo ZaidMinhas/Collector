@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8485059240731095898}
   - component: {fileID: 4476636898363217118}
   m_Layer: 0
-  m_Name: red_defender
+  m_Name: Defender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,6 +27,8 @@ public class DefenderManager : MonoBehaviour
 
     private void Update()
     {
+        if (leader == null) return;
+
         Vector3 directionToPlanet = (planet.transform.position - transform.position).normalized;
 
         // MOVEMENT

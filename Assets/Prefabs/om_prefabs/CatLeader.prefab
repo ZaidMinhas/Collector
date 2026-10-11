@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8417595402667781717}
   - component: {fileID: 7741893664299271580}
   m_Layer: 0
-  m_Name: maduro
+  m_Name: CatLeader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
