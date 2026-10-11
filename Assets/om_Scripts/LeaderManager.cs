@@ -8,6 +8,7 @@ public class LeaderManager : MonoBehaviour
     public float movementSpeed = 2.0f;
 
     private float targetAlt = 0f;
+    private bool lockAlt = true;
 
     private void Start()
     {
@@ -37,12 +38,18 @@ public class LeaderManager : MonoBehaviour
         transform.position = (leftDist > rightDist) ? leftOption : rightOption;
 
         // bind to default alt
-        Vector3 dir = (transform.position - planet.transform.position).normalized;
-        transform.position = planet.transform.position + (dir * targetAlt);
+        if (lockAlt)
+        {
+            Vector3 dir = (transform.position - planet.transform.position).normalized;
+            transform.position = planet.transform.position + (dir * targetAlt);
+        }
 
         // ROTATION: Make bottom face the planet
         // For 2D (assuming Z axis is forward)
         float btDir = Mathf.Atan2(directionToPlanet.y, directionToPlanet.x) * Mathf.Rad2Deg + 90f;
         transform.rotation = Quaternion.Euler(0f, 0f, btDir);
     }
+
+    public void UnlockAlt() => lockAlt = false;
+
 }

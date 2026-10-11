@@ -12,7 +12,7 @@ public class UfoManager : MonoBehaviour
 
     public Projectile defaultProjectile;
 
-    public Abductable abductionTarget;
+    public LeaderManager abductionTarget;
     public GameObject abductionBeam;
 
     public GameObject forceField;
@@ -25,12 +25,14 @@ public class UfoManager : MonoBehaviour
 
     public float moveSpeed = 5.0f;
     public float shotSpeed = 8.0f;
+    public float laserDmg = 64f;
 
     public int maxLaserDist = 256;
 
     private Vector3 directionToPlanet = Vector3.zero;
 
     private bool showPreviewBeam = false;
+    private bool abductSequence = false;
 
     [Header("Actions")]
     public PlayerAction shootAction;
@@ -115,6 +117,9 @@ public class UfoManager : MonoBehaviour
         if (placeableMass == null) return;
         if (placeableNegMass == null) return;
 
+        // ending cutscene
+        if (abductSequence) return;
+
         // used below a bunch
         directionToPlanet = (planetManager.transform.position - transform.position).normalized;
         UniverseManager uM = UniverseManager.Universe();
@@ -125,6 +130,12 @@ public class UfoManager : MonoBehaviour
 
         // CANCEL FURTHER ACTIONS IF SHIELD ON
         if (shieldOn) return;
+
+
+        // FORCE PROGRESSION
+        if (GodSpeed()) FindFirstObjectByType<CircleTransition>().Progress();
+        if (Reload()) FindFirstObjectByType<CircleTransition>().Reload();
+
 
         // PROJECTILES
 
@@ -202,6 +213,11 @@ public class UfoManager : MonoBehaviour
                 laserBeam.positionCount = 0;
                 laserOn = false;
             }
+        }
+
+        if (abductSequence)
+        {
+            abductionTarget.transform.position = Vector3.Lerp(abductionTarget.transform.position, transform.position, 0.01f);
         }
     }
 
@@ -289,7 +305,10 @@ public class UfoManager : MonoBehaviour
                 Vector3 dir = (planetPos - ufoPos).normalized;
                 if (bounds.IntersectRay(new(ufoPos, dir)))
                 {
-                    Destroy(abductionTarget.gameObject);
+                    abductSequence = true;
+                    abductionTarget.UnlockAlt();
+                    gameObject.GetComponent<Collider2D>().enabled = false;
+                    abductionTarget.GetComponent<Collider2D>().enabled = false;
                     FindFirstObjectByType<CircleTransition>().Progress();
                 }
             }
@@ -333,7 +352,7 @@ public class UfoManager : MonoBehaviour
                     { toDmg.Add(e); }
                 }
                 foreach (DestroyableEnemy e in toDmg)
-                    e.gameObject.GetComponent<HealthComponent>().TakeDamage(64f);
+                    e.gameObject.GetComponent<HealthComponent>().TakeDamage(laserDmg);
             }
 
 
@@ -421,7 +440,12 @@ public class UfoManager : MonoBehaviour
 
     private bool Shield() => Input.GetKeyDown(KeyCode.Alpha3);
 
-    private bool Laser() => Input.GetKeyDown(KeyCode.Alpha4);
+    private bool Multishot() => Input.GetKeyDown(KeyCode.Alpha4);
 
-    private bool Multishot() => Input.GetKeyDown(KeyCode.Alpha5);
+    private bool Laser() => Input.GetKeyDown(KeyCode.Alpha5);
+
+    private bool GodSpeed() => Input.GetKeyDown(KeyCode.Return);
+
+    private bool Reload() => Input.GetKeyDown(KeyCode.Backspace);
+
 }

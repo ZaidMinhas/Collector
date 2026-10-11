@@ -126,7 +126,9 @@ public class CircleTransition : MonoBehaviour
 
     public void Progress()
     {
+        transitionDuration *= 2f;
         currentLevel++;
         GoToNextLevel("Level" + currentLevel);
+        transitionDuration /= 2f;
     }
 }
