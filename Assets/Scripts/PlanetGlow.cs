@@ -121,7 +121,7 @@ public class PlanetGlow : MonoBehaviour
         float wave = Application.isPlaying ? Mathf.Sin(Time.time * pulseSpeed * Mathf.PI * 2f) : 0f;
 
         Camera cam = Camera.main;
-        transform.position = planet.position;
+        transform.position = PlanetPalette.Center(planet);
         if (cam != null) transform.rotation = cam.transform.rotation;
 
         float diameter = glowRadius * 2f * (1f + wave * pulseAmount * 0.05f);

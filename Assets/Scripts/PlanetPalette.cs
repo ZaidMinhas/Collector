@@ -12,6 +12,12 @@ public static class PlanetPalette
 
     static readonly Dictionary<(Texture, Color), Colors> cache = new Dictionary<(Texture, Color), Colors>();
 
+    public static Vector3 Center(Transform planet)
+    {
+        Renderer planetRenderer = planet.GetComponent<Renderer>();
+        return planetRenderer != null ? planetRenderer.bounds.center : planet.position;
+    }
+
     public static bool TryGet(Transform planet, out Colors colors)
     {
         colors = default;

@@ -70,10 +70,15 @@ public class CrystalOrbit : MonoBehaviour
     Gradient planetGradient;
     PlanetPalette.Colors cachedPlanetColors;
 
-    Vector3 Center => planet != null ? planet.position : transform.position;
+    Vector3 Center => planet != null ? PlanetPalette.Center(planet) : transform.position;
 
     public bool UsesColor => matchPlanetColor || useColor;
     public Gradient RingGradient => matchPlanetColor && UpdatePlanetGradient() ? planetGradient : colorGradient;
+
+    void Reset()
+    {
+        planet = transform.parent;
+    }
 
     void OnEnable()
     {
