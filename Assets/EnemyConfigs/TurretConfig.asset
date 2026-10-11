@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d95eb6828a9b745ba3be0ab533e6af, type: 3}
   m_Name: TurretConfig
   m_EditorClassIdentifier: Assembly-CSharp::TurretConfig
-  maxHealth: 100
+  maxHealth: 10
   range: 5
   requireLineOfSight: 0
-  burstBullets: 3
-  burstInterval: 0.1
-  fireInterval: 2
+  burstBullets: 1
+  burstInterval: 1
+  fireInterval: 5
   homingConfig:
-    speed: 10
+    speed: 5
     damage: 1
     turnSpeed: 90
     lifetime: 5

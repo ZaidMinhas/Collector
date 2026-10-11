@@ -34399,6 +34399,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
+      propertyPath: K
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: planetManager
       value: 
       objectReference: {fileID: 107013146}

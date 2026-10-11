@@ -4,7 +4,8 @@ using UnityEngine.Events;
 public class ActionIcon : MonoBehaviour
 {
 
-    public UnityEvent OnClick;
+    
+    public PlayerAction playerAction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
