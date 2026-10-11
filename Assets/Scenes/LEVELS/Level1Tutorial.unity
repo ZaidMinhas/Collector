@@ -665,6 +665,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3765223219231448766, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: stayDuration
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4121487168893646323, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -747,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
-      value: IconsMenuSet
+      value: MenuCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 4399513684936501618, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
@@ -771,16 +775,17 @@ PrefabInstance:
       objectReference: {fileID: 6659840101920734925}
     - target: {fileID: 6051168631428581819, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_text
-      value: 'Welcome, you are on a quest to collect the greatest minds in the galaxy
-        to craft your arsenal of weapons.
+      value: 'WELCOME you are on a quest to collect the greatest minds in the galaxy
+        to craft your arsenal of weapons and stop the EVIL ROBOT
 
 
-        To move, press A/D to orbit the
-        planet, and W/S to change altitude.
+        To move,
+        press <u><b>A/D</u></b> to orbit the planet, and <u><b>W/S</u></b> to change
+        altitude.
 
 
-        Press LMB to shoot hostiles,
-        and hold SPACE to abduct your target'
+        Press <u><b>LMB</u></b> to shoot hostiles, and hold <u><b>SPACE
+        </u></b>to capture your target'
       objectReference: {fileID: 0}
     - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.x
@@ -801,6 +806,10 @@ PrefabInstance:
     - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -590
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371931444775259991, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1201.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
