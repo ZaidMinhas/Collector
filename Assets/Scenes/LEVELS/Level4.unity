@@ -10835,7 +10835,7 @@ PrefabInstance:
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: multishotAction
       value: 
-      objectReference: {fileID: 11400000, guid: 2076656787cd8654ca3485af8cacd2de, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4365716878411323938, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
       propertyPath: whiteHoleAction
       value: 
@@ -10944,6 +10944,10 @@ PrefabInstance:
     - target: {fileID: 3454198493314499232, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478495326261764231, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4121487168893646323, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Pivot.x
@@ -11077,6 +11081,27 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6051168631428581819, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_text
+      value: '<size=46><color=#ff0000ff><b>LASER BEAM!!!</b></color></size>. Press
+        <b><u>4</u></b> to unleash a devastating blow on your enemies.
+
+
+        These
+        lasers pack a punch but take a while to reload, use wisely'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335201725138613894, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243440580693266472, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7582589612812281821, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11093,6 +11118,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8371931444775259991, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 315.0236
+      objectReference: {fileID: 0}
     - target: {fileID: 8558963124935659547, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11108,6 +11137,10 @@ PrefabInstance:
     - target: {fileID: 8558963124935659547, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653153046984790902, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
