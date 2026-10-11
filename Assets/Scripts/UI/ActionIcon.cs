@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActionIcon : MonoBehaviour
 {
     public PlayerAction playerAction;
     public RectTransform cooldownOverlay;
+
+    private Image cooldownImage;
 
     private void Awake()
     {
@@ -14,15 +17,25 @@ public class ActionIcon : MonoBehaviour
             return;
         }
 
-        playerAction.ResetRuntimeState();
+        cooldownImage = cooldownOverlay.GetComponent<Image>();
+        if (cooldownImage == null)
+        {
+            Debug.LogError("The cooldown overlay needs an Image component.", this);
+            enabled = false;
+            return;
+        }
 
-        cooldownOverlay.anchorMin = Vector2.zero;
-        SetHeight(0f);
+        cooldownImage.type = Image.Type.Filled;
+        cooldownImage.fillMethod = Image.FillMethod.Vertical;
+        cooldownImage.fillOrigin = (int)Image.OriginVertical.Bottom;
+
+        playerAction.ResetRuntimeState();
+        SetFill(0f);
     }
 
     private void OnEnable()
     {
-        if (playerAction == null || cooldownOverlay == null)
+        if (playerAction == null || cooldownImage == null)
             return;
 
         playerAction.OnUsePass += UseAction;
@@ -42,46 +55,33 @@ public class ActionIcon : MonoBehaviour
 
     private void Update()
     {
-        if (playerAction.cooldown <= 0)
-        {
-            return;
-        }
         playerAction.TickCooldown();
         RefreshOverlay();
     }
 
     private void RefreshOverlay()
     {
-        if (playerAction.cooldown <= 0)
+        if (cooldownImage == null)
+            return;
+
+        if (playerAction.cooldown <= 0f || playerAction.maxUses <= 0)
         {
+            SetFill(0f);
             return;
         }
+
         int max = playerAction.maxUses;
+        int missing = Mathf.Clamp(max - playerAction.currentUses, 0, max);
+        float progress = missing > 0
+            ? 1f - Mathf.Clamp01(playerAction.CooldownRemaining / playerAction.cooldown)
+            : 0f;
 
-        if (max <= 0)
-        {
-            SetHeight(0f);
-            return;
-        }
-
-        int missing = Mathf.Clamp(
-            max - playerAction.currentUses, 0, max);
-
-        float progress = 0f;
-
-        if (missing > 0 && playerAction.cooldown > 0f)
-        {
-            progress = 1f - Mathf.Clamp01(
-                playerAction.CooldownRemaining / playerAction.cooldown);
-        }
-
-        SetHeight(Mathf.Clamp01((missing - progress) / max));
+        SetFill(Mathf.Clamp01((missing - progress) / max));
     }
 
-    private void SetHeight(float fraction)
+    private void SetFill(float missingFraction)
     {
-        cooldownOverlay.anchorMax = new Vector2(1f, 1f - fraction);
-        cooldownOverlay.offsetMin = Vector2.zero;
-        cooldownOverlay.offsetMax = Vector2.zero;
+        // Preserve the previous 1 - fraction display direction.
+        cooldownImage.fillAmount = 1f - missingFraction;
     }
 }
