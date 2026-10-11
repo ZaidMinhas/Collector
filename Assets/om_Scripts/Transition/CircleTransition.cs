@@ -16,6 +16,7 @@ public class CircleTransition : MonoBehaviour
 
     private Material transitionMaterial;
     private bool isTransitioning;
+    public bool IsTransitioning => isTransitioning;
 
     private static readonly int RadiusID = Shader.PropertyToID("_Radius");
     private static readonly int CenterID = Shader.PropertyToID("_Center");
@@ -58,7 +59,14 @@ public class CircleTransition : MonoBehaviour
 
         // Start fully black, then reveal the first level.
         SetRadius(0f);
-        StartCoroutine(AnimateRadius(0f, maxRadius, null));
+        StartCoroutine(RevealInitialScene());
+    }
+
+    private IEnumerator RevealInitialScene()
+    {
+        isTransitioning = true;
+        yield return AnimateRadius(0f, maxRadius, null);
+        isTransitioning = false;
     }
 
     public void GoToNextLevel(string levelName)
