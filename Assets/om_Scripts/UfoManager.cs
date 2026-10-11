@@ -230,14 +230,16 @@ public class UfoManager : MonoBehaviour
 
         // MASS PLACEMENT
 
-        if (PlaceMass() && !uM.AtCapacity())
+        if (PlaceMass())
         {
-            blackHoleAction?.UseAction();
+            Manager.BlackWhiteHoleAudio.Play();
+            if (!uM.AtCapacity()) blackHoleAction?.UseAction();
         }
 
-        if (PlaceNegMass() && !uM.AtCapacity())
+        if (PlaceNegMass())
         {
-            whiteHoleAction?.UseAction();
+            Manager.BlackWhiteHoleAudio.Play();
+            if (!uM.AtCapacity()) whiteHoleAction?.UseAction();
         }
 
         // ABDUCTION
@@ -357,7 +359,6 @@ public class UfoManager : MonoBehaviour
         }
         sm.gameObject.transform.position = transform.position + directionToPlanet * 0.75f;
         UniverseManager.Universe().allMasses.Add(sm);
-        Manager.BlackWhiteHoleAudio.Play();
     }
 
     private void HandleAbduction()
