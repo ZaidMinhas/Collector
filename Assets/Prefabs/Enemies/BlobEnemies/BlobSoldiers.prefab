@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
   defaultMaxHealth: 2
   currentHealth: 0
-  isDestroyedOnDeath: 0
+  isDestroyedOnDeath: 1
   isDebugMode: 0
 --- !u!212 &3362903032309590112
 SpriteRenderer:
@@ -201,3 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dae13ea6ff57154c96803ae54571d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableEnemy
+  isBoss: 0
