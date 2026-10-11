@@ -47,7 +47,7 @@ public class UfoManager : MonoBehaviour
         // PROJECTILES
 
         if (Shoot()) HandleShooting(1, 0f);
-        if (PathShow()) HandleLaser(true);
+        if (PathShow()) HandleLaser(true, 1.5f);
         if (PathHide()) previewBeam.positionCount = 0;
 
         // MASS PLACEMENT
@@ -66,7 +66,7 @@ public class UfoManager : MonoBehaviour
 
         // LASER
 
-        if (Laser()) HandleLaser(false);
+        if (Laser()) HandleLaser(false, 1.5f);
 
         // MULTISHOT
 
@@ -187,7 +187,7 @@ public class UfoManager : MonoBehaviour
         shieldOn = true;
     }
 
-    private void HandleLaser(bool isPreview)
+    private void HandleLaser(bool isPreview, float arcRequired)
     {
         if (shieldOn) return;
 
@@ -199,11 +199,15 @@ public class UfoManager : MonoBehaviour
         Vector3 vel = GetVelocityVectorFor(angle, shotSpeed);
         beam.SetPosition(0, (isPreview ? transform.position : pos));
         UniverseManager u = UniverseManager.Universe();
+        int exclusions = 0;
+        Vector3 lastPlaced = pos;
         for (int i = 1; i < beam.positionCount; i++)
         {
             // TODO
             // linear search of all enemies to damage along the laser line
             // ...
+
+            // if inside a mass, stop the line draw 
             bool collide = false;
             foreach (StaticMass m in u.allMasses)
             {
@@ -211,10 +215,15 @@ public class UfoManager : MonoBehaviour
                 if (c != null && c.OverlapPoint(pos))
                 { collide = true; break; }
             }
-            beam.SetPosition(i, pos);
+            // make the line jagged looking (only draw pts on interval)
+            if (collide || ((lastPlaced - pos).magnitude >= arcRequired))
+            { lastPlaced = pos; beam.SetPosition(i - exclusions, pos); }
+            else { exclusions++; }
+            // find next location in the physics sim
             vel = u.UpdateVelocityForBody(pos, vel, defaultProjectile.gravityModifier, Time.fixedDeltaTime);
             pos += vel * Time.fixedDeltaTime;
-            if (collide) beam.positionCount -= (maxLaserDist - i);
+            // shave off remaining entries from collision
+            if (collide) beam.positionCount -= (maxLaserDist - i - 1);
         }
         if (!isPreview)
         {
@@ -222,6 +231,7 @@ public class UfoManager : MonoBehaviour
             laserMax = 0.5f;
             laserOn = true;
         }
+        beam.positionCount -= exclusions;
     }
 
 
