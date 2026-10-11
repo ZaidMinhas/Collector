@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
@@ -12,7 +13,7 @@ public class UfoManager : MonoBehaviour
 
     public Projectile defaultProjectile;
 
-    public Abductable abductionTarget;
+    public LeaderManager abductionTarget;
     public GameObject abductionBeam;
 
     public GameObject forceField;
@@ -25,12 +26,24 @@ public class UfoManager : MonoBehaviour
 
     public float moveSpeed = 5.0f;
     public float shotSpeed = 8.0f;
+    public float laserDmg = 64f;
+    public float shieldHealthGain = 25;
 
     public int maxLaserDist = 256;
 
     private Vector3 directionToPlanet = Vector3.zero;
 
-    private bool showPreviewBeam = false;
+    private bool showPreviewBeam = true;
+    private bool abductSequence = false;
+    private HealthComponent _healthComponent;
+
+    [Header("Primary Fire Bursts")]
+    [Min(1)] public int shotsPerBurst = 3;
+    [Min(0.01f)] public float burstShotInterval = 0.1f;
+    [Min(0.01f)] public float burstPause = 0.35f;
+
+    private int burstShotsRemaining;
+    private float nextBurstShotTime;
 
     [Header("Actions")]
     public PlayerAction shootAction;
@@ -48,10 +61,19 @@ public class UfoManager : MonoBehaviour
 
         if (forceField != null)
             forceField.SetActive(false);
+
+        if (previewBeam != null)
+        {
+            previewBeam.gameObject.SetActive(true);
+            previewBeam.enabled = true;
+        }
+
+        _healthComponent = GetComponent<HealthComponent>();
     }
 
     private void OnEnable()
     {
+        ResetPrimaryBurst();
         Subscribe(shootAction, ShootSingle);
         Subscribe(abductAction, HandleAbduction);
         Subscribe(blackHoleAction, PlaceBlackHole);
@@ -59,15 +81,16 @@ public class UfoManager : MonoBehaviour
         Subscribe(laserAction, FireLaser);
         Subscribe(multishotAction, ShootMultiple);
         Subscribe(shieldAction, ActivateShield);
+    }
 
-        gameObject.GetComponent<HealthComponent>().OnDeath += () =>
-        {
-            FindFirstObjectByType<CircleTransition>().Reload();
-        };
+    void Start()
+    {
+        _healthComponent.OnDeath += () => FindFirstObjectByType<CircleTransition>().Reload();
     }
 
     private void OnDisable()
     {
+        ResetPrimaryBurst();
         Unsubscribe(shootAction, ShootSingle);
         Unsubscribe(abductAction, HandleAbduction);
         Unsubscribe(blackHoleAction, PlaceBlackHole);
@@ -93,6 +116,36 @@ public class UfoManager : MonoBehaviour
             action.OnUsePass -= callback;
     }
 
+    private void ResetPrimaryBurst()
+    {
+        burstShotsRemaining = 0;
+        nextBurstShotTime = 0f;
+    }
+
+    private void HandleHeldShooting()
+    {
+        if (!Shoot())
+        {
+            ResetPrimaryBurst();
+            return;
+        }
+
+        if (Time.timeScale <= 0f || shootAction == null ||
+            shootAction.currentUses <= 0 || Time.time < nextBurstShotTime)
+            return;
+
+        if (burstShotsRemaining <= 0)
+            burstShotsRemaining = Mathf.Max(1, shotsPerBurst);
+
+        // Each shot uses the existing action, charge, and UI callbacks.
+        shootAction.UseAction();
+        burstShotsRemaining--;
+
+        nextBurstShotTime = Time.time + (burstShotsRemaining > 0
+            ? Mathf.Max(0.01f, burstShotInterval)
+            : Mathf.Max(0.01f, burstPause));
+    }
+
     private void ShootSingle() => HandleShooting(1, 0f);
     private void ShootMultiple() => HandleShooting(8, 45f);
     private void PlaceBlackHole() => HandleMassPlacement(directionToPlanet, false);
@@ -115,6 +168,9 @@ public class UfoManager : MonoBehaviour
         if (placeableMass == null) return;
         if (placeableNegMass == null) return;
 
+        // ending cutscene
+        if (abductSequence) { ResetPrimaryBurst(); return; }
+
         // used below a bunch
         directionToPlanet = (planetManager.transform.position - transform.position).normalized;
         UniverseManager uM = UniverseManager.Universe();
@@ -124,21 +180,24 @@ public class UfoManager : MonoBehaviour
         HandleMovement(directionToPlanet);
 
         // CANCEL FURTHER ACTIONS IF SHIELD ON
-        if (shieldOn) return;
+        if (shieldOn) { ResetPrimaryBurst(); return; }
+
+
+        // FORCE PROGRESSION
+        if (GodSpeed()) FindFirstObjectByType<CircleTransition>().Progress();
+        if (Reload()) FindFirstObjectByType<CircleTransition>().Reload();
+
 
         // PROJECTILES
 
-        if (Shoot())
-        {
-            shootAction?.UseAction();
-        }
+        HandleHeldShooting();
 
         if (PathShowHide())
         {
-            if (showPreviewBeam) { previewBeam.positionCount = 0; showPreviewBeam = false; }
+            if (showPreviewBeam) { if (previewBeam != null) previewBeam.positionCount = 0; showPreviewBeam = false; }
             else { showPreviewBeam = true; }
         }
-        if (showPreviewBeam) HandleLaser(true, 1.5f);
+        if (showPreviewBeam && previewBeam != null) HandleLaser(true, 1.5f);
 
         // MASS PLACEMENT
 
@@ -202,6 +261,11 @@ public class UfoManager : MonoBehaviour
                 laserBeam.positionCount = 0;
                 laserOn = false;
             }
+        }
+
+        if (abductSequence)
+        {
+            abductionTarget.transform.position = Vector3.Lerp(abductionTarget.transform.position, transform.position, 0.01f);
         }
     }
 
@@ -289,8 +353,21 @@ public class UfoManager : MonoBehaviour
                 Vector3 dir = (planetPos - ufoPos).normalized;
                 if (bounds.IntersectRay(new(ufoPos, dir)))
                 {
-                    Destroy(abductionTarget.gameObject);
-                    FindFirstObjectByType<CircleTransition>().Progress();
+                    abductSequence = true;
+                    abductionTarget.UnlockAlt();
+                    gameObject.GetComponent<Collider2D>().enabled = false;
+                    if (abductionTarget.GetComponent<Collider2D>() != null) 
+                        abductionTarget.GetComponent<Collider2D>().enabled = false;
+
+                    var trans = FindFirstObjectByType<CircleTransition>();
+                    if (trans)
+                    {
+                        trans.Progress();
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1 );
+                    }
                 }
             }
         }
@@ -302,6 +379,7 @@ public class UfoManager : MonoBehaviour
         shieldTimer = 0f;
         shieldMax = durationSeconds;
         shieldOn = true;
+        _healthComponent.GiveHealth(shieldHealthGain);
     }
 
     private void HandleLaser(bool isPreview, float arcRequired)
@@ -333,7 +411,7 @@ public class UfoManager : MonoBehaviour
                     { toDmg.Add(e); }
                 }
                 foreach (DestroyableEnemy e in toDmg)
-                    e.gameObject.GetComponent<HealthComponent>().TakeDamage(64f);
+                    e.gameObject.GetComponent<HealthComponent>().TakeDamage(laserDmg);
             }
 
 
@@ -407,7 +485,7 @@ public class UfoManager : MonoBehaviour
 
     private bool MoveDown() => Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
 
-    private bool Shoot() => Input.GetKeyDown(KeyCode.Mouse0);
+    private bool Shoot() => Input.GetKey(KeyCode.Mouse0);
 
     private bool PathShowHide() => Input.GetKeyDown(KeyCode.Mouse1);
 
@@ -421,7 +499,12 @@ public class UfoManager : MonoBehaviour
 
     private bool Shield() => Input.GetKeyDown(KeyCode.Alpha3);
 
-    private bool Laser() => Input.GetKeyDown(KeyCode.Alpha4);
+    private bool Multishot() => Input.GetKeyDown(KeyCode.Alpha4);
 
-    private bool Multishot() => Input.GetKeyDown(KeyCode.Alpha5);
+    private bool Laser() => Input.GetKeyDown(KeyCode.Alpha5);
+
+    private bool GodSpeed() => Input.GetKeyDown(KeyCode.Return);
+
+    private bool Reload() => Input.GetKeyDown(KeyCode.Backspace);
+
 }

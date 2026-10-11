@@ -22,6 +22,8 @@ public class HealthComponent : MonoBehaviour
     {
         this.currentHealth = defaultMaxHealth =  health;
     }
+    
+    
 
     public void Start()
     {
@@ -40,6 +42,11 @@ public class HealthComponent : MonoBehaviour
             OnTakeDamage += () => Debug.Log(name + " OnTakeDamage");
             OnDeath += () => Debug.Log(name + "OnDeath");
         }
+    }
+
+    public void GiveHealth(float health)
+    {
+        TakeDamage(-health);
     }
 
     public void TakeDamage(float damage)
