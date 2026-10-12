@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelMusic
   music: {fileID: 8300000, guid: 3c49ac97637f48c45a571ceb104016e5, type: 3}
   loop: 1
-  volume: 1
+  volume: 0.69
 --- !u!114 &952691244
 MonoBehaviour:
   m_ObjectHideFlags: 0
