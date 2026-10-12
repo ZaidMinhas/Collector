@@ -8927,6 +8927,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7115028554574802624, guid: 76c04441b54f59f488c9fbc6220570ac, type: 3}
   m_PrefabInstance: {fileID: 6659840101920734924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1234902807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234902808}
+  - component: {fileID: 1234902810}
+  - component: {fileID: 1234902809}
+  m_Layer: 0
+  m_Name: Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1234902808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234902807}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1818133730}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1115.8901, y: -37.706055}
+  m_SizeDelta: {x: -42.76001, y: 201.41199}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1234902809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234902807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 004da4c99ef5d8d4d9f25a1b19247023, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1234902810
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234902807}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1282013030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9166,6 +9241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossHealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 2337224570269756512, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5344618348704091739, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
       propertyPath: m_Value
       value: 1
@@ -9275,6 +9354,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6855478004669190440, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
+      propertyPath: barImg
+      value: 
+      objectReference: {fileID: 1234902809}
+    - target: {fileID: 6855478004669190440, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
       propertyPath: entityToTrack
       value: 
       objectReference: {fileID: 33330754}
@@ -9296,7 +9379,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6154051116657403108, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1234902808}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbca7c403e72e85468dbc0ee62386492, type: 3}
 --- !u!224 &1818133730 stripped
@@ -9628,6 +9714,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 8300000, guid: 45e9c913de2475a4785748020730b970, type: 3}
+    - target: {fileID: 4122894596883793904, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
+      propertyPath: volume
+      value: 0.744
+      objectReference: {fileID: 0}
     - target: {fileID: 4231099067565334737, guid: 4c84ab7b93734224c8653181fe5c41de, type: 3}
       propertyPath: m_Name
       value: IconsMenuSet
