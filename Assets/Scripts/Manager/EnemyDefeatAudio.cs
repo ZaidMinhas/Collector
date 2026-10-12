@@ -13,7 +13,8 @@ namespace Manager
                 clip = Resources.Load<AudioClip>("Sfx/Defeat");
             if (clip == null) return;
 
-            AudioManager.Instance.PlaySFX(clip, 0.5f);
+            // +6 dB: multiply the previous amplitude by 10^(6 / 20).
+            AudioManager.Instance.PlaySFX(clip, 0.5f * 1.9952623f);
         }
     }
 }

@@ -20,6 +20,8 @@ public class MortalEntity : MonoBehaviour
             timerState++;
             if (timerState >= lifeframes)
             {
+                timerOn = false;
+                StopAttachedAudio();
                 Destroy(gameObject);
                 UniverseManager.Universe().RefreshLists();
             }
@@ -30,6 +32,18 @@ public class MortalEntity : MonoBehaviour
                 gameObject.transform.localScale = new(s.x * mult, s.y * mult, s.z * mult);
             }
         }
+    }
+
+    private void OnDisable()
+    {
+        StopAttachedAudio();
+    }
+
+    private void StopAttachedAudio()
+    {
+        // Cut lifetime-bound sounds immediately, before deferred destruction.
+        foreach (var source in GetComponentsInChildren<AudioSource>(true))
+            source.Stop();
     }
 
     public void StartTimer()

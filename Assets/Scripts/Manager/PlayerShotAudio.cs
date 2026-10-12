@@ -14,7 +14,8 @@ namespace Manager
             if (clip == null) return;
 
             // The higher pitch is already baked into this clip.
-            AudioManager.Instance.PlayNonEnemySFX(clip, 0.4f);
+            // +5 dB: multiply the previous amplitude by 10^(5 / 20).
+            AudioManager.Instance.PlayNonEnemySFX(clip, 0.4f * 1.7782794f);
         }
     }
 }

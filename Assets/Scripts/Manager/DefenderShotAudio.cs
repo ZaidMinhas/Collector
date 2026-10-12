@@ -14,8 +14,9 @@ namespace Manager
                 defaultClip = Resources.Load<AudioClip>("Sfx/Pew");
             if (defaultClip == null) return;
 
+            // +2 dB while keeping the existing shot volume and pitch variation.
             AudioManager.Instance.PlaySFX(defaultClip,
-                Random.Range(0.25f, 0.35f), Random.Range(0.9f, 1.1f));
+                Random.Range(0.25f, 0.35f) * 1.2589254f, Random.Range(0.9f, 1.1f));
         }
     }
 }
