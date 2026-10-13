@@ -9,11 +9,14 @@ public class HealthBar : MonoBehaviour
     public Animator animator;
     public Image barImg;
     public SpriteRenderer barRenderer;
+    [Tooltip("Animate only when damage removes a displayed health segment.")]
+    public bool animateOnlyOnSegmentLoss;
 
     // Keep the field used by existing scene overrides; scenes do not need rewriting.
     [SerializeField] private HealthComponent healthComponent;
     private Slider slider;
     private HealthComponent trackedEntity;
+    private int displayedStage = -1;
 
     private void Start()
     {
@@ -32,8 +35,11 @@ public class HealthBar : MonoBehaviour
 
     private void OnHealthChanged(float health)
     {
+        int previousStage = displayedStage;
         Refresh(health);
-        if (animator != null) animator.SetTrigger("TakeHit");
+        bool segmentRemoved = previousStage >= 0 && displayedStage > previousStage;
+        if (animator != null && (!animateOnlyOnSegmentLoss || segmentRemoved))
+            animator.SetTrigger("TakeHit");
     }
 
     private void Refresh(float health)
@@ -44,6 +50,7 @@ public class HealthBar : MonoBehaviour
 
         int index = Mathf.Clamp(barStages.Count - Mathf.CeilToInt(health * barStages.Count),
             0, barStages.Count - 1);
+        displayedStage = index;
         if (barImg != null) barImg.sprite = barStages[index];
         if (barRenderer != null) barRenderer.sprite = barStages[index];
     }

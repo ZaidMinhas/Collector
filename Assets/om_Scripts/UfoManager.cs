@@ -437,10 +437,10 @@ public class UfoManager : MonoBehaviour
         UniverseManager u = UniverseManager.Universe();
         int exclusions = 0;
         Vector3 lastPlaced = pos;
+        var damagedEnemies = new HashSet<DestroyableEnemy>();
         for (int i = 1; i < beam.positionCount; i++)
         {
-            // TODO
-            // linear search of all enemies to damage along the laser line
+            // Each enemy takes damage once per activation, regardless of beam overlap.
             if (!isPreview)
             {
                 List<DestroyableEnemy> toDmg = new();
@@ -448,7 +448,7 @@ public class UfoManager : MonoBehaviour
                 {
                     if (e == null) continue;
                     Collider2D c = e.gameObject.GetComponent<Collider2D>();
-                    if (c != null && c.OverlapPoint(pos) && !e.isBoss)
+                    if (c != null && c.OverlapPoint(pos) && damagedEnemies.Add(e))
                     { toDmg.Add(e); }
                 }
                 foreach (DestroyableEnemy e in toDmg)
