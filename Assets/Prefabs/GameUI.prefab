@@ -419,7 +419,6 @@ GameObject:
   - component: {fileID: 3100243677941171025}
   - component: {fileID: 5174236426012678212}
   - component: {fileID: 7348105629285642182}
-  - component: {fileID: 9135394154277018224}
   m_Layer: 0
   m_Name: Edge
   m_TagString: Untagged
@@ -506,34 +505,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9135394154277018224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3876676093692990895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7340a2af128a143af7e30c84854d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
-  barStages:
-  - {fileID: 21300000, guid: 004da4c99ef5d8d4d9f25a1b19247023, type: 3}
-  - {fileID: 21300000, guid: 06d95203bd6c0f240924fc4096269fa3, type: 3}
-  - {fileID: 21300000, guid: bd20b91959cf4b047983988ae7485385, type: 3}
-  - {fileID: 21300000, guid: 443356cb328bfcb45be3f9e05d7f1d4b, type: 3}
-  - {fileID: 21300000, guid: 52d6477e8cc72964681c942c08673d47, type: 3}
-  - {fileID: 21300000, guid: 40ef68dd9c9f9b6498c5d9ac4ccb61d0, type: 3}
-  - {fileID: 21300000, guid: 7c4ea80f5fcf936449643348725273fd, type: 3}
-  - {fileID: 21300000, guid: 6bd800abbc2e57343b56f5a665000a08, type: 3}
-  - {fileID: 21300000, guid: d00afa9c89ace63449b7d17f39182a01, type: 3}
-  - {fileID: 21300000, guid: 1cfa9e5b744c26e41b375068b7d1103f, type: 3}
-  entityToTrack: {fileID: 0}
-  animator: {fileID: 7348105629285642182}
-  barImg: {fileID: 3885574547982897756}
-  barRenderer: {fileID: 0}
-  healthComponent: {fileID: 0}
 --- !u!1 &4231099067565334737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1128,6 @@ GameObject:
   - component: {fileID: 968661309926419419}
   - component: {fileID: 2135612729572224745}
   - component: {fileID: 7890816735747482779}
-  - component: {fileID: 3992000742598683066}
   m_Layer: 0
   m_Name: Edge
   m_TagString: Untagged
@@ -1244,34 +1214,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3992000742598683066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6490720910596998934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7340a2af128a143af7e30c84854d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
-  barStages:
-  - {fileID: 21300000, guid: 004da4c99ef5d8d4d9f25a1b19247023, type: 3}
-  - {fileID: 21300000, guid: 06d95203bd6c0f240924fc4096269fa3, type: 3}
-  - {fileID: 21300000, guid: bd20b91959cf4b047983988ae7485385, type: 3}
-  - {fileID: 21300000, guid: 443356cb328bfcb45be3f9e05d7f1d4b, type: 3}
-  - {fileID: 21300000, guid: 52d6477e8cc72964681c942c08673d47, type: 3}
-  - {fileID: 21300000, guid: 40ef68dd9c9f9b6498c5d9ac4ccb61d0, type: 3}
-  - {fileID: 21300000, guid: 7c4ea80f5fcf936449643348725273fd, type: 3}
-  - {fileID: 21300000, guid: 6bd800abbc2e57343b56f5a665000a08, type: 3}
-  - {fileID: 21300000, guid: d00afa9c89ace63449b7d17f39182a01, type: 3}
-  - {fileID: 21300000, guid: 1cfa9e5b744c26e41b375068b7d1103f, type: 3}
-  entityToTrack: {fileID: 0}
-  animator: {fileID: 6893668013256364051}
-  barImg: {fileID: 8086148344831784536}
-  barRenderer: {fileID: 0}
-  healthComponent: {fileID: 0}
 --- !u!1 &7236784953577612650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1360,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6bd800abbc2e57343b56f5a665000a08, type: 3}
   - {fileID: 21300000, guid: d00afa9c89ace63449b7d17f39182a01, type: 3}
   - {fileID: 21300000, guid: 1cfa9e5b744c26e41b375068b7d1103f, type: 3}
+  trackPlayerIfUnassigned: 1
   entityToTrack: {fileID: 0}
   animator: {fileID: 6893668013256364051}
   barImg: {fileID: 8086148344831784536}

@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Soldier
   player: {fileID: 0}
   planet: {fileID: 0}
-  soldierConfig: {fileID: 11400000, guid: 209055b5196d617499db03d2aa0aa7db, type: 2}
+  soldierConfig: {fileID: 11400000, guid: 93eb8298538c4d3b91135418b22fd45b, type: 2}
   bullet: {fileID: -3427170235566603166, guid: 1dcc240a748181640a4cf0e41220b0fa, type: 3}
   angle: 0
   radius: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22960be84c27671428a91f403eb4f300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthComponent
-  defaultMaxHealth: 3
+  defaultMaxHealth: 2
   currentHealth: 0
   isDestroyedOnDeath: 1
   isDebugMode: 0

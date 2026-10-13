@@ -11,6 +11,8 @@ public class HealthBar : MonoBehaviour
     public SpriteRenderer barRenderer;
     [Tooltip("Animate only when damage removes a displayed health segment.")]
     public bool animateOnlyOnSegmentLoss;
+    [Tooltip("Find the player in this scene if no health target is assigned.")]
+    public bool trackPlayerIfUnassigned;
 
     // Keep the field used by existing scene overrides; scenes do not need rewriting.
     [SerializeField] private HealthComponent healthComponent;
@@ -22,6 +24,15 @@ public class HealthBar : MonoBehaviour
     {
         slider = GetComponent<Slider>();
         trackedEntity = entityToTrack != null ? entityToTrack : healthComponent;
+        if (trackedEntity == null && trackPlayerIfUnassigned)
+        {
+            foreach (var player in FindObjectsByType<UfoManager>(FindObjectsSortMode.None))
+            {
+                if (player.gameObject.scene != gameObject.scene) continue;
+                trackedEntity = player.GetComponent<HealthComponent>();
+                if (trackedEntity != null) break;
+            }
+        }
         if (trackedEntity == null)
         {
             Debug.LogWarning("Assign an entity to the health bar.", this);
@@ -31,6 +42,14 @@ public class HealthBar : MonoBehaviour
         trackedEntity.OnHealthChange += OnHealthChanged;
         Refresh(trackedEntity.defaultMaxHealth > 0f
             ? trackedEntity.currentHealth / trackedEntity.defaultMaxHealth : 0f);
+    }
+
+    private void LateUpdate()
+    {
+        // Keep the health display authoritative after Animator updates in builds.
+        if (trackedEntity != null)
+            Refresh(trackedEntity.defaultMaxHealth > 0f
+                ? trackedEntity.currentHealth / trackedEntity.defaultMaxHealth : 0f);
     }
 
     private void OnHealthChanged(float health)
