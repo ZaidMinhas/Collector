@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
 
     public Rigidbody2D rBody;
     private Transform owner;
+    private bool firedByEnemy;
 
     private void Awake()
     {
@@ -47,6 +48,9 @@ public class Projectile : MonoBehaviour
     public void SetOwner(Transform shooter)
     {
         owner = shooter;
+        // Remember the faction even if the shooter dies before its bullet hits.
+        firedByEnemy = shooter != null &&
+            shooter.GetComponentInParent<DestroyableEnemy>() != null;
     }
 
     protected virtual void FixedUpdate()
@@ -61,6 +65,8 @@ public class Projectile : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (owner != null && other.transform.IsChildOf(owner)) return;
+        // Pass through allies without consuming the bullet or applying damage.
+        if (firedByEnemy && other.GetComponentInParent<DestroyableEnemy>() != null) return;
         if (!isHitting) return;
 
         if (isDebug)
